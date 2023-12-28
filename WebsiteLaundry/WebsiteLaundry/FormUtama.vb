@@ -111,9 +111,8 @@ Public Class FormUtama
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
-        ActivateButton(sender, RGBColors.color1)
-        OpenChildForm(New FormLogin)
-        Reset()
+        FormLoginOrSignup.Show()
+        Me.Hide()
     End Sub
 
 

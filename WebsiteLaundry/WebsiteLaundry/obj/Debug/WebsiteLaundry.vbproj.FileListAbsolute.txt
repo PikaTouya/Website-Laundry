@@ -12,7 +12,6 @@ C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaun
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.xml
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.pdb
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormUtama.resources
-C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormLogin.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormCoupon.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormHistory.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormMaster.resources
@@ -20,3 +19,4 @@ C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaun
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormUtility.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.MasterFormPengguna.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.MasterFormJasa.resources
+C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormLoginOrSignup.resources
