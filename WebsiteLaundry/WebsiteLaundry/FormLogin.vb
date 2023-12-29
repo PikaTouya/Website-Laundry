@@ -3,8 +3,8 @@ Imports FontAwesome.Sharp
 
 Public Class FormLoginOrSignup
     Sub KondisiAwal()
-        TBUsername1.Text = "erwin"
-        TBPass1.Text = "erwin"
+        TBUsername1.Text = "ADMIN001"
+        TBPass1.Text = "SAYAADMIN001"
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""
@@ -13,7 +13,7 @@ Public Class FormLoginOrSignup
         TBConfirmPass.Text = ""
         cmbLevel.Text = ""
         TBUserID.Enabled = False
-        TBUsername1.Enabled = False
+        TBUsername2.Enabled = False 'awalnya tbusername, ferico ubah jadi tbusername2
         TBPass2.Enabled = False
         TBConfirmPass.Enabled = False
         If cmbLevel.Items.Count = 0 Then
@@ -114,63 +114,6 @@ Public Class FormLoginOrSignup
             Timer2.Stop()
             btnLogIn.Enabled = True
             btnSignUp.Enabled = True
-        End If
-    End Sub
-
-    Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
-        If (TBUsername2.Text = "" Or TBPass2.Text = "" Or TBConfirmPass.Text = "" Or cmbLevel.Text = "") Then
-            MsgBox("Mohon masukkan data dengan lengkap!")
-        Else
-            ' Mendapatkan pola ID berdasarkan cmblevel
-            Dim idPola As String = If(cmbLevel.Text = "ADMIN", "ADM", "USR")
-
-            Using Conn As New SqlConnection(connectionString)
-                Conn.Open()
-
-                ' Mendapatkan ID terakhir untuk pola tertentu
-                strsql = "SELECT TOP 1 id_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & idPola & "%' ORDER BY id_pengguna DESC"
-
-                Using Cmd As New SqlCommand(strsql, Conn)
-                    Dim Dr As SqlDataReader = Cmd.ExecuteReader()
-
-                    Dim newId As String
-
-                    If Dr.Read() Then
-                        ' Jika ID sudah ada, dapatkan nomor berikutnya
-                        Dim lastId As String = Dr("id_pengguna").ToString()
-                        Dim lastNumber As Integer = Integer.Parse(lastId.Substring(idPola.Length))
-                        Dim newNumber As Integer = lastNumber + 1
-                        newId = idPola & newNumber.ToString("D3") ' D3 untuk format tiga digit angka
-                    Else
-                        ' Jika belum ada ID, gunakan nomor awal
-                        newId = idPola & "001"
-                    End If
-
-                    Dr.Close()
-
-                    ' Insert data baru
-                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBPass1.Text & "', '" & TBPass2.Text & "', '" & cmbLevel.Text & "')"
-
-                    Cmd.CommandText = strsql
-                    Cmd.ExecuteNonQuery()
-                End Using
-
-                MsgBox("Data berhasil ditambahkan!")
-                Me.Close()
-                Form4.Show()
-                If cmbLevel.Text = "ADMIN" Then
-                    Form4.UtilityToolStripMenuItem.Visible = False
-                    Form4.MasterToolStripMenuItem.Visible = True
-                Else
-                    Form4.MasterToolStripMenuItem.Visible = False
-                    Form4.UtilityToolStripMenuItem.Visible = True
-                End If
-
-                'edited by erwin
-                Form4.ToolStripMenuItem1.Text = TBPass1.Text
-
-
-            End Using
         End If
     End Sub
 End Class

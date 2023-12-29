@@ -20,3 +20,25 @@ C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaun
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.MasterFormPengguna.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.MasterFormJasa.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\UAS_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormLoginOrSignup.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.vbproj.AssemblyReference.cache
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormCoupon.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormHistory.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormMaster.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormTransaction.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormUtama.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormLoginOrSignup.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormUtility.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.MasterFormJasa.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.MasterFormPengguna.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.Resources.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.vbproj.GenerateResource.cache
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.vbproj.CoreCompileInputs.cache
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.exe
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.xml
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.pdb
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\bin\Debug\WebsiteLaundry.exe.config
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\bin\Debug\WebsiteLaundry.exe
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\bin\Debug\WebsiteLaundry.pdb
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\bin\Debug\WebsiteLaundry.xml
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.vbproj.CopyComplete
