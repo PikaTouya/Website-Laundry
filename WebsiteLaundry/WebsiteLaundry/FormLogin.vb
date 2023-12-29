@@ -2,23 +2,28 @@
 Imports FontAwesome.Sharp
 
 Public Class FormLoginOrSignup
+    Dim connectionString As String = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
+    Dim strsql As String
     Sub KondisiAwal()
         TBUsername1.Text = "ADMIN001"
         TBPass1.Text = "SAYAADMIN001"
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""
-        TBUsername1.Text = ""
+        TBUsername2.Text = ""
         TBPass2.Text = ""
         TBConfirmPass.Text = ""
         cmbLevel.Text = ""
         TBUserID.Enabled = False
-        TBUsername2.Enabled = False 'awalnya tbusername, ferico ubah jadi tbusername2
+        TBUsername2.Enabled = False
         TBPass2.Enabled = False
+        TBPass2.PasswordChar = "*"
         TBConfirmPass.Enabled = False
+        TBConfirmPass.PasswordChar = "*"
         If cmbLevel.Items.Count = 0 Then
             cmbLevel.Items.Add("ADMIN")
             cmbLevel.Items.Add("USER")
+            cmbLevel.DropDownStyle = ComboBoxStyle.DropDownList
         End If
     End Sub
 
@@ -45,7 +50,7 @@ Public Class FormLoginOrSignup
                 Dim NamaUser As String = Dr("nama_pengguna").ToString()
                 FormUtama.lblNamaUser.Text = NamaUser
                 FormUtama.lblNamaUser.Visible = True
-                FormUtama.IconUser.IconChar = IconChar.UserAlt
+                FormUtama.IconUser.IconChar = IconChar.CircleUser
                 FormUtama.IconUser.Visible = True
                 FormUtama.btnlogin.Visible = False
                 FormUtama.btnlogout.Visible = True
@@ -76,6 +81,130 @@ Public Class FormLoginOrSignup
             Dr.Close()
         End If
     End Sub
+
+    Private Function GenerateID(prefix As String) As String
+        ' Inisialisasi objek Conn (SqlConnection)
+        Using Conn As New SqlConnection(connectionString)
+            ' Buka koneksi sebelum menjalankan perintah SQL
+            Conn.Open()
+
+            ' Mendapatkan ID terakhir untuk pola tertentu
+            strsql = "SELECT TOP 1 id_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & prefix & "%' ORDER BY id_pengguna DESC"
+
+            Using Cmd As New SqlCommand(strsql, Conn)
+                Dr = Cmd.ExecuteReader()
+
+                Dim newId As String
+
+                If Dr.Read() Then
+                    ' Jika ID sudah ada, dapatkan nomor berikutnya
+                    Dim lastId As String = Dr("id_pengguna").ToString()
+                    Dim lastNumber As Integer = Integer.Parse(lastId.Substring(prefix.Length))
+                    Dim newNumber As Integer = lastNumber + 1
+                    newId = prefix & newNumber.ToString("D3") ' D3 untuk format tiga digit angka
+                Else
+                    ' Jika belum ada ID, gunakan nomor awal
+                    newId = prefix & "001"
+                End If
+
+                Dr.Close()
+
+                ' Pastikan untuk menutup koneksi setelah selesai
+                Conn.Close()
+
+                Return newId
+            End Using
+        End Using
+    End Function
+
+    Private Sub cmblevel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbLevel.SelectedIndexChanged
+        ' Aktifkan TextBox1 setelah pengguna memilih cmblevel
+        TBUsername2.Enabled = True
+        TBPass2.Enabled = True
+        TBConfirmPass.Enabled = True
+
+        ' Atur nilai pada TextBox1 sesuai dengan pola yang diinginkan
+        If cmbLevel.Text = "ADMIN" Then
+            TBUserID.Text = GenerateID("ADM")
+        ElseIf cmbLevel.Text = "USER" Then
+            TBUserID.Text = GenerateID("USR")
+        End If
+    End Sub
+
+
+    Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
+        If (TBUserID.Text = "" Or TBUsername2.Text = "" Or TBPass2.Text = "" Or TBConfirmPass.Text = "" Or cmbLevel.Text = "") Then
+            MsgBox("Mohon isi semua data dengan lengkap!")
+        Else
+            ' Mendapatkan pola ID berdasarkan cmblevel
+            Dim idPola As String = If(cmbLevel.Text = "ADMIN", "ADM", "USR")
+
+            Using Conn As New SqlConnection(connectionString)
+                Conn.Open()
+
+                ' Mendapatkan ID terakhir untuk pola tertentu
+                strsql = "SELECT TOP 1 id_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & idPola & "%' ORDER BY id_pengguna DESC"
+
+                Using Cmd As New SqlCommand(strsql, Conn)
+                    Dim Dr As SqlDataReader = Cmd.ExecuteReader()
+
+                    Dim newId As String
+
+                    If Dr.Read() Then
+                        ' Jika ID sudah ada, dapatkan nomor berikutnya
+                        Dim lastId As String = Dr("id_pengguna").ToString()
+                        Dim lastNumber As Integer = Integer.Parse(lastId.Substring(idPola.Length))
+                        Dim newNumber As Integer = lastNumber + 1
+                        newId = idPola & newNumber.ToString("D3") ' D3 untuk format tiga digit angka
+                    Else
+                        ' Jika belum ada ID, gunakan nomor awal
+                        newId = idPola & "001"
+                    End If
+
+                    Dr.Close()
+
+                    ' Insert data baru
+                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBUsername2.Text & "', '" & TBPass2.Text & "', '" & cmbLevel.Text & "')"
+
+                    Cmd.CommandText = strsql
+                    Cmd.ExecuteNonQuery()
+                End Using
+                If TBPass2.Text = TBConfirmPass.Text Then
+                    MsgBox("Data berhasil ditambahkan!")
+                    FormUtama.lblNamaUser.Text = TBUsername2.Text
+                    FormUtama.lblNamaUser.Visible = True
+                    FormUtama.IconUser.IconChar = IconChar.CircleUser
+                    FormUtama.IconUser.Visible = True
+                    FormUtama.btnlogin.Visible = False
+                    FormUtama.btnlogout.Visible = True
+
+                    If cmbLevel.Text = "ADMIN" Then
+                        FormUtama.PanelMenu.Visible = True
+                        FormUtama.btnTransaction.Visible = True
+                        FormUtama.btnMaster.Visible = True
+                        FormUtama.btnUtility.Visible = True
+                        FormUtama.btnHistory.Visible = False
+                        FormUtama.btnCoupon.Visible = False
+                    Else
+                        FormUtama.PanelMenu.Visible = True
+                        FormUtama.btnHistory.Visible = True
+                        FormUtama.btnCoupon.Visible = True
+                        FormUtama.btnUtility.Visible = True
+                        FormUtama.btnTransaction.Visible = False
+                        FormUtama.btnMaster.Visible = False
+                        FormUtama.btnOrder.Visible = True
+                    End If
+
+                    Me.Close()
+                    FormUtama.Show()
+                Else
+                    MsgBox("Mohon konfirmasi password anda!")
+                End If
+
+            End Using
+        End If
+    End Sub
+
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel1.Click
         Me.Close()
@@ -116,4 +245,8 @@ Public Class FormLoginOrSignup
             btnSignUp.Enabled = True
         End If
     End Sub
+
+
+
+
 End Class

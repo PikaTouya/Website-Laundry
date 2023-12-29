@@ -207,6 +207,7 @@
         Dr.Close()
     End Sub
 
+
     Private Sub Cblevel2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cblevel2.SelectedIndexChanged
         ' Pastikan bahwa DataReader ditutup sebelum menjalankan perintah SELECT
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
@@ -235,12 +236,20 @@
         Dr.Close()
     End Sub
 
+    Private Sub ClearCbLevel2_Click(sender As Object, e As EventArgs) Handles ClearCbLevel2.Click
+        Cblevel2.Items.Clear()
+        Cblevel2.Items.Add("ADMIN")
+        Cblevel2.Items.Add("USER")
+        Cblevel2.DropDownStyle = ComboBoxStyle.DropDownList
+        View()
+    End Sub
+    Private Sub ClearCbLevel1_Click(sender As Object, e As EventArgs) Handles ClearCbLevel1.Click
+        CBLevel1.Items.Clear()
+        CBLevel1.Items.Add("ADMIN")
+        CBLevel1.Items.Add("USER")
+        CBLevel1.DropDownStyle = ComboBoxStyle.DropDownList
 
-
-
-
-
-
+    End Sub
 
     'finish by ferico
 End Class

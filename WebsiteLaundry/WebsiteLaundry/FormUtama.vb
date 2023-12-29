@@ -111,8 +111,9 @@ Public Class FormUtama
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
-        FormLoginOrSignup.Show()
+
         Me.Hide()
+        FormLoginOrSignup.Show()
     End Sub
 
 
