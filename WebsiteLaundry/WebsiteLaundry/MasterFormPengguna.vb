@@ -207,34 +207,6 @@
         Dr.Close()
     End Sub
 
-    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
-        ' Pastikan bahwa DataReader ditutup sebelum menjalankan perintah SELECT
-        If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
-            Dr.Close()
-        End If
-
-        ' Bersihkan ListView
-        LVData.Items.Clear()
-
-        ' Lakukan pencarian berdasarkan nama_pengguna
-        strsql = "SELECT * FROM Pengguna WHERE nama_pengguna = '" & TBSearch.Text & "'"
-        Cmd.CommandText = strsql
-        Cmd.Connection = Conn
-        Da.SelectCommand = Cmd
-        Dr = Cmd.ExecuteReader()
-
-        ' Tampilkan hasil pencarian di ListView
-        While (Dr.Read())
-            With LVData.Items.Add(Dr("id_pengguna"))
-                .SubItems.Add(Dr("nama_pengguna"))
-                .SubItems.Add(Dr("level_pengguna"))
-            End With
-        End While
-
-        ' Tutup DataReader
-        Dr.Close()
-    End Sub
-
     Private Sub Cblevel2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cblevel2.SelectedIndexChanged
         ' Pastikan bahwa DataReader ditutup sebelum menjalankan perintah SELECT
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then

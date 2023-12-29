@@ -38,9 +38,9 @@ Partial Class FormUtility
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("News706 BT", 26.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(293, 93)
+        Me.Label1.Location = New System.Drawing.Point(260, 74)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(617, 62)
+        Me.Label1.Size = New System.Drawing.Size(522, 52)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Change Your Password"
         '
@@ -50,9 +50,9 @@ Partial Class FormUtility
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(355, 213)
+        Me.Label2.Location = New System.Drawing.Point(316, 170)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(205, 29)
+        Me.Label2.Size = New System.Drawing.Size(168, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Current Password"
         '
@@ -62,9 +62,9 @@ Partial Class FormUtility
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(355, 300)
+        Me.Label3.Location = New System.Drawing.Point(316, 240)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(176, 29)
+        Me.Label3.Size = New System.Drawing.Size(142, 25)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "New Password"
         '
@@ -74,9 +74,9 @@ Partial Class FormUtility
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label4.Location = New System.Drawing.Point(355, 389)
+        Me.Label4.Location = New System.Drawing.Point(316, 311)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(266, 29)
+        Me.Label4.Size = New System.Drawing.Size(215, 25)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Re-type New Password"
         '
@@ -86,10 +86,11 @@ Partial Class FormUtility
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button1.Location = New System.Drawing.Point(360, 511)
+        Me.Button1.Location = New System.Drawing.Point(320, 409)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(470, 80)
-        Me.Button1.TabIndex = 3
+        Me.Button1.Size = New System.Drawing.Size(418, 64)
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "Change"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -99,10 +100,12 @@ Partial Class FormUtility
         Me.CurrentPass.BackColor = System.Drawing.SystemColors.Window
         Me.CurrentPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CurrentPass.ForeColor = System.Drawing.Color.Black
-        Me.CurrentPass.Location = New System.Drawing.Point(360, 248)
+        Me.CurrentPass.Location = New System.Drawing.Point(320, 198)
+        Me.CurrentPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CurrentPass.Name = "CurrentPass"
-        Me.CurrentPass.Size = New System.Drawing.Size(470, 44)
-        Me.CurrentPass.TabIndex = 4
+        Me.CurrentPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.CurrentPass.Size = New System.Drawing.Size(418, 38)
+        Me.CurrentPass.TabIndex = 1
         '
         'NewPass
         '
@@ -110,10 +113,12 @@ Partial Class FormUtility
         Me.NewPass.BackColor = System.Drawing.SystemColors.Window
         Me.NewPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NewPass.ForeColor = System.Drawing.Color.Black
-        Me.NewPass.Location = New System.Drawing.Point(360, 335)
+        Me.NewPass.Location = New System.Drawing.Point(320, 268)
+        Me.NewPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NewPass.Name = "NewPass"
-        Me.NewPass.Size = New System.Drawing.Size(470, 44)
-        Me.NewPass.TabIndex = 4
+        Me.NewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.NewPass.Size = New System.Drawing.Size(418, 38)
+        Me.NewPass.TabIndex = 2
         '
         'RetypeNewPass
         '
@@ -121,17 +126,19 @@ Partial Class FormUtility
         Me.RetypeNewPass.BackColor = System.Drawing.SystemColors.Window
         Me.RetypeNewPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RetypeNewPass.ForeColor = System.Drawing.Color.Black
-        Me.RetypeNewPass.Location = New System.Drawing.Point(360, 426)
+        Me.RetypeNewPass.Location = New System.Drawing.Point(320, 341)
+        Me.RetypeNewPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RetypeNewPass.Name = "RetypeNewPass"
-        Me.RetypeNewPass.Size = New System.Drawing.Size(470, 44)
-        Me.RetypeNewPass.TabIndex = 4
+        Me.RetypeNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.RetypeNewPass.Size = New System.Drawing.Size(418, 38)
+        Me.RetypeNewPass.TabIndex = 3
         '
         'FormUtility
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1178, 694)
+        Me.ClientSize = New System.Drawing.Size(1047, 555)
         Me.Controls.Add(Me.RetypeNewPass)
         Me.Controls.Add(Me.NewPass)
         Me.Controls.Add(Me.CurrentPass)
@@ -141,6 +148,7 @@ Partial Class FormUtility
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.Color.Black
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormUtility"
         Me.Text = "Utility"
         Me.ResumeLayout(False)

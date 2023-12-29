@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MasterFormPengguna
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MasterFormPengguna
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TBSearch = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,7 +43,6 @@ Partial Class MasterFormPengguna
         Me.TBUsername = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Cblevel2 = New System.Windows.Forms.ComboBox()
-        Me.btnFind = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TBSearch
@@ -52,7 +51,7 @@ Partial Class MasterFormPengguna
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(129, 166)
+        Me.TBSearch.Location = New System.Drawing.Point(126, 177)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
         Me.TBSearch.Size = New System.Drawing.Size(298, 30)
@@ -77,7 +76,7 @@ Partial Class MasterFormPengguna
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(34, 168)
+        Me.Label1.Location = New System.Drawing.Point(31, 179)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 25)
         Me.Label1.TabIndex = 6
@@ -272,7 +271,7 @@ Partial Class MasterFormPengguna
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label7.Location = New System.Drawing.Point(432, 168)
+        Me.Label7.Location = New System.Drawing.Point(429, 179)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 25)
         Me.Label7.TabIndex = 5
@@ -283,25 +282,11 @@ Partial Class MasterFormPengguna
         Me.Cblevel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Cblevel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cblevel2.FormattingEnabled = True
-        Me.Cblevel2.Location = New System.Drawing.Point(511, 166)
+        Me.Cblevel2.Location = New System.Drawing.Point(508, 177)
         Me.Cblevel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Cblevel2.Name = "Cblevel2"
         Me.Cblevel2.Size = New System.Drawing.Size(158, 33)
         Me.Cblevel2.TabIndex = 2
-        '
-        'btnFind
-        '
-        Me.btnFind.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFind.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFind.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnFind.Location = New System.Drawing.Point(38, 208)
-        Me.btnFind.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnFind.Name = "btnFind"
-        Me.btnFind.Size = New System.Drawing.Size(630, 35)
-        Me.btnFind.TabIndex = 3
-        Me.btnFind.Text = "Find"
-        Me.btnFind.UseVisualStyleBackColor = True
         '
         'MasterFormPengguna
         '
@@ -325,7 +310,6 @@ Partial Class MasterFormPengguna
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnDelete)
-        Me.Controls.Add(Me.btnFind)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnAdd)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -357,5 +341,4 @@ Partial Class MasterFormPengguna
     Friend WithEvents TBUsername As TextBox
     Friend WithEvents Cblevel2 As ComboBox
     Protected WithEvents Label7 As Label
-    Friend WithEvents btnFind As Button
 End Class
