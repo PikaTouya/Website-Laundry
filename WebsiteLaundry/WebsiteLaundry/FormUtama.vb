@@ -215,5 +215,7 @@ Public Class FormUtama
         Public Shared color6 As Color = Color.FromArgb(24, 161, 251)
     End Structure
 
-
+    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
+        OpenChildForm(New FormTransaction)
+    End Sub
 End Class

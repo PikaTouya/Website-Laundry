@@ -31,9 +31,7 @@ Public Class FormLoginOrSignup
         KondisiAwal()
         Me.FormBorderStyle = FormBorderStyle.None
         Me.Text = String.Empty
-
     End Sub
-
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         If TBUsername1.Text = "" Or TBPass1.Text = "" Then
             MsgBox("Mohon masukkan data dengan lengkap!")
@@ -54,7 +52,6 @@ Public Class FormLoginOrSignup
                 FormUtama.IconUser.Visible = True
                 FormUtama.btnlogin.Visible = False
                 FormUtama.btnlogout.Visible = True
-
                 Dim levelpengguna As String = Dr("level_pengguna").ToString()
                 If levelpengguna = "ADMIN" Then
                     FormUtama.PanelMenu.Visible = True
@@ -72,7 +69,7 @@ Public Class FormLoginOrSignup
                     FormUtama.btnMaster.Visible = False
                     FormUtama.btnOrder.Visible = True
                 End If
-
+                Module1.LoggedInUserID = Dr("id_pengguna").ToString()
             Else
                 MsgBox("Nama atau Password Salah!")
                 Call KondisiAwal()
@@ -214,7 +211,6 @@ Public Class FormLoginOrSignup
         Me.Close()
         FormUtama.Show()
     End Sub
-
     Private Sub LinkSignIn_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkSignIn.LinkClicked
         Timer1.Start()
         btnLogIn.Enabled = False
@@ -225,7 +221,6 @@ Public Class FormLoginOrSignup
         btnLogIn.Enabled = False
         btnSignUp.Enabled = False
     End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If PanelSlide.Location.X > -750 Then
             PanelSlide.Location = New Point(PanelSlide.Location.X - 10, PanelSlide.Location.Y)
@@ -235,7 +230,6 @@ Public Class FormLoginOrSignup
             btnSignUp.Enabled = True
         End If
     End Sub
-
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If PanelSlide.Location.X < 0 Then
             PanelSlide.Location = New Point(PanelSlide.Location.X + 10, PanelSlide.Location.Y)

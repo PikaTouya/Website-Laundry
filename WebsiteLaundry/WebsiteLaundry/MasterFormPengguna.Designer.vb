@@ -31,6 +31,7 @@ Partial Class MasterFormPengguna
         Me.id_pengguna = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.nama_pengguna = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.level_pengguna = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.nomortelepon_pengguna = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CBLevel1 = New System.Windows.Forms.ComboBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
@@ -45,6 +46,8 @@ Partial Class MasterFormPengguna
         Me.Cblevel2 = New System.Windows.Forms.ComboBox()
         Me.ClearCbLevel2 = New FontAwesome.Sharp.IconButton()
         Me.ClearCbLevel1 = New FontAwesome.Sharp.IconButton()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TBPhone = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TBSearch
@@ -53,10 +56,10 @@ Partial Class MasterFormPengguna
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(142, 221)
+        Me.TBSearch.Location = New System.Drawing.Point(126, 177)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(335, 35)
+        Me.TBSearch.Size = New System.Drawing.Size(298, 30)
         Me.TBSearch.TabIndex = 1
         Me.TBSearch.WordWrap = False
         '
@@ -66,9 +69,9 @@ Partial Class MasterFormPengguna
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(789, 325)
+        Me.Label2.Location = New System.Drawing.Point(702, 233)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 29)
+        Me.Label2.Size = New System.Drawing.Size(83, 25)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "UserID :"
         '
@@ -78,9 +81,9 @@ Partial Class MasterFormPengguna
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(35, 224)
+        Me.Label1.Location = New System.Drawing.Point(31, 179)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 29)
+        Me.Label1.Size = New System.Drawing.Size(86, 25)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Search :"
         '
@@ -90,11 +93,11 @@ Partial Class MasterFormPengguna
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnAdd.Location = New System.Drawing.Point(794, 705)
+        Me.btnAdd.Location = New System.Drawing.Point(707, 592)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(142, 44)
-        Me.btnAdd.TabIndex = 8
+        Me.btnAdd.Size = New System.Drawing.Size(126, 35)
+        Me.btnAdd.TabIndex = 9
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -104,22 +107,21 @@ Partial Class MasterFormPengguna
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(438, 68)
+        Me.Label3.Location = New System.Drawing.Point(389, 54)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(498, 67)
+        Me.Label3.Size = New System.Drawing.Size(415, 56)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Daftar Pengguna"
         '
         'LVData
         '
         Me.LVData.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LVData.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id_pengguna, Me.nama_pengguna, Me.level_pengguna})
+        Me.LVData.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id_pengguna, Me.nama_pengguna, Me.level_pengguna, Me.nomortelepon_pengguna})
         Me.LVData.GridLines = True
         Me.LVData.HideSelection = False
-        Me.LVData.Location = New System.Drawing.Point(42, 325)
-        Me.LVData.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.LVData.Location = New System.Drawing.Point(36, 233)
         Me.LVData.Name = "LVData"
-        Me.LVData.Size = New System.Drawing.Size(709, 458)
+        Me.LVData.Size = New System.Drawing.Size(632, 394)
         Me.LVData.TabIndex = 14
         Me.LVData.UseCompatibleStateImageBehavior = False
         Me.LVData.View = System.Windows.Forms.View.Details
@@ -139,15 +141,20 @@ Partial Class MasterFormPengguna
         Me.level_pengguna.Text = "level_pengguna"
         Me.level_pengguna.Width = 93
         '
+        'nomortelepon_pengguna
+        '
+        Me.nomortelepon_pengguna.Text = "nomortelepon_pengguna"
+        Me.nomortelepon_pengguna.Width = 173
+        '
         'CBLevel1
         '
         Me.CBLevel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CBLevel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBLevel1.FormattingEnabled = True
-        Me.CBLevel1.Location = New System.Drawing.Point(794, 618)
+        Me.CBLevel1.Location = New System.Drawing.Point(707, 467)
         Me.CBLevel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CBLevel1.Name = "CBLevel1"
-        Me.CBLevel1.Size = New System.Drawing.Size(446, 37)
+        Me.CBLevel1.Size = New System.Drawing.Size(397, 33)
         Me.CBLevel1.TabIndex = 7
         '
         'btnUpdate
@@ -156,11 +163,11 @@ Partial Class MasterFormPengguna
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnUpdate.Location = New System.Drawing.Point(960, 705)
+        Me.btnUpdate.Location = New System.Drawing.Point(854, 592)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(142, 44)
-        Me.btnUpdate.TabIndex = 9
+        Me.btnUpdate.Size = New System.Drawing.Size(126, 35)
+        Me.btnUpdate.TabIndex = 10
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
@@ -170,11 +177,11 @@ Partial Class MasterFormPengguna
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnDelete.Location = New System.Drawing.Point(1126, 705)
+        Me.btnDelete.Location = New System.Drawing.Point(1002, 592)
         Me.btnDelete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(142, 44)
-        Me.btnDelete.TabIndex = 10
+        Me.btnDelete.Size = New System.Drawing.Size(126, 35)
+        Me.btnDelete.TabIndex = 11
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -186,10 +193,10 @@ Partial Class MasterFormPengguna
         Me.IconBack.IconColor = System.Drawing.Color.Gainsboro
         Me.IconBack.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconBack.IconSize = 70
-        Me.IconBack.Location = New System.Drawing.Point(12, 12)
+        Me.IconBack.Location = New System.Drawing.Point(11, 10)
         Me.IconBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.IconBack.Name = "IconBack"
-        Me.IconBack.Size = New System.Drawing.Size(70, 70)
+        Me.IconBack.Size = New System.Drawing.Size(62, 56)
         Me.IconBack.TabIndex = 16
         Me.IconBack.UseVisualStyleBackColor = True
         '
@@ -199,10 +206,10 @@ Partial Class MasterFormPengguna
         Me.TBUserID.BackColor = System.Drawing.SystemColors.Window
         Me.TBUserID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBUserID.ForeColor = System.Drawing.Color.Black
-        Me.TBUserID.Location = New System.Drawing.Point(794, 359)
+        Me.TBUserID.Location = New System.Drawing.Point(707, 260)
         Me.TBUserID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBUserID.Name = "TBUserID"
-        Me.TBUserID.Size = New System.Drawing.Size(474, 35)
+        Me.TBUserID.Size = New System.Drawing.Size(422, 30)
         Me.TBUserID.TabIndex = 4
         Me.TBUserID.WordWrap = False
         '
@@ -212,9 +219,9 @@ Partial Class MasterFormPengguna
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label4.Location = New System.Drawing.Point(789, 584)
+        Me.Label4.Location = New System.Drawing.Point(702, 440)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(83, 29)
+        Me.Label4.Size = New System.Drawing.Size(70, 25)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Level :"
         '
@@ -224,9 +231,9 @@ Partial Class MasterFormPengguna
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label5.Location = New System.Drawing.Point(789, 498)
+        Me.Label5.Location = New System.Drawing.Point(702, 371)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(132, 29)
+        Me.Label5.Size = New System.Drawing.Size(109, 25)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Password :"
         '
@@ -236,10 +243,10 @@ Partial Class MasterFormPengguna
         Me.TBPass.BackColor = System.Drawing.SystemColors.Window
         Me.TBPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBPass.ForeColor = System.Drawing.Color.Black
-        Me.TBPass.Location = New System.Drawing.Point(794, 531)
+        Me.TBPass.Location = New System.Drawing.Point(707, 398)
         Me.TBPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBPass.Name = "TBPass"
-        Me.TBPass.Size = New System.Drawing.Size(474, 35)
+        Me.TBPass.Size = New System.Drawing.Size(422, 30)
         Me.TBPass.TabIndex = 6
         Me.TBPass.WordWrap = False
         '
@@ -249,9 +256,9 @@ Partial Class MasterFormPengguna
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label6.Location = New System.Drawing.Point(789, 411)
+        Me.Label6.Location = New System.Drawing.Point(702, 302)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 29)
+        Me.Label6.Size = New System.Drawing.Size(113, 25)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Username :"
         '
@@ -261,10 +268,10 @@ Partial Class MasterFormPengguna
         Me.TBUsername.BackColor = System.Drawing.SystemColors.Window
         Me.TBUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBUsername.ForeColor = System.Drawing.Color.Black
-        Me.TBUsername.Location = New System.Drawing.Point(794, 445)
+        Me.TBUsername.Location = New System.Drawing.Point(707, 329)
         Me.TBUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBUsername.Name = "TBUsername"
-        Me.TBUsername.Size = New System.Drawing.Size(474, 35)
+        Me.TBUsername.Size = New System.Drawing.Size(422, 30)
         Me.TBUsername.TabIndex = 5
         Me.TBUsername.WordWrap = False
         '
@@ -274,9 +281,9 @@ Partial Class MasterFormPengguna
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label7.Location = New System.Drawing.Point(483, 224)
+        Me.Label7.Location = New System.Drawing.Point(429, 179)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(83, 29)
+        Me.Label7.Size = New System.Drawing.Size(70, 25)
         Me.Label7.TabIndex = 5
         Me.Label7.Text = "Level :"
         '
@@ -285,10 +292,10 @@ Partial Class MasterFormPengguna
         Me.Cblevel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Cblevel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cblevel2.FormattingEnabled = True
-        Me.Cblevel2.Location = New System.Drawing.Point(572, 221)
+        Me.Cblevel2.Location = New System.Drawing.Point(508, 177)
         Me.Cblevel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Cblevel2.Name = "Cblevel2"
-        Me.Cblevel2.Size = New System.Drawing.Size(177, 37)
+        Me.Cblevel2.Size = New System.Drawing.Size(158, 33)
         Me.Cblevel2.TabIndex = 2
         '
         'ClearCbLevel2
@@ -301,9 +308,10 @@ Partial Class MasterFormPengguna
         Me.ClearCbLevel2.IconColor = System.Drawing.SystemColors.Window
         Me.ClearCbLevel2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ClearCbLevel2.IconSize = 40
-        Me.ClearCbLevel2.Location = New System.Drawing.Point(743, 216)
+        Me.ClearCbLevel2.Location = New System.Drawing.Point(660, 173)
+        Me.ClearCbLevel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ClearCbLevel2.Name = "ClearCbLevel2"
-        Me.ClearCbLevel2.Size = New System.Drawing.Size(40, 40)
+        Me.ClearCbLevel2.Size = New System.Drawing.Size(36, 32)
         Me.ClearCbLevel2.TabIndex = 17
         Me.ClearCbLevel2.UseVisualStyleBackColor = True
         '
@@ -317,28 +325,56 @@ Partial Class MasterFormPengguna
         Me.ClearCbLevel1.IconColor = System.Drawing.SystemColors.Window
         Me.ClearCbLevel1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ClearCbLevel1.IconSize = 40
-        Me.ClearCbLevel1.Location = New System.Drawing.Point(1235, 614)
+        Me.ClearCbLevel1.Location = New System.Drawing.Point(1099, 464)
+        Me.ClearCbLevel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ClearCbLevel1.Name = "ClearCbLevel1"
-        Me.ClearCbLevel1.Size = New System.Drawing.Size(38, 38)
+        Me.ClearCbLevel1.Size = New System.Drawing.Size(34, 30)
         Me.ClearCbLevel1.TabIndex = 17
         Me.ClearCbLevel1.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label8.Location = New System.Drawing.Point(702, 513)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(154, 25)
+        Me.Label8.TabIndex = 5
+        Me.Label8.Text = "Phone Number :"
+        '
+        'TBPhone
+        '
+        Me.TBPhone.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBPhone.BackColor = System.Drawing.SystemColors.Window
+        Me.TBPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBPhone.ForeColor = System.Drawing.Color.Black
+        Me.TBPhone.Location = New System.Drawing.Point(706, 540)
+        Me.TBPhone.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TBPhone.Name = "TBPhone"
+        Me.TBPhone.Size = New System.Drawing.Size(422, 30)
+        Me.TBPhone.TabIndex = 8
+        Me.TBPhone.WordWrap = False
+        '
         'MasterFormPengguna
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1335, 812)
+        Me.ClientSize = New System.Drawing.Size(1187, 650)
         Me.Controls.Add(Me.IconBack)
         Me.Controls.Add(Me.Cblevel2)
         Me.Controls.Add(Me.CBLevel1)
         Me.Controls.Add(Me.LVData)
         Me.Controls.Add(Me.TBUsername)
+        Me.Controls.Add(Me.TBPhone)
         Me.Controls.Add(Me.TBPass)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TBUserID)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TBSearch)
         Me.Controls.Add(Me.Label2)
@@ -380,4 +416,7 @@ Partial Class MasterFormPengguna
     Protected WithEvents Label7 As Label
     Friend WithEvents ClearCbLevel2 As FontAwesome.Sharp.IconButton
     Friend WithEvents ClearCbLevel1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents nomortelepon_pengguna As ColumnHeader
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TBPhone As TextBox
 End Class

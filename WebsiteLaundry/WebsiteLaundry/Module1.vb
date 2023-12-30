@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Module Module1
+    Public LoggedInUserID As String = ""
+
     Public Conn As SqlConnection
     Public Cmd As SqlCommand
     Public Dr As SqlDataReader

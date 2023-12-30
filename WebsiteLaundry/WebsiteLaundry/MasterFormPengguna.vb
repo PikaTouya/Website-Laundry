@@ -49,11 +49,13 @@
             Dim id_pengguna As String = Dr("id_pengguna").ToString()
             Dim nama_pengguna As String = Dr("nama_pengguna").ToString()
             Dim level_pengguna As String = Dr("level_pengguna").ToString()
+            Dim nomortelepon_pengguna As String = Dr("nomortelepon_pengguna").ToString()
 
             ' Tambahkan item baru ke ListView
             With LVData.Items.Add(id_pengguna)
                 .SubItems.Add(nama_pengguna)
                 .SubItems.Add(level_pengguna)
+                .SubItems.Add(nomortelepon_pengguna)
             End With
         End While
 
@@ -62,7 +64,7 @@
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If TBUserID.Text = "" Or TBUsername.Text = "" Or TBPass.Text = "" Or CBLevel1.Text = "" Then
+        If TBUserID.Text = "" Or TBUsername.Text = "" Or TBPass.Text = "" Or CBLevel1.Text = "" Or TBPhone.Text = "" Then
             MsgBox("Please complete the information!")
             Exit Sub
         End If
@@ -82,7 +84,7 @@
             Dr.Close()
         End If
 
-        strsql = "INSERT INTO Pengguna VALUES ('" & TBUserID.Text & "','" & TBUsername.Text & "','" & TBPass.Text & "','" & CBLevel1.Text & "')"
+        strsql = "INSERT INTO Pengguna VALUES ('" & TBUserID.Text & "','" & TBUsername.Text & "','" & TBPass.Text & "','" & CBLevel1.Text & "','" & TBPhone.Text & "')"
         Dim Cmd As New SqlClient.SqlCommand
         Cmd.CommandText = strsql
         Cmd.Connection = Conn
@@ -95,6 +97,7 @@
             TBUsername.Text = ""
             TBPass.Text = ""
             CBLevel1.Text = ""
+            TBPhone.Text = ""
 
         Catch ex As SqlClient.SqlException
             If ex.Number = 2627 Then 'ex number adalah property yang memberikan nomor kesalahan yang diberikan oleh sql server 2627, itu berarti terjadi pelanggaran integritas data yang menyebabkan duplikasi nilai kunci unik (duplicate key)'
@@ -112,6 +115,7 @@
             TBUserID.Enabled = False
             TBUsername.Text = .SubItems(1).Text
             CBLevel1.Text = .SubItems(2).Text
+            TBPhone.Text = .SubItems(3).Text
             ' ketika mau ubah data, tombol tambah tidak akan bisa dipakai
             btnAdd.Enabled = False
             btnAdd.ForeColor = Color.DimGray
@@ -119,7 +123,7 @@
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        If (TBUserID.Text = "") Or (TBUsername.Text = "") Or (TBPass.Text = "") Or (CBLevel1.Text = "") Then
+        If TBUserID.Text = "" Or TBUsername.Text = "" Or TBPass.Text = "" Or CBLevel1.Text = "" Or TBPhone.Text = "" Then
             MsgBox("Please fill in the data you want to modify first!")
             Exit Sub
         End If
@@ -129,7 +133,7 @@
             Dr.Close()
         End If
 
-        strsql = "UPDATE Pengguna SET nama_pengguna = '" & TBUsername.Text & "', password_pengguna = '" & TBPass.Text & "', level_pengguna = '" & CBLevel1.Text & "' WHERE id_pengguna = '" & ctrl & "'"
+        strsql = "UPDATE Pengguna SET nama_pengguna = '" & TBUsername.Text & "', password_pengguna = '" & TBPass.Text & "', level_pengguna = '" & CBLevel1.Text & "', nomortelepon_pengguna = '" & TBPhone.Text & "' WHERE id_pengguna = '" & ctrl & "'"
         Dim Cmd As New SqlClient.SqlCommand
         Cmd.CommandText = strsql
         Cmd.Connection = Conn
@@ -142,6 +146,7 @@
             TBUsername.Text = ""
             TBPass.Text = ""
             CBLevel1.Text = ""
+            TBPhone.Text = ""
             TBUserID.Enabled = True
             btnAdd.Enabled = True
             btnAdd.ForeColor = Color.Gainsboro
@@ -151,6 +156,11 @@
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        If TBUserID.Text = "" Or TBUsername.Text = "" Or TBPass.Text = "" Or CBLevel1.Text = "" Or TBPhone.Text = "" Then
+            MsgBox("Please fill in the data you want to modify first!")
+            Exit Sub
+        End If
+
         ' Pastikan bahwa DataReader ditutup sebelum menjalankan perintah DELETE
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
             Dr.Close()
@@ -167,6 +177,7 @@
         TBUsername.Text = ""
         TBPass.Text = ""
         CBLevel1.Text = ""
+        TBPhone.Text = ""
         TBUserID.Enabled = True
         btnAdd.Enabled = True
         btnAdd.ForeColor = Color.Gainsboro
@@ -200,6 +211,7 @@
             With LVData.Items.Add(Dr("id_pengguna"))
                 .SubItems.Add(Dr("nama_pengguna"))
                 .SubItems.Add(Dr("level_pengguna"))
+                .subItems.Add(Dr("nomortelepon_pengguna"))
             End With
         End While
 
@@ -229,6 +241,7 @@
             With LVData.Items.Add(Dr("id_pengguna"))
                 .SubItems.Add(Dr("nama_pengguna"))
                 .SubItems.Add(Dr("level_pengguna"))
+                .SubItems.Add(Dr("nomortelepon_pengguna"))
             End With
         End While
 
@@ -249,6 +262,14 @@
         CBLevel1.Items.Add("USER")
         CBLevel1.DropDownStyle = ComboBoxStyle.DropDownList
 
+    End Sub
+
+    Private Sub TBPhone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBPhone.KeyPress
+        ' Memeriksa apakah karakter yang dimasukkan adalah angka atau kontrol karakter (seperti backspace)
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            ' Jika bukan angka, batalkan input
+            e.Handled = True
+        End If
     End Sub
 
     'finish by ferico
