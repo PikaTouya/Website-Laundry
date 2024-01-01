@@ -55,17 +55,17 @@ Public Class FormLoginOrSignup
                 Dim levelpengguna As String = Dr("level_pengguna").ToString()
                 If levelpengguna = "ADMIN" Then
                     FormUtama.PanelMenu.Visible = True
-                    FormUtama.btnTransaction.Visible = True
+                    FormUtama.btnTransaction.Visible = False
                     FormUtama.btnMaster.Visible = True
                     FormUtama.btnUtility.Visible = True
-                    FormUtama.btnHistory.Visible = False
+                    FormUtama.btnHistory.Visible = True
                     FormUtama.btnCoupon.Visible = False
                 Else
                     FormUtama.PanelMenu.Visible = True
                     FormUtama.btnHistory.Visible = True
                     FormUtama.btnCoupon.Visible = True
                     FormUtama.btnUtility.Visible = True
-                    FormUtama.btnTransaction.Visible = False
+                    FormUtama.btnTransaction.Visible = True
                     FormUtama.btnMaster.Visible = False
                     FormUtama.btnOrder.Visible = True
                 End If
@@ -130,7 +130,7 @@ Public Class FormLoginOrSignup
 
 
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
-        If (TBUserID.Text = "" Or TBUsername2.Text = "" Or TBPass2.Text = "" Or TBConfirmPass.Text = "" Or cmbLevel.Text = "") Then
+        If (TBUserID.Text = "" Or TBUsername2.Text = "" Or TBPass2.Text = "" Or TBConfirmPass.Text = "" Or cmbLevel.Text = "" Or TBPhoneNumber.Text = "") Then
             MsgBox("Mohon isi semua data dengan lengkap!")
         Else
             ' Mendapatkan pola ID berdasarkan cmblevel
@@ -161,7 +161,7 @@ Public Class FormLoginOrSignup
                     Dr.Close()
 
                     ' Insert data baru
-                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBUsername2.Text & "', '" & TBPass2.Text & "', '" & cmbLevel.Text & "')"
+                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBUsername2.Text & "', '" & TBPass2.Text & "', '" & cmbLevel.Text & "','" & TBPhoneNumber.Text & "')"
 
                     Cmd.CommandText = strsql
                     Cmd.ExecuteNonQuery()
@@ -177,17 +177,17 @@ Public Class FormLoginOrSignup
 
                     If cmbLevel.Text = "ADMIN" Then
                         FormUtama.PanelMenu.Visible = True
-                        FormUtama.btnTransaction.Visible = True
+                        FormUtama.btnTransaction.Visible = False
                         FormUtama.btnMaster.Visible = True
                         FormUtama.btnUtility.Visible = True
-                        FormUtama.btnHistory.Visible = False
+                        FormUtama.btnHistory.Visible = True
                         FormUtama.btnCoupon.Visible = False
                     Else
                         FormUtama.PanelMenu.Visible = True
                         FormUtama.btnHistory.Visible = True
                         FormUtama.btnCoupon.Visible = True
                         FormUtama.btnUtility.Visible = True
-                        FormUtama.btnTransaction.Visible = False
+                        FormUtama.btnTransaction.Visible = True
                         FormUtama.btnMaster.Visible = False
                         FormUtama.btnOrder.Visible = True
                     End If
@@ -241,6 +241,10 @@ Public Class FormLoginOrSignup
     End Sub
 
 
-
-
+    Private Sub TBPhoneNumber_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TBPhoneNumber.KeyPress
+        ' Hanya izinkan angka, backspace, dan tombol delete
+        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> ControlChars.Back AndAlso e.KeyChar <> ChrW(Keys.Delete) Then
+            e.Handled = True ' Menahan karakter yang tidak valid
+        End If
+    End Sub
 End Class
