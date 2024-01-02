@@ -5,8 +5,8 @@ Public Class FormLoginOrSignup
     Dim connectionString As String = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
     Dim strsql As String
     Sub KondisiAwal()
-        TBUsername1.Text = "ADMIN001"
-        TBPass1.Text = "SAYAADMIN001"
+        TBUsername1.Text = "USER001"
+        TBPass1.Text = "SAYAUSER001"
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""
@@ -70,6 +70,7 @@ Public Class FormLoginOrSignup
                     FormUtama.btnOrder.Visible = True
                 End If
                 Module1.LoggedInUserID = Dr("id_pengguna").ToString()
+
             Else
                 MsgBox("Nama atau Password Salah!")
                 Call KondisiAwal()
@@ -199,6 +200,8 @@ Public Class FormLoginOrSignup
                 End If
 
             End Using
+            ' Store the phone number in the shared property
+            Module1.SignedUpPhoneNumber = TBPhoneNumber.Text
         End If
     End Sub
 

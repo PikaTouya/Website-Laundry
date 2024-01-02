@@ -39,9 +39,9 @@ Partial Class FormTransaction
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cbcoupon = New System.Windows.Forms.ComboBox()
-        Me.tbtelepon = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Id_User = New System.Windows.Forms.Label()
+        Me.lbltelepon = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'tanggal_transaksi
@@ -221,13 +221,6 @@ Partial Class FormTransaction
         Me.cbcoupon.Size = New System.Drawing.Size(370, 24)
         Me.cbcoupon.TabIndex = 1
         '
-        'tbtelepon
-        '
-        Me.tbtelepon.Location = New System.Drawing.Point(234, 254)
-        Me.tbtelepon.Name = "tbtelepon"
-        Me.tbtelepon.Size = New System.Drawing.Size(256, 22)
-        Me.tbtelepon.TabIndex = 2
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -250,6 +243,17 @@ Partial Class FormTransaction
         Me.Id_User.TabIndex = 0
         Me.Id_User.Text = "id"
         '
+        'lbltelepon
+        '
+        Me.lbltelepon.AutoSize = True
+        Me.lbltelepon.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltelepon.ForeColor = System.Drawing.Color.Gainsboro
+        Me.lbltelepon.Location = New System.Drawing.Point(229, 250)
+        Me.lbltelepon.Name = "lbltelepon"
+        Me.lbltelepon.Size = New System.Drawing.Size(76, 25)
+        Me.lbltelepon.TabIndex = 0
+        Me.lbltelepon.Text = "telepon"
+        '
         'FormTransaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -258,7 +262,6 @@ Partial Class FormTransaction
         Me.ClientSize = New System.Drawing.Size(1024, 554)
         Me.Controls.Add(Me.btncancel)
         Me.Controls.Add(Me.btnorder)
-        Me.Controls.Add(Me.tbtelepon)
         Me.Controls.Add(Me.berat_pakaian)
         Me.Controls.Add(Me.cbcoupon)
         Me.Controls.Add(Me.cbjenis)
@@ -273,6 +276,7 @@ Partial Class FormTransaction
         Me.Controls.Add(Me.harga_transaksi)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lbltelepon)
         Me.Controls.Add(Me.Id_User)
         Me.Controls.Add(Me.Id_Transaksi)
         Me.Controls.Add(Me.tanggal_transaksi)
@@ -301,7 +305,7 @@ Partial Class FormTransaction
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents cbcoupon As ComboBox
-    Friend WithEvents tbtelepon As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Id_User As Label
+    Friend WithEvents lbltelepon As Label
 End Class
