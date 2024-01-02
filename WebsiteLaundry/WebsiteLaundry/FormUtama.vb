@@ -216,6 +216,6 @@ Public Class FormUtama
     End Structure
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
-        OpenChildForm(New FormTransaction)
+        OpenChildForm(New FormOrder)
     End Sub
 End Class

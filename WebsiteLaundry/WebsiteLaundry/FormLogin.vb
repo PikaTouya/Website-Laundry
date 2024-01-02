@@ -11,11 +11,13 @@ Public Class FormLoginOrSignup
 
         TBUserID.Text = ""
         TBUsername2.Text = ""
+        TBPhoneNumber.Text = ""
         TBPass2.Text = ""
         TBConfirmPass.Text = ""
-        cmbLevel.Text = ""
+        cmbLevel.Items.Clear()
         TBUserID.Enabled = False
         TBUsername2.Enabled = False
+        TBPhoneNumber.Enabled = False
         TBPass2.Enabled = False
         TBPass2.PasswordChar = "*"
         TBConfirmPass.Enabled = False
@@ -55,17 +57,17 @@ Public Class FormLoginOrSignup
                 Dim levelpengguna As String = Dr("level_pengguna").ToString()
                 If levelpengguna = "ADMIN" Then
                     FormUtama.PanelMenu.Visible = True
-                    FormUtama.btnTransaction.Visible = False
+                    FormUtama.btnTransaction.Visible = True
                     FormUtama.btnMaster.Visible = True
                     FormUtama.btnUtility.Visible = True
-                    FormUtama.btnHistory.Visible = True
+                    FormUtama.btnHistory.Visible = False
                     FormUtama.btnCoupon.Visible = False
                 Else
                     FormUtama.PanelMenu.Visible = True
                     FormUtama.btnHistory.Visible = True
                     FormUtama.btnCoupon.Visible = True
                     FormUtama.btnUtility.Visible = True
-                    FormUtama.btnTransaction.Visible = True
+                    FormUtama.btnTransaction.Visible = false
                     FormUtama.btnMaster.Visible = False
                     FormUtama.btnOrder.Visible = True
                 End If
@@ -118,6 +120,7 @@ Public Class FormLoginOrSignup
     Private Sub cmblevel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbLevel.SelectedIndexChanged
         ' Aktifkan TextBox1 setelah pengguna memilih cmblevel
         TBUsername2.Enabled = True
+        TBPhoneNumber.Enabled = True
         TBPass2.Enabled = True
         TBConfirmPass.Enabled = True
 
@@ -169,28 +172,13 @@ Public Class FormLoginOrSignup
                 End Using
                 If TBPass2.Text = TBConfirmPass.Text Then
                     MsgBox("Data berhasil ditambahkan!")
-                    FormUtama.lblNamaUser.Text = TBUsername2.Text
-                    FormUtama.lblNamaUser.Visible = True
-                    FormUtama.IconUser.IconChar = IconChar.CircleUser
-                    FormUtama.IconUser.Visible = True
-                    FormUtama.btnlogin.Visible = False
-                    FormUtama.btnlogout.Visible = True
-
-                    If cmbLevel.Text = "ADMIN" Then
-                        FormUtama.PanelMenu.Visible = True
-                        FormUtama.btnTransaction.Visible = False
-                        FormUtama.btnMaster.Visible = True
-                        FormUtama.btnUtility.Visible = True
-                        FormUtama.btnHistory.Visible = True
-                        FormUtama.btnCoupon.Visible = False
+                    Call KondisiAwal()
+                    If PanelSlide.Location.X < 0 Then
+                        PanelSlide.Location = New Point(PanelSlide.Location.X + 10, PanelSlide.Location.Y)
                     Else
-                        FormUtama.PanelMenu.Visible = True
-                        FormUtama.btnHistory.Visible = True
-                        FormUtama.btnCoupon.Visible = True
-                        FormUtama.btnUtility.Visible = True
-                        FormUtama.btnTransaction.Visible = True
-                        FormUtama.btnMaster.Visible = False
-                        FormUtama.btnOrder.Visible = True
+                        Timer2.Stop()
+                        btnLogIn.Enabled = True
+                        btnSignUp.Enabled = True
                     End If
 
                     Timer2.Start()

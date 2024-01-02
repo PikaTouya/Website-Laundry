@@ -73,7 +73,6 @@ C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormCoupon.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormHistory.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormMaster.resources
-C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormTransaction.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormUtama.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormLoginOrSignup.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormUtility.resources
@@ -86,3 +85,5 @@ C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.exe
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.xml
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.pdb
+C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormOrder.resources
+C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormTransaction.resources

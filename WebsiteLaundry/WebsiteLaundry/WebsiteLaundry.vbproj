@@ -86,10 +86,10 @@
     <Compile Include="FormMaster.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTransaction.Designer.vb">
-      <DependentUpon>FormTransaction.vb</DependentUpon>
+    <Compile Include="FormOrder.Designer.vb">
+      <DependentUpon>FormOrder.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormTransaction.vb">
+    <Compile Include="FormOrder.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCoupon.Designer.vb">
@@ -102,6 +102,12 @@
       <DependentUpon>FormHistory.vb</DependentUpon>
     </Compile>
     <Compile Include="FormHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaction.Designer.vb">
+      <DependentUpon>FormTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaction.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUtama.vb">
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMaster.resx">
       <DependentUpon>FormMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrder.resx">
+      <DependentUpon>FormOrder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTransaction.resx">
       <DependentUpon>FormTransaction.vb</DependentUpon>
