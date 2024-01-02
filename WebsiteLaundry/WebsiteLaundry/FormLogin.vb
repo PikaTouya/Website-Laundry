@@ -193,8 +193,7 @@ Public Class FormLoginOrSignup
                         FormUtama.btnOrder.Visible = True
                     End If
 
-                    Me.Close()
-                    FormUtama.Show()
+                    Timer2.Start()
                 Else
                     MsgBox("Mohon konfirmasi password anda!")
                 End If
