@@ -41,9 +41,9 @@ Partial Class FormHistory
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(47, 199)
+        Me.Label1.Location = New System.Drawing.Point(42, 159)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(264, 29)
+        Me.Label1.Size = New System.Drawing.Size(221, 25)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Search by ID Tansaksi :"
         '
@@ -53,9 +53,9 @@ Partial Class FormHistory
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(514, 49)
+        Me.Label3.Location = New System.Drawing.Point(457, 39)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(321, 67)
+        Me.Label3.Size = New System.Drawing.Size(270, 56)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "All History"
         '
@@ -70,10 +70,9 @@ Partial Class FormHistory
         Me.LVDataHistory.GridLines = True
         Me.LVDataHistory.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.LVDataHistory.HideSelection = False
-        Me.LVDataHistory.Location = New System.Drawing.Point(35, 257)
-        Me.LVDataHistory.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.LVDataHistory.Location = New System.Drawing.Point(31, 206)
         Me.LVDataHistory.Name = "LVDataHistory"
-        Me.LVDataHistory.Size = New System.Drawing.Size(1276, 574)
+        Me.LVDataHistory.Size = New System.Drawing.Size(1134, 460)
         Me.LVDataHistory.TabIndex = 15
         Me.LVDataHistory.UseCompatibleStateImageBehavior = False
         Me.LVDataHistory.View = System.Windows.Forms.View.Details
@@ -122,23 +121,24 @@ Partial Class FormHistory
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(311, 196)
+        Me.TBSearch.Location = New System.Drawing.Point(276, 157)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(1000, 39)
+        Me.TBSearch.Size = New System.Drawing.Size(889, 34)
         Me.TBSearch.TabIndex = 16
         Me.TBSearch.WordWrap = False
         '
         'FormHistory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1342, 859)
+        Me.ClientSize = New System.Drawing.Size(1193, 687)
         Me.Controls.Add(Me.TBSearch)
         Me.Controls.Add(Me.LVDataHistory)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormHistory"
         Me.Text = "History"
         Me.ResumeLayout(False)

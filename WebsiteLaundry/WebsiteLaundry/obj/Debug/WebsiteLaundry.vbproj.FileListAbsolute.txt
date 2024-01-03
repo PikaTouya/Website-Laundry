@@ -87,3 +87,4 @@ C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.pdb
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormOrder.resources
 C:\Users\User\OneDrive\Desktop\VB\LAUNDRY\Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormTransaction.resources
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormOrder.resources

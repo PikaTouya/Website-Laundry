@@ -77,34 +77,35 @@ Public Class FormOrder
     End Sub
 
     Private Sub berat_pakaian_TextChanged(sender As Object, e As EventArgs) Handles berat_pakaian.TextChanged
-        'periksa apakah cbjenis dan beratpakaian sudah di isi
+        ' Periksa apakah cbjenis dan beratpakaian sudah di isi
         If Not String.IsNullOrEmpty(cbjenis.Text) AndAlso Not String.IsNullOrEmpty(berat_pakaian.Text) Then
-            If cbjenis.Text = "Normal Wash" Then
-                If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                    harga_transaksi.Text = 0
-                Else
-                    harga_transaksi.Text = (10000 * Val(berat_pakaian.Text)).ToString()
+            Dim berat As Double
+            If Double.TryParse(berat_pakaian.Text, berat) Then
+                If cbjenis.Text = "Normal Wash" Then
+                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
+                        harga_transaksi.Text = 0
+                    Else
+                        harga_transaksi.Text = (10000 * berat).ToString()
+                    End If
+                ElseIf cbjenis.Text = "Normal Wash + Ironing" Then
+                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
+                        harga_transaksi.Text = 0
+                    Else
+                        harga_transaksi.Text = ((10000 * berat) + 5000).ToString()
+                    End If
+                ElseIf cbjenis.Text = "Quick Wash" Then
+                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
+                        harga_transaksi.Text = 0
+                    Else
+                        harga_transaksi.Text = (15000 * berat).ToString()
+                    End If
+                ElseIf cbjenis.Text = "Quick Wash + Ironing" Then
+                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
+                        harga_transaksi.Text = 0
+                    Else
+                        harga_transaksi.Text = ((15000 * berat) + 5000).ToString()
+                    End If
                 End If
-            ElseIf cbjenis.Text = "Normal Wash + Ironing" Then
-                If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                    harga_transaksi.Text = 0
-                Else
-                    harga_transaksi.Text = ((10000 * Val(berat_pakaian.Text)) + 5000).ToString()
-                End If
-            ElseIf cbjenis.Text = "Quick Wash" Then
-                If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                    harga_transaksi.Text = 0
-                Else
-                    harga_transaksi.Text = (15000 * Val(berat_pakaian.Text)).ToString()
-                End If
-            ElseIf cbjenis.Text = "Quick Wash + Ironing" Then
-                If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                    harga_transaksi.Text = 0
-                Else
-                    harga_transaksi.Text = ((15000 * Val(berat_pakaian.Text)) + 5000).ToString()
-                End If
-            Else
-                harga_transaksi.Text = "????"
             End If
         End If
     End Sub

@@ -170,6 +170,7 @@ Partial Class FormOrder
         Me.harga_transaksi.Size = New System.Drawing.Size(242, 91)
         Me.harga_transaksi.TabIndex = 0
         Me.harga_transaksi.Text = "Biaya"
+        Me.harga_transaksi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnorder
         '
@@ -254,7 +255,7 @@ Partial Class FormOrder
         Me.lbltelepon.TabIndex = 0
         Me.lbltelepon.Text = "telepon"
         '
-        'FormTransaction
+        'FormOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -281,7 +282,7 @@ Partial Class FormOrder
         Me.Controls.Add(Me.Id_Transaksi)
         Me.Controls.Add(Me.tanggal_transaksi)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "FormTransaction"
+        Me.Name = "FormOrder"
         Me.Text = " "
         Me.ResumeLayout(False)
         Me.PerformLayout()
