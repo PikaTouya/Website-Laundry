@@ -115,4 +115,5 @@ Public Class FormHistory
     Private Sub TBSearch_TextChanged(sender As Object, e As EventArgs) Handles TBSearch.TextChanged
         SearchData(TBSearch.Text)
     End Sub
+
 End Class
