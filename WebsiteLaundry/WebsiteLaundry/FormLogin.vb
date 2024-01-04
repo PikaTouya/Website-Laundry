@@ -5,8 +5,8 @@ Public Class FormLoginOrSignup
     Dim connectionString As String = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
     Dim strsql As String
     Sub KondisiAwal()
-        TBUsername1.Text = "USER001"
-        TBPass1.Text = "SAYAUSER001"
+        TBUsername1.Text = "ADMIN001"
+        TBPass1.Text = "SAYAADMIN001"
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""

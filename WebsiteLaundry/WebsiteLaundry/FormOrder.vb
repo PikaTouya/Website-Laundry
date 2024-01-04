@@ -81,29 +81,16 @@ Public Class FormOrder
         If Not String.IsNullOrEmpty(cbjenis.Text) AndAlso Not String.IsNullOrEmpty(berat_pakaian.Text) Then
             Dim berat As Double
             If Double.TryParse(berat_pakaian.Text, berat) Then
-                If cbjenis.Text = "Normal Wash" Then
-                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                        harga_transaksi.Text = 0
-                    Else
-                        harga_transaksi.Text = (10000 * berat).ToString()
-                    End If
-                ElseIf cbjenis.Text = "Normal Wash + Ironing" Then
-                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                        harga_transaksi.Text = 0
-                    Else
-                        harga_transaksi.Text = ((10000 * berat) + 5000).ToString()
-                    End If
-                ElseIf cbjenis.Text = "Quick Wash" Then
-                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                        harga_transaksi.Text = 0
-                    Else
-                        harga_transaksi.Text = (15000 * berat).ToString()
-                    End If
-                ElseIf cbjenis.Text = "Quick Wash + Ironing" Then
-                    If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                        harga_transaksi.Text = 0
-                    Else
-                        harga_transaksi.Text = ((15000 * berat) + 5000).ToString()
+                ' Panggil fungsi untuk mendapatkan harga dari database berdasarkan jenis cuci
+                LoadPriceFromDatabase(cbjenis.Text)
+
+                ' Hitung harga_transaksi berdasarkan harga dari database
+                If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
+                    harga_transaksi.Text = "0"
+                Else
+                    Dim harga As Double
+                    If Double.TryParse(harga_transaksi.Text, harga) Then
+                        harga_transaksi.Text = (harga * berat).ToString()
                     End If
                 End If
             End If
@@ -111,8 +98,37 @@ Public Class FormOrder
     End Sub
 
     Private Sub cbjenis_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbjenis.SelectedIndexChanged, cbcoupon.SelectedIndexChanged
-        'mengupdate harga transaksi setelah user memasukan cbjenis dan berat pakaian
+        ' Panggil fungsi untuk mendapatkan harga dari database berdasarkan jenis cuci yang dipilih
+        LoadPriceFromDatabase(cbjenis.Text)
+
+        ' Mengupdate harga transaksi setelah user memilih jenis cuci
         berat_pakaian_TextChanged(sender, e)
+    End Sub
+
+    ' Fungsi untuk mendapatkan harga dari database berdasarkan jenis cuci
+    Private Sub LoadPriceFromDatabase(jenisCuci As String)
+        ' Panggil fungsi connect dari Module1 untuk membuka koneksi ke database
+        connect()
+
+        ' Ambil harga dari database untuk jenis cuci yang dipilih
+        Dim query As String = "SELECT harga FROM Jasa WHERE jenis_cuci = @jenisCuci"
+        Cmd = New SqlCommand(query, Conn)
+        Cmd.Parameters.AddWithValue("@jenisCuci", jenisCuci)
+
+        Try
+            Dim harga As Object = Cmd.ExecuteScalar()
+
+            If harga IsNot DBNull.Value AndAlso harga IsNot Nothing Then
+                ' Set nilai textbox harga_transaksi berdasarkan harga dari database
+                harga_transaksi.Text = harga.ToString()
+            End If
+        Catch ex As Exception
+            ' Handle any exceptions that may occur during the database operation
+            MsgBox("An error occurred while retrieving the price: " & ex.Message)
+        Finally
+            ' Tutup koneksi setelah selesai membaca data
+            Conn.Close()
+        End Try
     End Sub
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
