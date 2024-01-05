@@ -10,23 +10,13 @@ Public Class FormLoginOrSignup
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""
+        TBUserID.Enabled = False
         TBUsername2.Text = ""
         TBPhoneNumber.Text = ""
         TBPass2.Text = ""
         TBConfirmPass.Text = ""
-        cmbLevel.Items.Clear()
-        TBUserID.Enabled = False
-        TBUsername2.Enabled = False
-        TBPhoneNumber.Enabled = False
-        TBPass2.Enabled = False
         TBPass2.PasswordChar = "*"
-        TBConfirmPass.Enabled = False
         TBConfirmPass.PasswordChar = "*"
-        If cmbLevel.Items.Count = 0 Then
-            cmbLevel.Items.Add("ADMIN")
-            cmbLevel.Items.Add("USER")
-            cmbLevel.DropDownStyle = ComboBoxStyle.DropDownList
-        End If
     End Sub
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -67,7 +57,7 @@ Public Class FormLoginOrSignup
                     FormUtama.btnHistory.Visible = True
                     FormUtama.btnCoupon.Visible = True
                     FormUtama.btnUtility.Visible = True
-                    FormUtama.btnTransaction.Visible = false
+                    FormUtama.btnTransaction.Visible = False
                     FormUtama.btnMaster.Visible = False
                     FormUtama.btnOrder.Visible = True
                 End If
@@ -117,38 +107,23 @@ Public Class FormLoginOrSignup
         End Using
     End Function
 
-    Private Sub cmblevel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbLevel.SelectedIndexChanged
-        ' Aktifkan TextBox1 setelah pengguna memilih cmblevel
-        TBUsername2.Enabled = True
-        TBPhoneNumber.Enabled = True
-        TBPass2.Enabled = True
-        TBConfirmPass.Enabled = True
-
-        ' Atur nilai pada TextBox1 sesuai dengan pola yang diinginkan
-        If cmbLevel.Text = "ADMIN" Then
-            TBUserID.Text = GenerateID("ADM")
-        ElseIf cmbLevel.Text = "USER" Then
-            TBUserID.Text = GenerateID("USR")
-        End If
-    End Sub
-
-
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
-        If (TBUserID.Text = "" Or TBUsername2.Text = "" Or TBPass2.Text = "" Or TBConfirmPass.Text = "" Or cmbLevel.Text = "" Or TBPhoneNumber.Text = "") Then
+        If (TBUserID.Text = "" Or TBUsername2.Text = "" Or TBPass2.Text = "" Or TBConfirmPass.Text = "" Or TBPhoneNumber.Text = "") Then
             MsgBox("Mohon isi semua data dengan lengkap!")
         Else
             ' Mendapatkan pola ID berdasarkan cmblevel
-            Dim idPola As String = If(cmbLevel.Text = "ADMIN", "ADM", "USR")
+            Dim idPola As String = If(TBUsername2.Text = "ADMIN", "ADM", "USR")
 
             Using Conn As New SqlConnection(connectionString)
                 Conn.Open()
 
                 ' Mendapatkan ID terakhir untuk pola tertentu
-                strsql = "SELECT TOP 1 id_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & idPola & "%' ORDER BY id_pengguna DESC"
+                strsql = "SELECT TOP 1 id_pengguna, nama_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & idPola & "%' ORDER BY id_pengguna DESC"
+
 
                 Using Cmd As New SqlCommand(strsql, Conn)
+                    Dim LevelPengguna As String
                     Dim Dr As SqlDataReader = Cmd.ExecuteReader()
-
                     Dim newId As String
 
                     If Dr.Read() Then
@@ -157,19 +132,32 @@ Public Class FormLoginOrSignup
                         Dim lastNumber As Integer = Integer.Parse(lastId.Substring(idPola.Length))
                         Dim newNumber As Integer = lastNumber + 1
                         newId = idPola & newNumber.ToString("D3") ' D3 untuk format tiga digit angka
+
+                        Dim NamaPengguna As String = Dr("nama_pengguna").ToString()
+
+                        If NamaPengguna = TBUsername2.Text Then
+                            MsgBox("Username ini telah dipakai, silahkan pilih username lain.")
+                            Dr.Close()
+                            Return ' Stop further execution if username exists
+                        End If
+
                     Else
                         ' Jika belum ada ID, gunakan nomor awal
                         newId = idPola & "001"
+                        LevelPengguna = "USER"
                     End If
 
-                    Dr.Close()
 
+
+
+                    Dr.Close()
                     ' Insert data baru
-                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBUsername2.Text & "', '" & TBPass2.Text & "', '" & cmbLevel.Text & "','" & TBPhoneNumber.Text & "')"
+                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBUsername2.Text & "', '" & TBPass2.Text & "', '" & LevelPengguna & "','" & TBPhoneNumber.Text & "')"
 
                     Cmd.CommandText = strsql
                     Cmd.ExecuteNonQuery()
                 End Using
+
                 If TBPass2.Text = TBConfirmPass.Text Then
                     MsgBox("Data berhasil ditambahkan!")
                     Call KondisiAwal()
@@ -214,6 +202,7 @@ Public Class FormLoginOrSignup
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If PanelSlide.Location.X > -750 Then
             PanelSlide.Location = New Point(PanelSlide.Location.X - 10, PanelSlide.Location.Y)
+            TBUserID.Text = GenerateID("USR")
         Else
             Timer1.Stop()
             btnLogIn.Enabled = True
@@ -223,6 +212,7 @@ Public Class FormLoginOrSignup
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If PanelSlide.Location.X < 0 Then
             PanelSlide.Location = New Point(PanelSlide.Location.X + 10, PanelSlide.Location.Y)
+            TBUserID.Text = ""
         Else
             Timer2.Stop()
             btnLogIn.Enabled = True
