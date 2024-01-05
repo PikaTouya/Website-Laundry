@@ -123,7 +123,7 @@ Partial Class FormLoginOrSignup
         Me.LinkLogIn.Location = New System.Drawing.Point(1076, 634)
         Me.LinkLogIn.Name = "LinkLogIn"
         Me.LinkLogIn.Size = New System.Drawing.Size(66, 25)
-        Me.LinkLogIn.TabIndex = 13
+        Me.LinkLogIn.TabIndex = 18
         Me.LinkLogIn.TabStop = True
         Me.LinkLogIn.Text = "Log In"
         '
@@ -137,7 +137,7 @@ Partial Class FormLoginOrSignup
         Me.btnCancel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnCancel2.Name = "btnCancel2"
         Me.btnCancel2.Size = New System.Drawing.Size(160, 64)
-        Me.btnCancel2.TabIndex = 12
+        Me.btnCancel2.TabIndex = 17
         Me.btnCancel2.Text = "Cancel"
         Me.btnCancel2.UseVisualStyleBackColor = True
         '
@@ -167,7 +167,7 @@ Partial Class FormLoginOrSignup
         Me.TBConfirmPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBConfirmPass.Name = "TBConfirmPass"
         Me.TBConfirmPass.Size = New System.Drawing.Size(389, 38)
-        Me.TBConfirmPass.TabIndex = 10
+        Me.TBConfirmPass.TabIndex = 15
         Me.TBConfirmPass.WordWrap = False
         '
         'Label9
@@ -204,7 +204,7 @@ Partial Class FormLoginOrSignup
         Me.TBPass2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBPass2.Name = "TBPass2"
         Me.TBPass2.Size = New System.Drawing.Size(389, 38)
-        Me.TBPass2.TabIndex = 9
+        Me.TBPass2.TabIndex = 14
         Me.TBPass2.WordWrap = False
         '
         'Label3
@@ -241,7 +241,7 @@ Partial Class FormLoginOrSignup
         Me.TBUserID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBUserID.Name = "TBUserID"
         Me.TBUserID.Size = New System.Drawing.Size(391, 38)
-        Me.TBUserID.TabIndex = 6
+        Me.TBUserID.TabIndex = 11
         '
         'Label7
         '
@@ -277,7 +277,7 @@ Partial Class FormLoginOrSignup
         Me.TBPhoneNumber.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBPhoneNumber.Name = "TBPhoneNumber"
         Me.TBPhoneNumber.Size = New System.Drawing.Size(391, 38)
-        Me.TBPhoneNumber.TabIndex = 8
+        Me.TBPhoneNumber.TabIndex = 13
         '
         'txt
         '
@@ -301,7 +301,7 @@ Partial Class FormLoginOrSignup
         Me.TBUsername2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBUsername2.Name = "TBUsername2"
         Me.TBUsername2.Size = New System.Drawing.Size(391, 38)
-        Me.TBUsername2.TabIndex = 7
+        Me.TBUsername2.TabIndex = 12
         '
         'Label4
         '
@@ -325,7 +325,7 @@ Partial Class FormLoginOrSignup
         Me.btnSignUp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(160, 64)
-        Me.btnSignUp.TabIndex = 11
+        Me.btnSignUp.TabIndex = 16
         Me.btnSignUp.Text = "Sign Up"
         Me.btnSignUp.UseVisualStyleBackColor = True
         '
@@ -435,7 +435,7 @@ Partial Class FormLoginOrSignup
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(644, 714)
+        Me.ClientSize = New System.Drawing.Size(638, 714)
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelSlide)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D

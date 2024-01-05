@@ -58,6 +58,15 @@ Public Class FormOrder
                 MsgBox("An error occurred while retrieving the phone number: " & ex.Message)
             End Try
         End Using
+
+
+        If FormCoupon.lblTotalCoupon.Text = "0" Then
+            Label8.Visible = False
+            cbcoupon.Visible = False
+        ElseIf FormCoupon.lblTotalCoupon.Text <> "0" Then
+            Label8.Visible = True
+            cbcoupon.Visible = True
+        End If
     End Sub
 
     Private Sub berat_pakaian_KeyPress(sender As Object, e As KeyPressEventArgs) Handles berat_pakaian.KeyPress
