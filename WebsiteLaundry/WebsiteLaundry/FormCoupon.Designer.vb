@@ -24,13 +24,11 @@ Partial Class FormCoupon
     Private Sub InitializeComponent()
         Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblOrderCount = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblTotalCoupon = New System.Windows.Forms.Label()
+        Me.lblUnusedCoupons = New System.Windows.Forms.Label()
+        Me.lblRemainingStars = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -44,10 +42,8 @@ Partial Class FormCoupon
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.BackColor = System.Drawing.Color.LavenderBlush
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.lblTotalCoupon)
-        Me.Panel1.Controls.Add(Me.lblOrderCount)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.lblUnusedCoupons)
+        Me.Panel1.Controls.Add(Me.lblRemainingStars)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(151, 124)
@@ -56,17 +52,41 @@ Partial Class FormCoupon
         Me.Panel1.Size = New System.Drawing.Size(670, 355)
         Me.Panel1.TabIndex = 0
         '
-        'Label11
+        'lblUnusedCoupons
         '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label11.Location = New System.Drawing.Point(320, 44)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(322, 56)
-        Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Your Coupon"
+        Me.lblUnusedCoupons.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblUnusedCoupons.AutoSize = True
+        Me.lblUnusedCoupons.Font = New System.Drawing.Font("News706 BT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUnusedCoupons.ForeColor = System.Drawing.Color.Black
+        Me.lblUnusedCoupons.Location = New System.Drawing.Point(18, 157)
+        Me.lblUnusedCoupons.Name = "lblUnusedCoupons"
+        Me.lblUnusedCoupons.Size = New System.Drawing.Size(159, 29)
+        Me.lblUnusedCoupons.TabIndex = 7
+        Me.lblUnusedCoupons.Text = "total coupon"
+        '
+        'lblRemainingStars
+        '
+        Me.lblRemainingStars.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblRemainingStars.AutoSize = True
+        Me.lblRemainingStars.Font = New System.Drawing.Font("News706 BT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRemainingStars.ForeColor = System.Drawing.Color.Black
+        Me.lblRemainingStars.Location = New System.Drawing.Point(18, 116)
+        Me.lblRemainingStars.Name = "lblRemainingStars"
+        Me.lblRemainingStars.Size = New System.Drawing.Size(137, 29)
+        Me.lblRemainingStars.TabIndex = 7
+        Me.lblRemainingStars.Text = "total order"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("News706 BT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(14, 88)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(472, 16)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "NB: Your total order time will be reset to 0 after getting the coupon"
         '
         'Label1
         '
@@ -80,65 +100,17 @@ Partial Class FormCoupon
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "NB: You will get a coupon after 10 times order"
         '
-        'Label2
+        'Label11
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("News706 BT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(12, 115)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(271, 29)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Your total order time :"
-        '
-        'lblOrderCount
-        '
-        Me.lblOrderCount.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblOrderCount.AutoSize = True
-        Me.lblOrderCount.Font = New System.Drawing.Font("News706 BT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOrderCount.ForeColor = System.Drawing.Color.Black
-        Me.lblOrderCount.Location = New System.Drawing.Point(289, 115)
-        Me.lblOrderCount.Name = "lblOrderCount"
-        Me.lblOrderCount.Size = New System.Drawing.Size(137, 29)
-        Me.lblOrderCount.TabIndex = 7
-        Me.lblOrderCount.Text = "total order"
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("News706 BT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(12, 157)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 29)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Coupon :"
-        '
-        'lblTotalCoupon
-        '
-        Me.lblTotalCoupon.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblTotalCoupon.AutoSize = True
-        Me.lblTotalCoupon.Font = New System.Drawing.Font("News706 BT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCoupon.ForeColor = System.Drawing.Color.Black
-        Me.lblTotalCoupon.Location = New System.Drawing.Point(135, 157)
-        Me.lblTotalCoupon.Name = "lblTotalCoupon"
-        Me.lblTotalCoupon.Size = New System.Drawing.Size(159, 29)
-        Me.lblTotalCoupon.TabIndex = 7
-        Me.lblTotalCoupon.Text = "total coupon"
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("News706 BT", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(14, 88)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(472, 16)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "NB: Your total order time will be reset to 0 after getting the coupon"
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label11.Location = New System.Drawing.Point(320, 44)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(322, 56)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Your Coupon"
         '
         'FormCoupon
         '
@@ -162,10 +134,8 @@ Partial Class FormCoupon
     Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblOrderCount As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents lblTotalCoupon As Label
+    Friend WithEvents lblRemainingStars As Label
+    Friend WithEvents lblUnusedCoupons As Label
     Friend WithEvents Label4 As Label
 End Class

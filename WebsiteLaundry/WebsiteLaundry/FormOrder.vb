@@ -58,15 +58,6 @@ Public Class FormOrder
                 MsgBox("An error occurred while retrieving the phone number: " & ex.Message)
             End Try
         End Using
-
-
-        If FormCoupon.lblTotalCoupon.Text = "0" Then
-            Label8.Visible = False
-            cbcoupon.Visible = False
-        ElseIf FormCoupon.lblTotalCoupon.Text <> "0" Then
-            Label8.Visible = True
-            cbcoupon.Visible = True
-        End If
     End Sub
 
     Private Sub berat_pakaian_KeyPress(sender As Object, e As KeyPressEventArgs) Handles berat_pakaian.KeyPress
@@ -112,6 +103,61 @@ Public Class FormOrder
 
         ' Mengupdate harga transaksi setelah user memilih jenis cuci
         berat_pakaian_TextChanged(sender, e)
+    End Sub
+
+    Private Sub cbcoupon_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbcoupon.SelectedIndexChanged
+        ' Update lblUnusedCoupons based on the selected coupon option
+        UpdateUnusedCouponsLabel()
+    End Sub
+
+    Private Sub UpdateUnusedCouponsLabel()
+        ' Connect to the database
+        Module1.connect()
+
+        ' Get the user's ID
+        Dim userId As String = Module1.LoggedInUserID
+
+        ' Calculate total orders without using a coupon
+        Dim totalOrderWithoutCouponQuery As String = "SELECT COUNT(*) FROM Transaksi WHERE pakai_kupon = 0 AND id_pengguna = @id_pengguna"
+        Using cmdTotalOrderWithoutCoupon As New SqlCommand(totalOrderWithoutCouponQuery, Module1.Conn)
+            cmdTotalOrderWithoutCoupon.Parameters.AddWithValue("@id_pengguna", userId)
+
+            Try
+                Dim totalOrderWithoutCoupon As Integer = CInt(cmdTotalOrderWithoutCoupon.ExecuteScalar())
+
+                ' Calculate the remaining stars
+                Dim remainingStars As Integer = totalOrderWithoutCoupon Mod 10
+
+                ' Display the remaining stars
+                FormCoupon.lblRemainingStars.Text = "Remaining Stars: " & remainingStars.ToString()
+
+                ' Calculate the unused coupons
+                Dim totalOrderWithCouponQuery As String = "SELECT COUNT(*) FROM Transaksi WHERE pakai_kupon = 1 AND id_pengguna = @id_pengguna"
+                Using cmdTotalOrderWithCoupon As New SqlCommand(totalOrderWithCouponQuery, Module1.Conn)
+                    cmdTotalOrderWithCoupon.Parameters.AddWithValue("@id_pengguna", userId)
+
+                    Try
+                        Dim totalOrderWithCoupon As Integer = CInt(cmdTotalOrderWithCoupon.ExecuteScalar())
+
+                        Dim unusedCoupons As Integer = (totalOrderWithoutCoupon \ 10) - totalOrderWithCoupon
+
+                        ' If "Yes, I wanna use my coupon!" is selected, reduce the unused coupons by 1
+                        If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
+                            unusedCoupons -= 1
+                        End If
+
+                        ' Display the unused coupons
+                        FormCoupon.lblUnusedCoupons.Text = "Unused Coupons: " & unusedCoupons.ToString()
+                    Catch ex As Exception
+                        ' Handle any exceptions that may occur during the database operation
+                        MsgBox("An error occurred while calculating total orders with coupon: " & ex.Message)
+                    End Try
+                End Using
+            Catch ex As Exception
+                ' Handle any exceptions that may occur during the database operation
+                MsgBox("An error occurred while calculating total orders without coupon: " & ex.Message)
+            End Try
+        End Using
     End Sub
 
     ' Fungsi untuk mendapatkan harga dari database berdasarkan jenis cuci
