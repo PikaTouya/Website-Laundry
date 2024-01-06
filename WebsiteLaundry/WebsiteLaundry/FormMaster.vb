@@ -8,5 +8,4 @@
         Me.Close()
         Call FormUtama.OpenChildForm(New MasterFormJasa)
     End Sub
-
 End Class

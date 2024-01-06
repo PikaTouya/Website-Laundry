@@ -22,7 +22,7 @@ Public Class FormCoupon
                 Dim totalOrderWithoutCoupon As Integer = CInt(cmdTotalOrderWithoutCoupon.ExecuteScalar())
 
                 ' Calculate the remaining stars
-                Dim remainingStars As Integer = totalOrderWithoutCoupon Mod 2
+                Dim remainingStars As Integer = totalOrderWithoutCoupon Mod 10
 
                 ' Display the remaining stars
                 lblRemainingStars.Text = "Remaining Stars: " & remainingStars.ToString()
@@ -35,7 +35,7 @@ Public Class FormCoupon
                     Try
                         Dim totalOrderWithCoupon As Integer = CInt(cmdTotalOrderWithCoupon.ExecuteScalar())
 
-                        Dim unusedCoupons As Integer = (totalOrderWithoutCoupon \ 2) - totalOrderWithCoupon
+                        Dim unusedCoupons As Integer = (totalOrderWithoutCoupon \ 10) - totalOrderWithCoupon
 
                         ' Display the unused coupons
                         lblUnusedCoupons.Text = "Unused Coupons: " & unusedCoupons.ToString()

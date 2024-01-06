@@ -3,6 +3,11 @@ Imports System.Globalization 'untuk desimal
 Public Class FormOrder
     Private transactionCounter As Integer = 1
     Private Sub FormTransaction_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim frmCoupon As New FormCoupon()
+        frmCoupon.Show() ' alasan mengshow form coupon, karena ingin mengecek bisa pakai kupon atau tidak, jika tidak maka visible false
+        frmCoupon.Hide() ' Jika Anda tidak ingin menampilkan FormCoupon secara langsung
+
+
         ' Tetapkan tanggal dan jam dan hari
         tanggal_transaksi.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy HH:mm:ss")
 
@@ -58,6 +63,14 @@ Public Class FormOrder
                 MsgBox("An error occurred while retrieving the phone number: " & ex.Message)
             End Try
         End Using
+
+        If frmCoupon.lblUnusedCoupons.Text = "Unused Coupons: 0" Then
+            Label8.Visible = False
+            cbcoupon.Visible = False
+        Else
+            Label8.Visible = True
+            cbcoupon.Visible = True
+        End If
     End Sub
 
     Private Sub berat_pakaian_KeyPress(sender As Object, e As KeyPressEventArgs) Handles berat_pakaian.KeyPress

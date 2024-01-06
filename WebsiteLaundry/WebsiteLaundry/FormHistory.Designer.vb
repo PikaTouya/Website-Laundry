@@ -32,9 +32,9 @@ Partial Class FormHistory
         Me.jenis_cuci = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.pakai_kupon = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.harga_transaksi = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Status_transaction = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TBSearch = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Status_transaction = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label1
@@ -43,9 +43,9 @@ Partial Class FormHistory
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(47, 199)
+        Me.Label1.Location = New System.Drawing.Point(42, 159)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(264, 29)
+        Me.Label1.Size = New System.Drawing.Size(221, 25)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Search by ID Tansaksi :"
         '
@@ -55,9 +55,9 @@ Partial Class FormHistory
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(514, 49)
+        Me.Label3.Location = New System.Drawing.Point(457, 39)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(321, 67)
+        Me.Label3.Size = New System.Drawing.Size(270, 56)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "All History"
         '
@@ -72,10 +72,9 @@ Partial Class FormHistory
         Me.LVDataHistory.GridLines = True
         Me.LVDataHistory.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.LVDataHistory.HideSelection = False
-        Me.LVDataHistory.Location = New System.Drawing.Point(35, 258)
-        Me.LVDataHistory.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.LVDataHistory.Location = New System.Drawing.Point(31, 206)
         Me.LVDataHistory.Name = "LVDataHistory"
-        Me.LVDataHistory.Size = New System.Drawing.Size(1276, 574)
+        Me.LVDataHistory.Size = New System.Drawing.Size(1134, 460)
         Me.LVDataHistory.TabIndex = 15
         Me.LVDataHistory.UseCompatibleStateImageBehavior = False
         Me.LVDataHistory.View = System.Windows.Forms.View.Details
@@ -118,37 +117,38 @@ Partial Class FormHistory
         Me.harga_transaksi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.harga_transaksi.Width = 116
         '
+        'Status_transaction
+        '
+        Me.Status_transaction.Text = "Status"
+        Me.Status_transaction.Width = 177
+        '
         'TBSearch
         '
         Me.TBSearch.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(310, 196)
+        Me.TBSearch.Location = New System.Drawing.Point(276, 157)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(1000, 39)
+        Me.TBSearch.Size = New System.Drawing.Size(889, 34)
         Me.TBSearch.TabIndex = 16
         Me.TBSearch.WordWrap = False
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(1015, 113)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(902, 90)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(178, 22)
         Me.DateTimePicker1.TabIndex = 17
-        '
-        'Status_transaction
-        '
-        Me.Status_transaction.Text = "Status"
-        Me.Status_transaction.Width = 177
         '
         'FormHistory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1342, 859)
+        Me.ClientSize = New System.Drawing.Size(1193, 687)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TBSearch)
         Me.Controls.Add(Me.LVDataHistory)
