@@ -340,7 +340,7 @@ Partial Class FormUtama
         '
         Me.IconChildForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.IconChildForm.ForeColor = System.Drawing.Color.Gainsboro
-        Me.IconChildForm.IconChar = FontAwesome.Sharp.IconChar.CottonBureau
+        Me.IconChildForm.IconChar = FontAwesome.Sharp.IconChar.Landmark
         Me.IconChildForm.IconColor = System.Drawing.Color.Gainsboro
         Me.IconChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconChildForm.IconSize = 50
@@ -417,12 +417,12 @@ Partial Class FormUtama
         Me.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOrder.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnOrder.Location = New System.Drawing.Point(468, 688)
+        Me.btnOrder.Location = New System.Drawing.Point(486, 683)
         Me.btnOrder.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnOrder.Name = "btnOrder"
         Me.btnOrder.Size = New System.Drawing.Size(331, 111)
         Me.btnOrder.TabIndex = 3
-        Me.btnOrder.Text = "Mulai Mencuci!"
+        Me.btnOrder.Text = "Start Laundering!"
         Me.btnOrder.UseVisualStyleBackColor = True
         '
         'Panel3
@@ -472,31 +472,31 @@ Partial Class FormUtama
         Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
         Me.Label4.Location = New System.Drawing.Point(0, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(252, 27)
+        Me.Label4.Size = New System.Drawing.Size(572, 27)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Anda Senang Kami Senang"
+        Me.Label4.Text = "Our swift cleanliness ensures your clothes shine in an instant."
         '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Cambria", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(404, 623)
+        Me.Label3.Location = New System.Drawing.Point(480, 599)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(482, 35)
+        Me.Label3.Size = New System.Drawing.Size(345, 33)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Website jitu untuk mencuci pakaian anda"
+        Me.Label3.Text = "We make you clothes shine"
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bell MT", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Bell MT", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(539, 296)
+        Me.Label2.Location = New System.Drawing.Point(497, 259)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(201, 33)
+        Me.Label2.Size = New System.Drawing.Size(290, 46)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Bobok Laundry"
         '
@@ -504,11 +504,11 @@ Partial Class FormUtama
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bauhaus 93", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Bauhaus 93", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(420, 215)
+        Me.Label1.Location = New System.Drawing.Point(363, 137)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(422, 82)
+        Me.Label1.Size = New System.Drawing.Size(559, 108)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Welcome to"
         '
@@ -517,7 +517,7 @@ Partial Class FormUtama
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(447, 332)
+        Me.PictureBox1.Location = New System.Drawing.Point(455, 325)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(352, 255)

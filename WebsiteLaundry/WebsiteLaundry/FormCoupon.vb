@@ -50,4 +50,5 @@ Public Class FormCoupon
             End Try
         End Using
     End Sub
+
 End Class

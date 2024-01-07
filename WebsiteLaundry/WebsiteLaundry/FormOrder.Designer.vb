@@ -51,11 +51,11 @@ Partial Class FormOrder
         '
         Me.tanggal_transaksi.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.tanggal_transaksi.AutoSize = True
-        Me.tanggal_transaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tanggal_transaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tanggal_transaksi.ForeColor = System.Drawing.Color.Gainsboro
-        Me.tanggal_transaksi.Location = New System.Drawing.Point(283, 414)
+        Me.tanggal_transaksi.Location = New System.Drawing.Point(261, 386)
         Me.tanggal_transaksi.Name = "tanggal_transaksi"
-        Me.tanggal_transaksi.Size = New System.Drawing.Size(145, 32)
+        Me.tanggal_transaksi.Size = New System.Drawing.Size(154, 32)
         Me.tanggal_transaksi.TabIndex = 0
         Me.tanggal_transaksi.Text = "Date/Time"
         '
@@ -65,7 +65,7 @@ Partial Class FormOrder
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(740, 407)
+        Me.Label3.Location = New System.Drawing.Point(714, 393)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(202, 32)
         Me.Label3.TabIndex = 0
@@ -77,7 +77,7 @@ Partial Class FormOrder
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label4.Location = New System.Drawing.Point(283, 304)
+        Me.Label4.Location = New System.Drawing.Point(261, 276)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(212, 32)
         Me.Label4.TabIndex = 0
@@ -89,7 +89,7 @@ Partial Class FormOrder
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label5.Location = New System.Drawing.Point(283, 461)
+        Me.Label5.Location = New System.Drawing.Point(261, 433)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(189, 32)
         Me.Label5.TabIndex = 0
@@ -101,7 +101,7 @@ Partial Class FormOrder
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label6.Location = New System.Drawing.Point(283, 382)
+        Me.Label6.Location = New System.Drawing.Point(261, 354)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(276, 32)
         Me.Label6.TabIndex = 0
@@ -113,7 +113,7 @@ Partial Class FormOrder
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label7.Location = New System.Drawing.Point(740, 296)
+        Me.Label7.Location = New System.Drawing.Point(714, 282)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(253, 32)
         Me.Label7.TabIndex = 0
@@ -123,11 +123,11 @@ Partial Class FormOrder
         '
         Me.Id_Transaksi.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Id_Transaksi.AutoSize = True
-        Me.Id_Transaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Id_Transaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Id_Transaksi.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Id_Transaksi.Location = New System.Drawing.Point(283, 335)
+        Me.Id_Transaksi.Location = New System.Drawing.Point(261, 307)
         Me.Id_Transaksi.Name = "Id_Transaksi"
-        Me.Id_Transaksi.Size = New System.Drawing.Size(211, 32)
+        Me.Id_Transaksi.Size = New System.Drawing.Size(226, 32)
         Me.Id_Transaksi.TabIndex = 0
         Me.Id_Transaksi.Text = "ID Transsaction"
         '
@@ -137,7 +137,7 @@ Partial Class FormOrder
         Me.cbjenis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbjenis.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbjenis.FormattingEnabled = True
-        Me.cbjenis.Location = New System.Drawing.Point(746, 443)
+        Me.cbjenis.Location = New System.Drawing.Point(720, 430)
         Me.cbjenis.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbjenis.Name = "cbjenis"
         Me.cbjenis.Size = New System.Drawing.Size(351, 40)
@@ -147,7 +147,7 @@ Partial Class FormOrder
         '
         Me.berat_pakaian.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.berat_pakaian.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.berat_pakaian.Location = New System.Drawing.Point(746, 332)
+        Me.berat_pakaian.Location = New System.Drawing.Point(720, 319)
         Me.berat_pakaian.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.berat_pakaian.Name = "berat_pakaian"
         Me.berat_pakaian.Size = New System.Drawing.Size(300, 39)
@@ -159,7 +159,7 @@ Partial Class FormOrder
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(1050, 335)
+        Me.Label1.Location = New System.Drawing.Point(1024, 322)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(49, 32)
         Me.Label1.TabIndex = 0
@@ -183,9 +183,9 @@ Partial Class FormOrder
         '
         'btnorder
         '
-        Me.btnorder.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnorder.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnorder.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnorder.Location = New System.Drawing.Point(827, 797)
+        Me.btnorder.Location = New System.Drawing.Point(441, 769)
         Me.btnorder.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnorder.Name = "btnorder"
         Me.btnorder.Size = New System.Drawing.Size(200, 70)
@@ -195,9 +195,9 @@ Partial Class FormOrder
         '
         'btncancel
         '
-        Me.btncancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btncancel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btncancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btncancel.Location = New System.Drawing.Point(1059, 797)
+        Me.btncancel.Location = New System.Drawing.Point(673, 769)
         Me.btncancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(200, 70)
@@ -211,7 +211,7 @@ Partial Class FormOrder
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label8.Location = New System.Drawing.Point(740, 520)
+        Me.Label8.Location = New System.Drawing.Point(714, 506)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(354, 32)
         Me.Label8.TabIndex = 0
@@ -223,7 +223,7 @@ Partial Class FormOrder
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label9.Location = New System.Drawing.Point(739, 558)
+        Me.Label9.Location = New System.Drawing.Point(713, 545)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(0, 32)
         Me.Label9.TabIndex = 0
@@ -234,7 +234,7 @@ Partial Class FormOrder
         Me.cbcoupon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbcoupon.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbcoupon.FormattingEnabled = True
-        Me.cbcoupon.Location = New System.Drawing.Point(745, 555)
+        Me.cbcoupon.Location = New System.Drawing.Point(719, 542)
         Me.cbcoupon.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbcoupon.Name = "cbcoupon"
         Me.cbcoupon.Size = New System.Drawing.Size(354, 40)
@@ -246,7 +246,7 @@ Partial Class FormOrder
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label10.Location = New System.Drawing.Point(283, 541)
+        Me.Label10.Location = New System.Drawing.Point(261, 513)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(286, 32)
         Me.Label10.TabIndex = 0
@@ -256,11 +256,11 @@ Partial Class FormOrder
         '
         Me.Id_User.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Id_User.AutoSize = True
-        Me.Id_User.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Id_User.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Id_User.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Id_User.Location = New System.Drawing.Point(283, 493)
+        Me.Id_User.Location = New System.Drawing.Point(261, 465)
         Me.Id_User.Name = "Id_User"
-        Me.Id_User.Size = New System.Drawing.Size(107, 32)
+        Me.Id_User.Size = New System.Drawing.Size(114, 32)
         Me.Id_User.TabIndex = 0
         Me.Id_User.Text = "User ID"
         '
@@ -268,21 +268,21 @@ Partial Class FormOrder
         '
         Me.lbltelepon.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbltelepon.AutoSize = True
-        Me.lbltelepon.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltelepon.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbltelepon.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lbltelepon.Location = New System.Drawing.Point(285, 571)
+        Me.lbltelepon.Location = New System.Drawing.Point(263, 543)
         Me.lbltelepon.Name = "lbltelepon"
-        Me.lbltelepon.Size = New System.Drawing.Size(216, 32)
+        Me.lbltelepon.Size = New System.Drawing.Size(230, 32)
         Me.lbltelepon.TabIndex = 0
         Me.lbltelepon.Text = "User Telephone"
         '
         'Panel1
         '
-        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.harga_transaksi)
-        Me.Panel1.Location = New System.Drawing.Point(827, 713)
+        Me.Panel1.Location = New System.Drawing.Point(441, 685)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(432, 55)
         Me.Panel1.TabIndex = 4

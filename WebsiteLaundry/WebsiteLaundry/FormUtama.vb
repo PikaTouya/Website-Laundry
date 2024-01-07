@@ -143,6 +143,8 @@ Public Class FormUtama
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
         OpenChildForm(New FormOrder)
+        IconChildForm.IconChar = IconChar.CartPlus
+        lblChildForm.Text = "Order"
     End Sub
 
     Private Sub btnlogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click

@@ -39,11 +39,11 @@ Partial Class FormHistory
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(29, 226)
+        Me.Label1.Location = New System.Drawing.Point(29, 238)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(264, 29)
+        Me.Label1.Size = New System.Drawing.Size(311, 32)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Search by ID Tansaksi :"
         '
@@ -53,11 +53,11 @@ Partial Class FormHistory
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(490, 49)
+        Me.Label3.Location = New System.Drawing.Point(476, 45)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(321, 67)
+        Me.Label3.Size = New System.Drawing.Size(377, 67)
         Me.Label3.TabIndex = 11
-        Me.Label3.Text = "All History"
+        Me.Label3.Text = "Your History"
         '
         'LVDataHistory
         '
@@ -81,34 +81,34 @@ Partial Class FormHistory
         '
         'id_transaksi
         '
-        Me.id_transaksi.Text = "ID Transaksi"
+        Me.id_transaksi.Text = "ID Transaction"
         Me.id_transaksi.Width = 140
         '
         'tanggal_transaksi
         '
-        Me.tanggal_transaksi.Text = "Tanggal Transaksi"
+        Me.tanggal_transaksi.Text = "Transaction Date"
         Me.tanggal_transaksi.Width = 222
         '
         'berat_pakaian
         '
-        Me.berat_pakaian.Text = "Berat Pakaian"
+        Me.berat_pakaian.Text = "Weight of Clothes"
         Me.berat_pakaian.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.berat_pakaian.Width = 136
         '
         'jenis_cuci
         '
-        Me.jenis_cuci.Text = "Paket Cucian"
+        Me.jenis_cuci.Text = "Type of Wash"
         Me.jenis_cuci.Width = 244
         '
         'pakai_kupon
         '
-        Me.pakai_kupon.Text = "Kupon Terpakai"
+        Me.pakai_kupon.Text = "Coupon"
         Me.pakai_kupon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.pakai_kupon.Width = 171
         '
         'harga_transaksi
         '
-        Me.harga_transaksi.Text = "Total harga"
+        Me.harga_transaksi.Text = "Total Price"
         Me.harga_transaksi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.harga_transaksi.Width = 173
         '
@@ -123,10 +123,10 @@ Partial Class FormHistory
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(292, 223)
+        Me.TBSearch.Location = New System.Drawing.Point(346, 235)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(983, 39)
+        Me.TBSearch.Size = New System.Drawing.Size(929, 39)
         Me.TBSearch.TabIndex = 16
         Me.TBSearch.WordWrap = False
         '

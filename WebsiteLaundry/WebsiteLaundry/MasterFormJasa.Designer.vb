@@ -59,21 +59,21 @@ Partial Class MasterFormJasa
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(369, 72)
+        Me.Label3.Location = New System.Drawing.Point(380, 73)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(586, 67)
+        Me.Label3.Size = New System.Drawing.Size(544, 67)
         Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Daftar Paket Cucian"
+        Me.Label3.Text = "Laundry Price List"
         '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
         Me.Label1.Location = New System.Drawing.Point(165, 351)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(455, 53)
+        Me.Label1.Size = New System.Drawing.Size(405, 46)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Normal Wash           "
         '
@@ -81,23 +81,23 @@ Partial Class MasterFormJasa
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft PhagsPa", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(165, 249)
+        Me.Label2.Location = New System.Drawing.Point(162, 237)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(302, 53)
+        Me.Label2.Size = New System.Drawing.Size(442, 63)
         Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Per Kilo Baju"
+        Me.Label2.Text = "Price per kilogram"
         '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
         Me.Label4.Location = New System.Drawing.Point(165, 425)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(528, 53)
+        Me.Label4.Size = New System.Drawing.Size(461, 46)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Normal Wash + Ironing "
         '
@@ -105,11 +105,11 @@ Partial Class MasterFormJasa
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gainsboro
         Me.Label5.Location = New System.Drawing.Point(165, 499)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(294, 53)
+        Me.Label5.Size = New System.Drawing.Size(258, 46)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Quick Wash "
         '
@@ -117,11 +117,11 @@ Partial Class MasterFormJasa
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
         Me.Label6.Location = New System.Drawing.Point(165, 571)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(497, 53)
+        Me.Label6.Size = New System.Drawing.Size(434, 46)
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "Quick Wash + Ironing "
         '
@@ -134,6 +134,7 @@ Partial Class MasterFormJasa
         Me.tbharganormal.Name = "tbharganormal"
         Me.tbharganormal.Size = New System.Drawing.Size(411, 52)
         Me.tbharganormal.TabIndex = 20
+        Me.tbharganormal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextBox2
         '
@@ -144,6 +145,7 @@ Partial Class MasterFormJasa
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(411, 52)
         Me.TextBox2.TabIndex = 20
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbhargaquick
         '
@@ -154,6 +156,7 @@ Partial Class MasterFormJasa
         Me.tbhargaquick.Name = "tbhargaquick"
         Me.tbhargaquick.Size = New System.Drawing.Size(411, 52)
         Me.tbhargaquick.TabIndex = 20
+        Me.tbhargaquick.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextBox4
         '
@@ -164,6 +167,7 @@ Partial Class MasterFormJasa
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(411, 52)
         Me.TextBox4.TabIndex = 20
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbharganormalsetrika
         '
@@ -174,6 +178,7 @@ Partial Class MasterFormJasa
         Me.tbharganormalsetrika.Name = "tbharganormalsetrika"
         Me.tbharganormalsetrika.Size = New System.Drawing.Size(411, 52)
         Me.tbharganormalsetrika.TabIndex = 20
+        Me.tbharganormalsetrika.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbhargaquicksetrika
         '
@@ -184,10 +189,11 @@ Partial Class MasterFormJasa
         Me.tbhargaquicksetrika.Name = "tbhargaquicksetrika"
         Me.tbhargaquicksetrika.Size = New System.Drawing.Size(411, 52)
         Me.tbhargaquicksetrika.TabIndex = 20
+        Me.tbhargaquicksetrika.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'SavePrice
         '
-        Me.SavePrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SavePrice.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.SavePrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SavePrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SavePrice.ForeColor = System.Drawing.Color.Gainsboro
@@ -221,7 +227,7 @@ Partial Class MasterFormJasa
         Me.Controls.Add(Me.IconBack)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MasterFormJasa"
-        Me.Text = "MasterFormJasa"
+        Me.Text = "Price List"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

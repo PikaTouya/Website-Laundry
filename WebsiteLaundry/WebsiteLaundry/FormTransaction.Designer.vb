@@ -95,10 +95,10 @@ Partial Class FormTransaction
         Me.LVDataTransaction.GridLines = True
         Me.LVDataTransaction.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.LVDataTransaction.HideSelection = False
-        Me.LVDataTransaction.Location = New System.Drawing.Point(15, 586)
+        Me.LVDataTransaction.Location = New System.Drawing.Point(24, 598)
         Me.LVDataTransaction.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LVDataTransaction.Name = "LVDataTransaction"
-        Me.LVDataTransaction.Size = New System.Drawing.Size(1276, 323)
+        Me.LVDataTransaction.Size = New System.Drawing.Size(1261, 294)
         Me.LVDataTransaction.Sorting = System.Windows.Forms.SortOrder.Descending
         Me.LVDataTransaction.TabIndex = 0
         Me.LVDataTransaction.UseCompatibleStateImageBehavior = False
@@ -106,12 +106,12 @@ Partial Class FormTransaction
         '
         'id_transaksi
         '
-        Me.id_transaksi.Text = "ID Transaksi"
+        Me.id_transaksi.Text = "ID Transaction"
         Me.id_transaksi.Width = 137
         '
         'tanggal_transaksi
         '
-        Me.tanggal_transaksi.Text = "Tanggal Transaksi"
+        Me.tanggal_transaksi.Text = "Transaction Date"
         Me.tanggal_transaksi.Width = 245
         '
         'id_pengguna
@@ -121,24 +121,24 @@ Partial Class FormTransaction
         '
         'berat_pakaian
         '
-        Me.berat_pakaian.Text = "Berat "
+        Me.berat_pakaian.Text = "Weight"
         Me.berat_pakaian.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.berat_pakaian.Width = 179
         '
         'jenis_cuci
         '
-        Me.jenis_cuci.Text = "Paket Cucian"
+        Me.jenis_cuci.Text = "Type of wash"
         Me.jenis_cuci.Width = 161
         '
         'pakai_kupon
         '
-        Me.pakai_kupon.Text = "Kupon Terpakai"
+        Me.pakai_kupon.Text = "Coupon"
         Me.pakai_kupon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.pakai_kupon.Width = 139
         '
         'harga_transaksi
         '
-        Me.harga_transaksi.Text = "Total harga"
+        Me.harga_transaksi.Text = "Total Price"
         Me.harga_transaksi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.harga_transaksi.Width = 176
         '
@@ -152,7 +152,7 @@ Partial Class FormTransaction
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(435, 32)
+        Me.Label3.Location = New System.Drawing.Point(438, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(447, 67)
         Me.Label3.TabIndex = 18
@@ -162,11 +162,11 @@ Partial Class FormTransaction
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(557, 189)
+        Me.Label1.Location = New System.Drawing.Point(250, 137)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 29)
+        Me.Label1.Size = New System.Drawing.Size(148, 32)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Search by "
         '
@@ -174,12 +174,12 @@ Partial Class FormTransaction
         '
         Me.TBSearch.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
-        Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBSearch.Font = New System.Drawing.Font("Symbol", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(852, 190)
+        Me.TBSearch.Location = New System.Drawing.Point(572, 135)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(439, 39)
+        Me.TBSearch.Size = New System.Drawing.Size(439, 47)
         Me.TBSearch.TabIndex = 20
         Me.TBSearch.WordWrap = False
         '
@@ -195,7 +195,7 @@ Partial Class FormTransaction
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Panel1.Location = New System.Drawing.Point(15, 185)
+        Me.Panel1.Location = New System.Drawing.Point(381, 195)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(525, 380)
         Me.Panel1.TabIndex = 21
@@ -337,9 +337,9 @@ Partial Class FormTransaction
         Me.Label12.Location = New System.Drawing.Point(3, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.Label12.Size = New System.Drawing.Size(83, 39)
+        Me.Label12.Size = New System.Drawing.Size(98, 39)
         Me.Label12.TabIndex = 8
-        Me.Label12.Text = "Kupon"
+        Me.Label12.Text = "Coupon"
         '
         'LblKuponTerpakai
         '
@@ -544,7 +544,7 @@ Partial Class FormTransaction
         Me.CBTipe.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CBTipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBTipe.FormattingEnabled = True
-        Me.CBTipe.Location = New System.Drawing.Point(677, 189)
+        Me.CBTipe.Location = New System.Drawing.Point(404, 136)
         Me.CBTipe.Name = "CBTipe"
         Me.CBTipe.Size = New System.Drawing.Size(162, 40)
         Me.CBTipe.TabIndex = 27
@@ -555,7 +555,7 @@ Partial Class FormTransaction
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSave.ForeColor = System.Drawing.Color.Gainsboro
-        Me.BtnSave.Location = New System.Drawing.Point(559, 497)
+        Me.BtnSave.Location = New System.Drawing.Point(912, 505)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(200, 70)
         Me.BtnSave.TabIndex = 22
@@ -576,7 +576,7 @@ Partial Class FormTransaction
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TBSearch)
         Me.Name = "FormTransaction"
-        Me.Text = "FormTransaction"
+        Me.Text = "Transaction"
         Me.Panel1.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
         Me.TableLayoutPanel6.ResumeLayout(False)

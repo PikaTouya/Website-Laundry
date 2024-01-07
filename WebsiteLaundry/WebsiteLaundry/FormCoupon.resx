@@ -120,4 +120,13 @@
   <metadata name="FileSystemWatcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>	Welcome to 'Bobok Laundry' Coupon Site, where we offer exclusive coupons for our regular customers. These coupons can be used to get discounts when placing an order.
+
+- For every 10 transactions, you'll receive a coupon.
+- The coupons you receive have no expiration date.
+- You can use these coupons to get a 100% discount for one laundry session.
+
+So, what are you waiting for? Subscribe now and get discounts up to 100%!</value>
+  </data>
 </root>

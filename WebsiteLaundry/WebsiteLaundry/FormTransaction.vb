@@ -10,6 +10,7 @@ Public Class FormTransaction
         CBTipe.Items.Add("ID Transaction")
         CBTipe.Items.Add("ID User")
         CBTipe.DropDownStyle = ComboBoxStyle.DropDownList
+        CBTipe.Text = "ID Transaction"
         CBStatus.Items.Add("In Progress..")
         CBStatus.Items.Add("Completed")
         CBStatus.DropDownStyle = ComboBoxStyle.DropDownList
@@ -236,6 +237,7 @@ Public Class FormTransaction
         LblTotalHarga.Text = ""
         LblTypeOfWash.Text = ""
         LblWeight.Text = ""
-        CBStatus.Text = ""
+        CBStatus.Visible = False
     End Sub
+
 End Class
