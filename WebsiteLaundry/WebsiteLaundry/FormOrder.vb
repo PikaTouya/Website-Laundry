@@ -2,7 +2,7 @@
 Imports System.Globalization 'untuk desimal
 Public Class FormOrder
     Private transactionCounter As Integer = 1
-    Private Sub FormTransaction_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FormOrder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim frmCoupon As New FormCoupon()
         frmCoupon.Show() ' alasan mengshow form coupon, karena ingin mengecek bisa pakai kupon atau tidak, jika tidak maka visible false
         frmCoupon.Hide() ' Jika Anda tidak ingin menampilkan FormCoupon secara langsung
@@ -210,10 +210,10 @@ Public Class FormOrder
         Else
             ' Connect to the database
             Module1.connect()
-
+            Dim StatusOrder As String = "In Progress.."
             ' Prepare the SQL statement for inserting data into the database
-            Dim strsql As String = "INSERT INTO Transaksi (id_transaksi, id_pengguna, tanggal_transaksi, jenis_cuci, berat_pakaian, harga_transaksi, pakai_kupon) " &
-                               "VALUES (@id_transaksi, @id_pengguna, @tanggal_transaksi, @jenis_cuci, @berat_pakaian, @harga_transaksi, @pakai_kupon)"
+            Dim strsql As String = "INSERT INTO Transaksi (id_transaksi, id_pengguna, tanggal_transaksi, jenis_cuci, berat_pakaian, harga_transaksi, pakai_kupon, status_transaksi) " &
+                               "VALUES (@id_transaksi, @id_pengguna, @tanggal_transaksi, @jenis_cuci, @berat_pakaian, @harga_transaksi, @pakai_kupon, @status_transaksi)"
 
             ' Create a new SqlCommand object
             Dim Cmd As New SqlClient.SqlCommand(strsql, Module1.Conn)
@@ -226,6 +226,7 @@ Public Class FormOrder
             Cmd.Parameters.AddWithValue("@berat_pakaian", Decimal.Parse(berat_pakaian.Text))
             Cmd.Parameters.AddWithValue("@harga_transaksi", Decimal.Parse(harga_transaksi.Text))
             Cmd.Parameters.AddWithValue("@pakai_kupon", If(cbcoupon.Text = "Yes, I wanna use my coupon!", True, False))
+            Cmd.Parameters.AddWithValue("@status_transaksi", StatusOrder)
 
             Try
                 ' Execute the SQL command to insert data into the database

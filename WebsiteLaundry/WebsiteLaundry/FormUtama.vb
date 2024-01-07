@@ -111,7 +111,6 @@ Public Class FormUtama
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
-
         Me.Hide()
         FormLoginOrSignup.Show()
     End Sub
@@ -142,6 +141,10 @@ Public Class FormUtama
         OpenChildForm(New FormUtility)
     End Sub
 
+    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
+        OpenChildForm(New FormOrder)
+    End Sub
+
     Private Sub btnlogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click
         Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
@@ -153,26 +156,15 @@ Public Class FormUtama
                 lblNamaUser.Visible = False
                 IconUser.Visible = False
                 btnOrder.Visible = False
+            Else
+                PanelMenu.Visible = False
+                btnlogin.Visible = True
+                lblNamaUser.Visible = False
+                IconUser.Visible = False
+                btnOrder.Visible = False
             End If
         End If
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     'codingan agar PanelNav dapat didrag
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
@@ -215,7 +207,4 @@ Public Class FormUtama
         Public Shared color6 As Color = Color.FromArgb(24, 161, 251)
     End Structure
 
-    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
-        OpenChildForm(New FormOrder)
-    End Sub
 End Class

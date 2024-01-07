@@ -25,3 +25,7 @@ INSERT INTO Pengguna(id_pengguna, nama_pengguna, password_pengguna, level_penggu
 INSERT INTO Pengguna(id_pengguna, nama_pengguna, password_pengguna, level_pengguna, nomortelepon_pengguna) VALUES ('ADM100', 'ADMIN100', 'SAYAADMIN100', 'ADMIN', '0812947353923')
 
 INSERT INTO Transaksi(id_transaksi, id_pengguna, tanggal_transaksi, jenis_cuci, berat_pakaian, harga_transaksi, pakai_kupon) VALUES ('TR001', 'USR001', GETDATE(), 'Cuci reguler', 5, 50000, 1)
+
+create table Transaksi (
+status_transaksi varchar(15)
+)

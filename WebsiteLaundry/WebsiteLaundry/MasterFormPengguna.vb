@@ -193,7 +193,6 @@
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
             Dr.Close()
         End If
-
         ' Bersihkan ListView
         LVData.Items.Clear()
 

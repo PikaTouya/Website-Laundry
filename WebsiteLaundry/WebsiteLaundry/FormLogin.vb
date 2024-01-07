@@ -5,8 +5,8 @@ Public Class FormLoginOrSignup
     Dim connectionString As String = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
     Dim strsql As String
     Sub KondisiAwal()
-        TBUsername1.Text = "USER001"
-        TBPass1.Text = "SAYAUSER001"
+        TBUsername1.Text = "ADMIN001"
+        TBPass1.Text = "SAYAADMIN001"
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""
@@ -111,18 +111,31 @@ Public Class FormLoginOrSignup
         If (TBUserID.Text = "" Or TBUsername2.Text = "" Or TBPass2.Text = "" Or TBConfirmPass.Text = "" Or TBPhoneNumber.Text = "") Then
             MsgBox("Mohon isi semua data dengan lengkap!")
         Else
-            ' Mendapatkan pola ID berdasarkan cmblevel
+            'mengecek apakah nama user sudah ada di database atau belum
+            Call connect()
+            Cmd = New SqlClient.SqlCommand("SELECT nama_pengguna FROM Pengguna WHERE nama_pengguna='" & TBUsername2.Text & "'", Conn)
+            Da = New SqlClient.SqlDataAdapter()
+            Dr = Cmd.ExecuteReader
+            Dr.Read()
+            If Dr.HasRows Then
+                Dim NamaPengguna As String = Dr("nama_pengguna").ToString()
+                If NamaPengguna = TBUsername2.Text Then
+                    MsgBox("Username ini telah dipakai, silahkan pilih username lain.")
+                End If
+            End If
+            Dr.Close()
+
+
+            ' Mendapatkan pola ID 
             Dim idPola As String = If(TBUsername2.Text = "ADMIN", "ADM", "USR")
+            Dim lvlpengguna As String = "USER"
 
             Using Conn As New SqlConnection(connectionString)
                 Conn.Open()
 
                 ' Mendapatkan ID terakhir untuk pola tertentu
-                strsql = "SELECT TOP 1 id_pengguna, nama_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & idPola & "%' ORDER BY id_pengguna DESC"
-
-
+                strsql = "SELECT TOP 1 id_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & idPola & "%' ORDER BY id_pengguna DESC"
                 Using Cmd As New SqlCommand(strsql, Conn)
-                    Dim LevelPengguna As String
                     Dim Dr As SqlDataReader = Cmd.ExecuteReader()
                     Dim newId As String
 
@@ -132,27 +145,15 @@ Public Class FormLoginOrSignup
                         Dim lastNumber As Integer = Integer.Parse(lastId.Substring(idPola.Length))
                         Dim newNumber As Integer = lastNumber + 1
                         newId = idPola & newNumber.ToString("D3") ' D3 untuk format tiga digit angka
-
-                        Dim NamaPengguna As String = Dr("nama_pengguna").ToString()
-
-                        If NamaPengguna = TBUsername2.Text Then
-                            MsgBox("Username ini telah dipakai, silahkan pilih username lain.")
-                            Dr.Close()
-                            Return ' Stop further execution if username exists
-                        End If
-
                     Else
                         ' Jika belum ada ID, gunakan nomor awal
                         newId = idPola & "001"
-                        LevelPengguna = "USER"
                     End If
-
-
-
-
                     Dr.Close()
+
+
                     ' Insert data baru
-                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBUsername2.Text & "', '" & TBPass2.Text & "', '" & LevelPengguna & "','" & TBPhoneNumber.Text & "')"
+                    strsql = "INSERT INTO Pengguna VALUES ('" & newId & "', '" & TBUsername2.Text & "', '" & TBPass2.Text & "', '" & lvlpengguna & "' ,'" & TBPhoneNumber.Text & "')"
 
                     Cmd.CommandText = strsql
                     Cmd.ExecuteNonQuery()
@@ -203,6 +204,7 @@ Public Class FormLoginOrSignup
         If PanelSlide.Location.X > -750 Then
             PanelSlide.Location = New Point(PanelSlide.Location.X - 10, PanelSlide.Location.Y)
             TBUserID.Text = GenerateID("USR")
+
         Else
             Timer1.Stop()
             btnLogIn.Enabled = True

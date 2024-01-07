@@ -1,9 +1,27 @@
-﻿Imports System.Runtime.InteropServices.ComTypes
+﻿Imports System.Data.SqlClient
+Imports System.Runtime.InteropServices.ComTypes
 Imports Microsoft.VisualBasic.ApplicationServices
 
 Public Class FormHistory
     Dim ctrl As String
-    Sub View()
+
+    Private Sub Statuscolor()
+        For i = 0 To LVDataHistory.Items.Count - 1
+            If LVDataHistory.Items(i).SubItems(6).Text = "In Progress.." Then
+
+                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(255, 128, 128)
+            Else
+                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(149, 255, 102)
+            End If
+        Next
+
+    End Sub
+
+    Public Function GetLVDataHistory() As ListView
+        Return LVDataHistory
+    End Function
+
+    Sub View(lVDataHistory As ListView)
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
             Dr.Close()
         End If
@@ -14,7 +32,7 @@ Public Class FormHistory
         End If
 
         ' Bersihkan ListView
-        LVDataHistory.Items.Clear()
+        lVDataHistory.Items.Clear()
 
         ' Pastikan bahwa DataReader (Dr) ditutup sebelum menjalankan perintah SELECT
         Call connect()
@@ -37,23 +55,22 @@ Public Class FormHistory
         While (Dr.Read())
             Dim id_transaksi As String = Dr("id_transaksi").ToString()
             Dim tanggal_Transaksi As String = Dr("tanggal_transaksi").ToString()
-            Dim id_pengguna As String = Dr("id_pengguna").ToString()
-            Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " kg"
+            Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
             Dim jenis_cuci As String = Dr("jenis_cuci").ToString()
             Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
             Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
+            Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
 
 
             ' Tambahkan item baru ke ListView
-            With LVDataHistory.Items.Add(id_transaksi)
+            With lVDataHistory.Items.Add(id_transaksi)
                 .SubItems.Add(tanggal_Transaksi)
-                .SubItems.Add(id_pengguna)
                 .SubItems.Add(berat_pakaian)
                 .SubItems.Add(jenis_cuci)
                 .SubItems.Add(pakai_kupon)
                 .SubItems.Add(harga_transaksi)
-
+                .SubItems.Add(status_transaksi)
             End With
 
         End While
@@ -64,8 +81,9 @@ Public Class FormHistory
 
     Private Sub FormHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Module1.connect()
-        View()
+        View(GetLVDataHistory())
         LVDataHistory.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
+        Statuscolor()
     End Sub
 
     Private Sub SearchData(searchText As String)
@@ -79,8 +97,18 @@ Public Class FormHistory
         ' Bersihkan ListView
         LVDataHistory.Items.Clear()
 
+        Call connect()
+        Cmd = New SqlClient.SqlCommand("SELECT * FROM Pengguna WHERE nama_pengguna = '" & FormUtama.lblNamaUser.Text & "'", Conn)
+        Da = New SqlClient.SqlDataAdapter()
+        Dr = Cmd.ExecuteReader
+        Dr.Read()
+        Dim IdUSER As String = Dr("id_pengguna").ToString()
+
+        Dr.Close()
+
         ' Lakukan pencarian berdasarkan nama_pengguna
-        strsql = "SELECT * FROM Transaksi WHERE id_transaksi LIKE @SearchText"
+        strsql = "SELECT * FROM Transaksi WHERE id_pengguna = '" & IdUSER & "' AND id_transaksi LIKE @SearchText"
+
         Cmd.CommandText = strsql
         Cmd.Connection = Conn
         Cmd.Parameters.Clear()
@@ -92,19 +120,19 @@ Public Class FormHistory
         While (Dr.Read())
             Dim id_transaksi As String = Dr("id_transaksi").ToString()
             Dim tanggal_Transaksi As String = Dr("tanggal_transaksi").ToString()
-            Dim id_pengguna As String = Dr("id_pengguna").ToString()
-            Dim berat_pakaian As String = Dr("berat_pakaian").ToString()
+            Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
             Dim jenis_cuci As String = Dr("jenis_cuci").ToString()
             Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
             Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
+            Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
             With LVDataHistory.Items.Add(id_transaksi)
                 .SubItems.Add(tanggal_Transaksi)
-                .SubItems.Add(id_pengguna)
                 .SubItems.Add(berat_pakaian)
                 .SubItems.Add(jenis_cuci)
                 .SubItems.Add(pakai_kupon)
                 .SubItems.Add(harga_transaksi)
+                .SubItems.Add(Status_transaksi)
             End With
         End While
 
@@ -114,5 +142,7 @@ Public Class FormHistory
 
     Private Sub TBSearch_TextChanged(sender As Object, e As EventArgs) Handles TBSearch.TextChanged
         SearchData(TBSearch.Text)
+        Statuscolor()
     End Sub
+
 End Class

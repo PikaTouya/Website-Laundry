@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormHistory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,21 +20,19 @@ Partial Class FormHistory
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LVDataHistory = New System.Windows.Forms.ListView()
         Me.id_transaksi = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.tanggal_transaksi = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.id_pengguna = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.berat_pakaian = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.jenis_cuci = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.pakai_kupon = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.harga_transaksi = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Status_transaction = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Status_transaksi = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TBSearch = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -43,9 +41,9 @@ Partial Class FormHistory
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(42, 159)
+        Me.Label1.Location = New System.Drawing.Point(29, 226)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(221, 25)
+        Me.Label1.Size = New System.Drawing.Size(264, 29)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Search by ID Tansaksi :"
         '
@@ -55,9 +53,9 @@ Partial Class FormHistory
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(457, 39)
+        Me.Label3.Location = New System.Drawing.Point(490, 49)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(270, 56)
+        Me.Label3.Size = New System.Drawing.Size(321, 67)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "All History"
         '
@@ -66,15 +64,17 @@ Partial Class FormHistory
         Me.LVDataHistory.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid
         Me.LVDataHistory.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LVDataHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LVDataHistory.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id_transaksi, Me.tanggal_transaksi, Me.id_pengguna, Me.berat_pakaian, Me.jenis_cuci, Me.pakai_kupon, Me.harga_transaksi, Me.Status_transaction})
+        Me.LVDataHistory.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id_transaksi, Me.tanggal_transaksi, Me.berat_pakaian, Me.jenis_cuci, Me.pakai_kupon, Me.harga_transaksi, Me.Status_transaksi})
         Me.LVDataHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LVDataHistory.FullRowSelect = True
         Me.LVDataHistory.GridLines = True
         Me.LVDataHistory.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.LVDataHistory.HideSelection = False
-        Me.LVDataHistory.Location = New System.Drawing.Point(31, 206)
+        Me.LVDataHistory.Location = New System.Drawing.Point(34, 309)
+        Me.LVDataHistory.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LVDataHistory.Name = "LVDataHistory"
-        Me.LVDataHistory.Size = New System.Drawing.Size(1134, 460)
+        Me.LVDataHistory.Size = New System.Drawing.Size(1241, 562)
+        Me.LVDataHistory.Sorting = System.Windows.Forms.SortOrder.Descending
         Me.LVDataHistory.TabIndex = 15
         Me.LVDataHistory.UseCompatibleStateImageBehavior = False
         Me.LVDataHistory.View = System.Windows.Forms.View.Details
@@ -87,12 +87,7 @@ Partial Class FormHistory
         'tanggal_transaksi
         '
         Me.tanggal_transaksi.Text = "Tanggal Transaksi"
-        Me.tanggal_transaksi.Width = 176
-        '
-        'id_pengguna
-        '
-        Me.id_pengguna.Text = "ID Customer"
-        Me.id_pengguna.Width = 126
+        Me.tanggal_transaksi.Width = 222
         '
         'berat_pakaian
         '
@@ -109,18 +104,18 @@ Partial Class FormHistory
         '
         Me.pakai_kupon.Text = "Kupon Terpakai"
         Me.pakai_kupon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.pakai_kupon.Width = 160
+        Me.pakai_kupon.Width = 171
         '
         'harga_transaksi
         '
         Me.harga_transaksi.Text = "Total harga"
         Me.harga_transaksi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.harga_transaksi.Width = 116
+        Me.harga_transaksi.Width = 173
         '
-        'Status_transaction
+        'Status_transaksi
         '
-        Me.Status_transaction.Text = "Status"
-        Me.Status_transaction.Width = 177
+        Me.Status_transaksi.Text = "Status"
+        Me.Status_transaksi.Width = 187
         '
         'TBSearch
         '
@@ -128,28 +123,19 @@ Partial Class FormHistory
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(276, 157)
+        Me.TBSearch.Location = New System.Drawing.Point(292, 223)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(889, 34)
+        Me.TBSearch.Size = New System.Drawing.Size(983, 39)
         Me.TBSearch.TabIndex = 16
         Me.TBSearch.WordWrap = False
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(902, 90)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(178, 22)
-        Me.DateTimePicker1.TabIndex = 17
-        '
         'FormHistory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1193, 687)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.ClientSize = New System.Drawing.Size(1306, 913)
         Me.Controls.Add(Me.TBSearch)
         Me.Controls.Add(Me.LVDataHistory)
         Me.Controls.Add(Me.Label3)
@@ -165,13 +151,11 @@ Partial Class FormHistory
     Friend WithEvents Label3 As Label
     Friend WithEvents LVDataHistory As ListView
     Friend WithEvents id_transaksi As ColumnHeader
-    Friend WithEvents id_pengguna As ColumnHeader
     Friend WithEvents berat_pakaian As ColumnHeader
     Friend WithEvents tanggal_transaksi As ColumnHeader
     Friend WithEvents harga_transaksi As ColumnHeader
     Friend WithEvents jenis_cuci As ColumnHeader
     Friend WithEvents pakai_kupon As ColumnHeader
     Friend WithEvents TBSearch As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Status_transaction As ColumnHeader
+    Friend WithEvents Status_transaksi As ColumnHeader
 End Class
