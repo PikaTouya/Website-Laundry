@@ -542,7 +542,7 @@ Partial Class FormUtama
         Me.MinimumSize = New System.Drawing.Size(1200, 792)
         Me.Name = "FormUtama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "s"
         Me.PanelMenu.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         CType(Me.ImgHome, System.ComponentModel.ISupportInitialize).EndInit()

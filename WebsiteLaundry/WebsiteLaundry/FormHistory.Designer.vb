@@ -140,6 +140,7 @@ Partial Class FormHistory
         Me.Controls.Add(Me.LVDataHistory)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormHistory"
         Me.Text = "History"

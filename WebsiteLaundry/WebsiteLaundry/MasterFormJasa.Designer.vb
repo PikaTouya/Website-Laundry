@@ -225,6 +225,7 @@ Partial Class MasterFormJasa
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.IconBack)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MasterFormJasa"
         Me.Text = "Price List"

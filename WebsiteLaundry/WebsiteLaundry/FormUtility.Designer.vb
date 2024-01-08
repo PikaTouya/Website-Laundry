@@ -38,7 +38,7 @@ Partial Class FormUtility
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("News706 BT", 26.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(345, 91)
+        Me.Label1.Location = New System.Drawing.Point(358, 150)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(617, 62)
         Me.Label1.TabIndex = 0
@@ -147,6 +147,7 @@ Partial Class FormUtility
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Black
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormUtility"

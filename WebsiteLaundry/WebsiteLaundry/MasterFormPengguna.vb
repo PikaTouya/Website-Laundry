@@ -1,5 +1,6 @@
 ﻿Public Class MasterFormPengguna
     Dim ctrl As String
+
     Private Sub IconBack_Click(sender As Object, e As EventArgs) Handles IconBack.Click
         Me.Close()
         Call FormUtama.OpenChildForm(New FormMaster)
@@ -130,13 +131,13 @@
 
         ' Pastikan bahwa DataReader ditutup sebelum menjalankan perintah UPDATE
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
-            Dr.Close()
-        End If
+                Dr.Close()
+            End If
 
-        strsql = "UPDATE Pengguna SET nama_pengguna = '" & TBUsername.Text & "', password_pengguna = '" & TBPass.Text & "', level_pengguna = '" & CBLevel1.Text & "', nomortelepon_pengguna = '" & TBPhone.Text & "' WHERE id_pengguna = '" & ctrl & "'"
-        Dim Cmd As New SqlClient.SqlCommand
-        Cmd.CommandText = strsql
-        Cmd.Connection = Conn
+            strsql = "UPDATE Pengguna SET nama_pengguna = '" & TBUsername.Text & "', password_pengguna = '" & TBPass.Text & "', level_pengguna = '" & CBLevel1.Text & "', nomortelepon_pengguna = '" & TBPhone.Text & "' WHERE id_pengguna = '" & ctrl & "'"
+            Dim Cmd As New SqlClient.SqlCommand
+            Cmd.CommandText = strsql
+            Cmd.Connection = Conn
 
         Try
             Cmd.ExecuteNonQuery()
@@ -156,8 +157,9 @@
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
         If TBUserID.Text = "" Or TBUsername.Text = "" Or TBPass.Text = "" Or CBLevel1.Text = "" Or TBPhone.Text = "" Then
-            MsgBox("Please fill in the data you want to modify first!")
+            MsgBox("Please fill In the data you want To modify first!")
             Exit Sub
         End If
 

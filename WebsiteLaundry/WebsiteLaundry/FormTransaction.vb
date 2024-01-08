@@ -207,11 +207,11 @@ Public Class FormTransaction
             LblTotalHarga.Text = .SubItems(6).Text
             CBStatus.Visible = True
             CBStatus.Text = .SubItems(7).Text
-            BtnSave.Visible = True
         End With
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+        
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
             Dr.Close()
         End If
@@ -220,7 +220,6 @@ Public Class FormTransaction
         Dim Cmd As New SqlClient.SqlCommand
         Cmd.CommandText = strsql
         Cmd.Connection = Conn
-
         Try
             Cmd.ExecuteNonQuery()
             MsgBox("The data has been successfully updated!")
@@ -240,4 +239,23 @@ Public Class FormTransaction
         CBStatus.Visible = False
     End Sub
 
+    Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged
+        If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
+            Dr.Close()
+        End If
+
+        strsql = "Select * FROM Transaksi WHERE id_transaksi = '" & ctrl & "'"
+        Cmd.CommandText = strsql
+        Cmd.Connection = Conn
+        Da.SelectCommand = Cmd
+        Dr = Cmd.ExecuteReader()
+
+        Dr.Read()
+        Dim status As String = Dr("status_transaksi").ToString()
+        If status <> CBStatus.Text Then
+            BtnSave.Visible = True
+        Else
+            BtnSave.Visible = False
+        End If
+    End Sub
 End Class

@@ -412,6 +412,7 @@ Partial Class FormLoginOrSignup
         Me.ClientSize = New System.Drawing.Size(724, 840)
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelSlide)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormLoginOrSignup"

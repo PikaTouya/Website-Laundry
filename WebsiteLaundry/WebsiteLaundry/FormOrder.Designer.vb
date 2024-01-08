@@ -335,6 +335,7 @@ Partial Class FormOrder
         Me.Controls.Add(Me.Id_User)
         Me.Controls.Add(Me.Id_Transaksi)
         Me.Controls.Add(Me.tanggal_transaksi)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormOrder"
         Me.Text = " "

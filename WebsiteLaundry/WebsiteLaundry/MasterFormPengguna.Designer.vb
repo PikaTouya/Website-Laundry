@@ -389,6 +389,7 @@ Partial Class MasterFormPengguna
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.ClearCbLevel1)
         Me.Controls.Add(Me.ClearCbLevel2)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MasterFormPengguna"
         Me.Text = "List Of User"
