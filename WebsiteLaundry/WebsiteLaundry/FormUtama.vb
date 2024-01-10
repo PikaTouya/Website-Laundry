@@ -20,8 +20,8 @@ Public Class FormUtama
         lblTanggal.Text = Today
         btnOrder.Visible = False
 
-        'memunculkna jam pada status
-        Timer1.Interval = 1000
+        'memunculkan jam pada status
+        Timer1.Interval = 1000 '1000ms artinya 1s, artinya setiap 1s waktunya akan berubah
         Timer1.Start()
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -64,8 +64,8 @@ Public Class FormUtama
     End Sub
 
     Private Sub ImgHome_Click(sender As Object, e As EventArgs) Handles ImgHome.Click, PictureBox1.Click
-        If currentChildForm IsNot Nothing Then
-            currentChildForm.Close()
+        If currentChildForm IsNot Nothing Then 'jika ada form anak lain yang sedang show
+            currentChildForm.Close() 'maka tutup form yang dibuka
         End If
         Reset()
     End Sub
@@ -75,14 +75,14 @@ Public Class FormUtama
         If currentChildForm IsNot Nothing Then
             currentChildForm.Close()
         End If
-        currentChildForm = childForm
+        currentChildForm = childForm 'Menetapkan form anak yang baru sebagai form aktif
         'end'
-        childForm.TopLevel = False
+        childForm.TopLevel = False 'TopLevel diatur menjadi False agar form anak dianggap sebagai kontrol di dalam form utama.
         childForm.FormBorderStyle = FormBorderStyle.None
-        childForm.Dock = DockStyle.Fill
-        PanelContent.Controls.Add(childForm)
+        childForm.Dock = DockStyle.Fill 'dock fill agar form anak mengisi seluruh panel
+        PanelContent.Controls.Add(childForm) 'Menambahkan form anak ke dalam panel
         PanelContent.Tag = childForm
-        childForm.BringToFront()
+        childForm.BringToFront() 'Membawa form anak ke layar paling depan
         childForm.Show()
         lblChildForm.Text = childForm.Text
     End Sub

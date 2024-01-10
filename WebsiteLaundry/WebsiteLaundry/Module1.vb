@@ -2,6 +2,7 @@
 Module Module1
     Public LoggedInUserID As String = ""
     Public SignedUpPhoneNumber As String = ""
+    Public LoggedInUserPassword As String = ""
 
     Public Conn As SqlConnection
     Public Cmd As SqlCommand

@@ -111,3 +111,4 @@ C:\Users\User\OneDrive\Desktop\VB\Website Laundry\WebsiteLaundry\WebsiteLaundry\
 C:\Users\User\OneDrive\Desktop\VB\Website Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.exe
 C:\Users\User\OneDrive\Desktop\VB\Website Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.xml
 C:\Users\User\OneDrive\Desktop\VB\Website Laundry\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.pdb
+C:\Users\Ferico\OneDrive\Desktop\Latihan PV\APLIKASI_LAUNDRY\WebsiteLaundry\WebsiteLaundry\obj\Debug\WebsiteLaundry.FormConfirm.resources

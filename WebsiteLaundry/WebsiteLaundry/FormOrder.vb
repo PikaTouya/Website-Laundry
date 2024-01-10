@@ -29,7 +29,7 @@ Public Class FormOrder
         Dim CmdMaxCounter As New SqlClient.SqlCommand(strsqlMaxCounter, Module1.Conn)
 
         Try
-            Dim maxCounter As Object = CmdMaxCounter.ExecuteScalar()
+            Dim maxCounter As Object = CmdMaxCounter.ExecuteScalar() 'mengembalikan nilai pertama dari hasil eksekusi
 
             If maxCounter IsNot DBNull.Value AndAlso maxCounter IsNot Nothing Then
                 ' Jika sudah ada transaksi, increment counter
@@ -119,11 +119,6 @@ Public Class FormOrder
     End Sub
 
     Private Sub cbcoupon_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbcoupon.SelectedIndexChanged
-        ' Update lblUnusedCoupons based on the selected coupon option
-        UpdateUnusedCouponsLabel()
-    End Sub
-
-    Private Sub UpdateUnusedCouponsLabel()
         ' Connect to the database
         Module1.connect()
 

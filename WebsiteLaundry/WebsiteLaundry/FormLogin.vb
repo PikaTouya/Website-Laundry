@@ -1,5 +1,5 @@
-﻿Imports System.Data.SqlClient
-Imports FontAwesome.Sharp
+﻿Imports System.Data.SqlClient 'diperlukan untuk bekerja dengan sqlserver
+Imports FontAwesome.Sharp 'diperlukan untuk mengatur ikon
 
 Public Class FormLoginOrSignup
     Dim connectionString As String = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
@@ -21,8 +21,8 @@ Public Class FormLoginOrSignup
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         KondisiAwal()
-        Me.FormBorderStyle = FormBorderStyle.None
-        Me.Text = String.Empty
+        Me.FormBorderStyle = FormBorderStyle.None 'agar menghilangkan border window seperti close minimize max
+        Me.Text = String.Empty 'agar tidak ada tulisan teks di border
     End Sub
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         If TBUsername1.Text = "" Or TBPass1.Text = "" Then
@@ -61,14 +61,15 @@ Public Class FormLoginOrSignup
                     FormUtama.btnMaster.Visible = False
                     FormUtama.btnOrder.Visible = True
                 End If
-                Module1.LoggedInUserID = Dr("id_pengguna").ToString()
+                Module1.LoggedInUserID = Dr("id_pengguna").ToString() 'mendapatkan id user yang sedang login
+                Module1.LoggedInUserPassword = Dr("password_pengguna").ToString() 'mendapatkan pass user yang sedang login (untuk form confirm)
 
             Else
                 MsgBox("Nama atau Password Salah!")
                 Call KondisiAwal()
                 TBUsername1.Focus()
             End If
-            Dr.Close()
+            Dr.Close() 'setelah selesai membaca, harus ditutup agar tidak error
         End If
     End Sub
 
@@ -79,7 +80,7 @@ Public Class FormLoginOrSignup
             Conn.Open()
 
             ' Mendapatkan ID terakhir untuk pola tertentu
-            strsql = "SELECT TOP 1 id_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & prefix & "%' ORDER BY id_pengguna DESC"
+            strsql = "SELECT TOP 1 id_pengguna FROM Pengguna WHERE id_pengguna LIKE '" & prefix & "%' ORDER BY id_pengguna DESC" 'desc = descending, artinya mengurutkan secara menurun hingga mendapatkan id yang paling besar
 
             Using Cmd As New SqlCommand(strsql, Conn)
                 Dr = Cmd.ExecuteReader()
@@ -88,8 +89,8 @@ Public Class FormLoginOrSignup
 
                 If Dr.Read() Then
                     ' Jika ID sudah ada, dapatkan nomor berikutnya
-                    Dim lastId As String = Dr("id_pengguna").ToString()
-                    Dim lastNumber As Integer = Integer.Parse(lastId.Substring(prefix.Length))
+                    Dim lastId As String = Dr("id_pengguna").ToString() 'mengambil id terakhir
+                    Dim lastNumber As Integer = Integer.Parse(lastId.Substring(prefix.Length)) 'menghitung nomor berikutnya dan ubah jadi tipe data integer
                     Dim newNumber As Integer = lastNumber + 1
                     newId = prefix & newNumber.ToString("D3") ' D3 untuk format tiga digit angka
                 Else
@@ -176,7 +177,7 @@ Public Class FormLoginOrSignup
                 End If
 
             End Using
-            ' Store the phone number in the shared property
+            'menyimpan nomor telepon
             Module1.SignedUpPhoneNumber = TBPhoneNumber.Text
         End If
     End Sub

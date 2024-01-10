@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormConfirm.Designer.vb">
+      <DependentUpon>FormConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMaster.Designer.vb">
       <DependentUpon>FormMaster.vb</DependentUpon>
     </Compile>
@@ -159,6 +165,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormConfirm.resx">
+      <DependentUpon>FormConfirm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCoupon.resx">
       <DependentUpon>FormCoupon.vb</DependentUpon>
     </EmbeddedResource>
