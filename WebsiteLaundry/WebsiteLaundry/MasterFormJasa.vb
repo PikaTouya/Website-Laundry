@@ -1,10 +1,12 @@
 ﻿Imports System.Data.SqlClient
+Imports FontAwesome.Sharp
 
 
 Public Class MasterFormJasa
     Private Sub IconBack_Click(sender As Object, e As EventArgs) Handles IconBack.Click
         Me.Close()
         Call FormUtama.OpenChildForm(New FormMaster)
+        FormUtama.IconChildForm.IconChar = IconChar.Edit
     End Sub
 
     Private Sub MasterFormJasa_Load(sender As Object, e As EventArgs) Handles MyBase.Load

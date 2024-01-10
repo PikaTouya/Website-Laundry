@@ -15,4 +15,8 @@ Public Class FormConfirm
         Me.Close()
         Call FormUtama.OpenChildForm(New MasterFormPengguna)
     End Sub
+
+    Private Sub FormConfirm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tbConfirm.PasswordChar = "*"
+    End Sub
 End Class

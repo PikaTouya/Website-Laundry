@@ -1,8 +1,11 @@
-﻿Public Class MasterFormPengguna
+﻿Imports FontAwesome.Sharp
+
+Public Class MasterFormPengguna
     Dim ctrl As String
     Private Sub IconBack_Click(sender As Object, e As EventArgs) Handles IconBack.Click
         Me.Close()
         Call FormUtama.OpenChildForm(New FormMaster)
+        FormUtama.IconChildForm.IconChar = IconChar.Edit
     End Sub
 
     'edited by ferico'
@@ -62,49 +65,45 @@
         ' Tutup DataReader
         Dr.Close()
     End Sub
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        If TBUserID.Text = "" Or TBUsername.Text = "" Or TBPass.Text = "" Or CBLevel1.Text = "" Or TBPhone.Text = "" Then
+            MsgBox("Please complete the information!")
+            Exit Sub
+        End If
 
-        Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-            If TBUserID.Text = "" Or TBUsername.Text = "" Or TBPass.Text = "" Or CBLevel1.Text = "" Or TBPhone.Text = "" Then
-                MsgBox("Please complete the information!")
+        ' Pengecekan apakah TBUserID.Text sudah ada dalam LVData
+        For Each item As ListViewItem In LVData.Items
+            If item.SubItems(0).Text = TBUserID.Text Then
+                MsgBox("ID already exists. Please choose a different ID!")
+                TBUserID.Focus()
+                TBUserID.Text = ""
                 Exit Sub
             End If
+        Next
 
-            ' Pengecekan apakah TBUserID.Text sudah ada dalam LVData
-            For Each item As ListViewItem In LVData.Items
-                If item.SubItems(0).Text = TBUserID.Text Then
-                    MsgBox("ID already exists. Please choose a different ID!")
-                    TBUserID.Focus()
-                    TBUserID.Text = ""
-                    Exit Sub
-                End If
-            Next
-
-            ' Pastikan bahwa DataReader (Dr) ditutup sebelum menjalankan perintah INSERT
-            If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
-                Dr.Close()
+        ' Pastikan bahwa DataReader (Dr) ditutup sebelum menjalankan perintah INSERT
+        If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
+            Dr.Close()
+        End If
+        strsql = "INSERT INTO Pengguna VALUES ('" & TBUserID.Text & "','" & TBUsername.Text & "','" & TBPass.Text & "','" & CBLevel1.Text & "','" & TBPhone.Text & "')"
+        Dim Cmd As New SqlClient.SqlCommand
+        Cmd.CommandText = strsql
+        Cmd.Connection = Conn
+        Try
+            Cmd.ExecuteNonQuery()
+            MsgBox("Saved!")
+            View()
+            TBUserID.Text = ""
+            TBUsername.Text = ""
+            TBPass.Text = ""
+            CBLevel1.Text = ""
+            TBPhone.Text = ""
+        Catch ex As SqlClient.SqlException
+            If ex.Number = 2627 Then 'ex number adalah property yang memberikan nomor kesalahan yang diberikan oleh sql server 2627, itu berarti terjadi pelanggaran integritas data yang menyebabkan duplikasi nilai kunci unik (duplicate key)'
+                MsgBox("Id must not be the same!") 'Oleh karena itu, kita menampilkan pesan "ID must not be the same!" kepada pengguna
+            Else
+                MsgBox("An error occurred: " & ex.Message) 'Jika nomor kesalahan bukan 2627, kita menampilkan pesan umum "An error occurred: " disertai dengan pesan kesalahan yang diberikan oleh eksepsi
             End If
-
-            strsql = "INSERT INTO Pengguna VALUES ('" & TBUserID.Text & "','" & TBUsername.Text & "','" & TBPass.Text & "','" & CBLevel1.Text & "','" & TBPhone.Text & "')"
-            Dim Cmd As New SqlClient.SqlCommand
-            Cmd.CommandText = strsql
-            Cmd.Connection = Conn
-
-            Try
-                Cmd.ExecuteNonQuery()
-                MsgBox("Saved!")
-                View()
-                TBUserID.Text = ""
-                TBUsername.Text = ""
-                TBPass.Text = ""
-                CBLevel1.Text = ""
-                TBPhone.Text = ""
-
-            Catch ex As SqlClient.SqlException
-                If ex.Number = 2627 Then 'ex number adalah property yang memberikan nomor kesalahan yang diberikan oleh sql server 2627, itu berarti terjadi pelanggaran integritas data yang menyebabkan duplikasi nilai kunci unik (duplicate key)'
-                    MsgBox("Id must not be the same!") 'Oleh karena itu, kita menampilkan pesan "ID must not be the same!" kepada pengguna
-                Else
-                    MsgBox("An error occurred: " & ex.Message) 'Jika nomor kesalahan bukan 2627, kita menampilkan pesan umum "An error occurred: " disertai dengan pesan kesalahan yang diberikan oleh eksepsi
-                End If
             End Try
         End Sub
 

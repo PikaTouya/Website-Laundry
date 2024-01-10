@@ -31,48 +31,69 @@ Partial Class FormConfirm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(253, 146)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label1.Location = New System.Drawing.Point(65, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(236, 17)
+        Me.Label1.Size = New System.Drawing.Size(407, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Please Confirm Your Password First!"
         '
         'tbConfirm
         '
-        Me.tbConfirm.Location = New System.Drawing.Point(256, 176)
+        Me.tbConfirm.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.tbConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbConfirm.ForeColor = System.Drawing.Color.Gainsboro
+        Me.tbConfirm.Location = New System.Drawing.Point(86, 127)
+        Me.tbConfirm.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbConfirm.Name = "tbConfirm"
-        Me.tbConfirm.Size = New System.Drawing.Size(233, 22)
+        Me.tbConfirm.Size = New System.Drawing.Size(356, 44)
         Me.tbConfirm.TabIndex = 1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(256, 214)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Button1.Location = New System.Drawing.Point(86, 202)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 23)
+        Me.Button1.Size = New System.Drawing.Size(150, 50)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Confirm"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(382, 214)
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnCancel.Location = New System.Drawing.Point(292, 202)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(107, 23)
+        Me.btnCancel.Size = New System.Drawing.Size(150, 50)
         Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'FormConfirm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(511, 326)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.tbConfirm)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormConfirm"
-        Me.Text = "FormConfirm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -80,6 +101,6 @@ Partial Class FormConfirm
 
     Friend WithEvents Label1 As Label
     Friend WithEvents tbConfirm As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -1,11 +1,15 @@
-﻿Public Class FormMaster
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+﻿Imports FontAwesome.Sharp
+Public Class FormMaster
+
+    Private Sub BtnListOfUser_Click(sender As Object, e As EventArgs) Handles BtnListOfUser.Click
         Me.Close()
         Call FormUtama.OpenChildForm(New MasterFormPengguna)
+        FormUtama.IconChildForm.IconChar = IconChar.AddressBook
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub BtnPriceList_Click(sender As Object, e As EventArgs) Handles BtnPriceList.Click
         Me.Close()
         Call FormUtama.OpenChildForm(New MasterFormJasa)
+        FormUtama.IconChildForm.IconChar = IconChar.Tag
     End Sub
 End Class

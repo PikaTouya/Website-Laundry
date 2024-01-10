@@ -121,12 +121,12 @@ Partial Class FormHistory
         '
         Me.TBSearch.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
-        Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
         Me.TBSearch.Location = New System.Drawing.Point(346, 235)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(929, 39)
+        Me.TBSearch.Size = New System.Drawing.Size(929, 44)
         Me.TBSearch.TabIndex = 16
         Me.TBSearch.WordWrap = False
         '

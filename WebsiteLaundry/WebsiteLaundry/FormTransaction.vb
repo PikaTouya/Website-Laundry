@@ -207,7 +207,6 @@ Public Class FormTransaction
             LblTotalHarga.Text = .SubItems(6).Text
             CBStatus.Visible = True
             CBStatus.Text = .SubItems(7).Text
-            BtnSave.Visible = True
         End With
     End Sub
 
@@ -238,6 +237,26 @@ Public Class FormTransaction
         LblTypeOfWash.Text = ""
         LblWeight.Text = ""
         CBStatus.Visible = False
+    End Sub
+
+    Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged
+        If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
+            Dr.Close()
+        End If
+
+        strsql = "Select * FROM Transaksi WHERE id_transaksi = '" & ctrl & "'"
+        Cmd.CommandText = strsql
+        Cmd.Connection = Conn
+        Da.SelectCommand = Cmd
+        Dr = Cmd.ExecuteReader()
+
+        Dr.Read()
+        Dim status As String = Dr("status_transaksi").ToString()
+        If status <> CBStatus.Text Then
+            BtnSave.Visible = True
+        Else
+            BtnSave.Visible = False
+        End If
     End Sub
 
 End Class

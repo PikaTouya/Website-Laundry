@@ -23,8 +23,8 @@ Partial Class FormMaster
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnListOfUser = New FontAwesome.Sharp.IconButton()
+        Me.BtnPriceList = New FontAwesome.Sharp.IconButton()
         Me.SuspendLayout()
         '
         'Label1
@@ -39,33 +39,39 @@ Partial Class FormMaster
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "What data do you want to change?"
         '
-        'Button1
+        'BtnListOfUser
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Swis721 Hv BT", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button1.Location = New System.Drawing.Point(355, 472)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(246, 122)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "List Of User"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnListOfUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnListOfUser.Font = New System.Drawing.Font("Swis721 Hv BT", 14.0!)
+        Me.BtnListOfUser.ForeColor = System.Drawing.Color.Gainsboro
+        Me.BtnListOfUser.IconChar = FontAwesome.Sharp.IconChar.AddressBook
+        Me.BtnListOfUser.IconColor = System.Drawing.Color.Gainsboro
+        Me.BtnListOfUser.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnListOfUser.IconSize = 80
+        Me.BtnListOfUser.Location = New System.Drawing.Point(336, 437)
+        Me.BtnListOfUser.Name = "BtnListOfUser"
+        Me.BtnListOfUser.Size = New System.Drawing.Size(250, 125)
+        Me.BtnListOfUser.TabIndex = 2
+        Me.BtnListOfUser.Text = "List Of User"
+        Me.BtnListOfUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnListOfUser.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BtnPriceList
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Swis721 Hv BT", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Button2.Location = New System.Drawing.Point(738, 472)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(246, 122)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Price list"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnPriceList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnPriceList.Font = New System.Drawing.Font("Swis721 Hv BT", 14.0!)
+        Me.BtnPriceList.ForeColor = System.Drawing.Color.Gainsboro
+        Me.BtnPriceList.IconChar = FontAwesome.Sharp.IconChar.Tag
+        Me.BtnPriceList.IconColor = System.Drawing.Color.Gainsboro
+        Me.BtnPriceList.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnPriceList.IconSize = 80
+        Me.BtnPriceList.Location = New System.Drawing.Point(732, 437)
+        Me.BtnPriceList.Name = "BtnPriceList"
+        Me.BtnPriceList.Size = New System.Drawing.Size(250, 125)
+        Me.BtnPriceList.TabIndex = 2
+        Me.BtnPriceList.Text = "Price List"
+        Me.BtnPriceList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnPriceList.UseVisualStyleBackColor = True
         '
         'FormMaster
         '
@@ -73,8 +79,8 @@ Partial Class FormMaster
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1306, 913)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnPriceList)
+        Me.Controls.Add(Me.BtnListOfUser)
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormMaster"
@@ -85,6 +91,6 @@ Partial Class FormMaster
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnListOfUser As FontAwesome.Sharp.IconButton
+    Friend WithEvents BtnPriceList As FontAwesome.Sharp.IconButton
 End Class
