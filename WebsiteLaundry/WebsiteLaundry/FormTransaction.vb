@@ -58,7 +58,7 @@ Public Class FormTransaction
             Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
             Dim jenis_cuci As String = Dr("jenis_cuci").ToString()
             Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
-            Dim harga_transaksi As String = "Rp " & Dr("harga_transaksi").ToString()
+            Dim harga_transaksi As String = "Rp " & Convert.ToDecimal(Dr("harga_transaksi")).ToString("F0").Replace(",", "").Replace(".", "")
             Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
 
@@ -134,9 +134,8 @@ Public Class FormTransaction
                 Dim tanggal_Transaksi As String = Dr("tanggal_transaksi").ToString()
                 Dim id_pengguna As String = Dr("id_pengguna").ToString()
                 Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
-
                 Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
-                Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
+                Dim harga_transaksi As String = "Rp " & Convert.ToDecimal(Dr("harga_transaksi")).ToString("F0").Replace(",", "").Replace(".", "")
                 Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
                 With LVDataTransaction.Items.Add(id_transaksi)
@@ -196,7 +195,7 @@ Public Class FormTransaction
                 Dim id_pengguna As String = Dr("id_pengguna").ToString()
                 Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
                 Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
-                Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
+                Dim harga_transaksi As String = "Rp " & Convert.ToDecimal(Dr("harga_transaksi")).ToString("F0").Replace(",", "").Replace(".", "")
                 Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
                 With LVDataTransaction.Items.Add(id_transaksi)
@@ -239,7 +238,6 @@ Public Class FormTransaction
             LblTotalHarga.Text = .SubItems(6).Text
             CBStatus.Visible = True
             CBStatus.Text = .SubItems(7).Text
-            BtnSave.Visible = True
         End With
     End Sub
 
@@ -272,4 +270,31 @@ Public Class FormTransaction
         CBStatus.Visible = False
     End Sub
 
+    Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged
+        If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
+            Dr.Close()
+        End If
+
+        ' Pastikan bahwa Cmd telah diinisialisasi sebelum digunakan
+        If Cmd Is Nothing Then
+            Cmd = New SqlClient.SqlCommand()
+        End If
+
+        ' Pastikan bahwa DataReader (Dr) ditutup sebelum menjalankan perintah SELECT
+        Call connect()
+        Cmd = New SqlClient.SqlCommand("SELECT Status_Transaksi FROM transaksi WHERE id_transaksi = '" & LblIDTransaction.Text & "'", Conn)
+        Da = New SqlClient.SqlDataAdapter()
+        Dr = Cmd.ExecuteReader
+        Dr.Read()
+        If Dr.HasRows Then
+            Dim status As String = Dr("status_transaksi").ToString()
+            If status <> CBStatus.Text Then
+                BtnSave.Visible = True
+            Else
+                BtnSave.Visible = False
+            End If
+        End If
+
+        Dr.Close()
+    End Sub
 End Class

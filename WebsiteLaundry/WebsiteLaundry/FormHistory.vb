@@ -73,7 +73,7 @@ Public Class FormHistory
             Dim tanggal_Transaksi As String = Dr("tanggal_transaksi").ToString()
             Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
             Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
-            Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
+            Dim harga_transaksi As String = "Rp " & Convert.ToDecimal(Dr("harga_transaksi")).ToString("F0").Replace(",", "").Replace(".", "")
             Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
 
@@ -136,9 +136,22 @@ Public Class FormHistory
             Dim id_transaksi As String = Dr("id_transaksi").ToString()
             Dim tanggal_Transaksi As String = Dr("tanggal_transaksi").ToString()
             Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
-            Dim jenis_cuci As String = Dr("jenis_cuci").ToString()
+            Dim jenis_cuci As String
+
+            Select Case Dr("id_jasa").ToString()
+                Case "JS001"
+                    jenis_cuci = "Normal Wash"
+                Case "JS002"
+                    jenis_cuci = "Normal Wash + Ironing"
+                Case "JS003"
+                    jenis_cuci = "Quick Wash"
+                Case "JS004"
+                    jenis_cuci = "Quick Wash + Ironing"
+                Case Else
+                    jenis_cuci = "Tidak Diketahui"
+            End Select
             Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
-            Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
+            Dim harga_transaksi As String = "Rp " & Convert.ToDecimal(Dr("harga_transaksi")).ToString("F0").Replace(",", "").Replace(".", "")
             Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
             With LVDataHistory.Items.Add(id_transaksi)

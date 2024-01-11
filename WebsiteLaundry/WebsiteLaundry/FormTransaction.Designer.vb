@@ -65,7 +65,7 @@ Partial Class FormTransaction
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LblDate = New System.Windows.Forms.Label()
         Me.CBTipe = New System.Windows.Forms.ComboBox()
-        Me.BtnSave = New System.Windows.Forms.Button()
+        Me.BtnSave = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
@@ -95,9 +95,10 @@ Partial Class FormTransaction
         Me.LVDataTransaction.GridLines = True
         Me.LVDataTransaction.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.LVDataTransaction.HideSelection = False
-        Me.LVDataTransaction.Location = New System.Drawing.Point(21, 478)
+        Me.LVDataTransaction.Location = New System.Drawing.Point(21, 591)
+        Me.LVDataTransaction.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LVDataTransaction.Name = "LVDataTransaction"
-        Me.LVDataTransaction.Size = New System.Drawing.Size(1121, 236)
+        Me.LVDataTransaction.Size = New System.Drawing.Size(1261, 299)
         Me.LVDataTransaction.Sorting = System.Windows.Forms.SortOrder.Descending
         Me.LVDataTransaction.TabIndex = 0
         Me.LVDataTransaction.UseCompatibleStateImageBehavior = False
@@ -151,9 +152,9 @@ Partial Class FormTransaction
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(389, 7)
+        Me.Label3.Location = New System.Drawing.Point(438, 9)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(375, 56)
+        Me.Label3.Size = New System.Drawing.Size(447, 67)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "All Transaction"
         '
@@ -163,9 +164,9 @@ Partial Class FormTransaction
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(222, 110)
+        Me.Label1.Location = New System.Drawing.Point(250, 138)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 29)
+        Me.Label1.Size = New System.Drawing.Size(148, 32)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Search by "
         '
@@ -175,10 +176,10 @@ Partial Class FormTransaction
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Tahoma", 14.0!)
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(509, 110)
+        Me.TBSearch.Location = New System.Drawing.Point(573, 138)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(391, 36)
+        Me.TBSearch.Size = New System.Drawing.Size(439, 41)
         Me.TBSearch.TabIndex = 20
         Me.TBSearch.WordWrap = False
         '
@@ -194,10 +195,10 @@ Partial Class FormTransaction
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Panel1.Location = New System.Drawing.Point(339, 156)
+        Me.Panel1.Location = New System.Drawing.Point(381, 195)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(467, 304)
+        Me.Panel1.Size = New System.Drawing.Size(525, 380)
         Me.Panel1.TabIndex = 21
         '
         'Panel8
@@ -205,10 +206,10 @@ Partial Class FormTransaction
         Me.Panel8.BackColor = System.Drawing.Color.OldLace
         Me.Panel8.Controls.Add(Me.TableLayoutPanel6)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel8.Location = New System.Drawing.Point(0, 264)
+        Me.Panel8.Location = New System.Drawing.Point(0, 330)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(467, 40)
+        Me.Panel8.Size = New System.Drawing.Size(525, 50)
         Me.Panel8.TabIndex = 3
         '
         'TableLayoutPanel6
@@ -223,17 +224,17 @@ Partial Class FormTransaction
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
         Me.TableLayoutPanel6.RowCount = 1
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(467, 40)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(525, 50)
         Me.TableLayoutPanel6.TabIndex = 0
         '
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.Label16)
         Me.Panel3.Controls.Add(Me.LblTotalHarga)
-        Me.Panel3.Location = New System.Drawing.Point(189, 2)
+        Me.Panel3.Location = New System.Drawing.Point(213, 2)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(275, 35)
+        Me.Panel3.Size = New System.Drawing.Size(309, 44)
         Me.Panel3.TabIndex = 22
         '
         'Label16
@@ -243,8 +244,8 @@ Partial Class FormTransaction
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(0, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.Label16.Size = New System.Drawing.Size(56, 33)
+        Me.Label16.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Label16.Size = New System.Drawing.Size(68, 39)
         Me.Label16.TabIndex = 12
         Me.Label16.Text = "Total"
         '
@@ -253,10 +254,10 @@ Partial Class FormTransaction
         Me.LblTotalHarga.AutoSize = True
         Me.LblTotalHarga.Dock = System.Windows.Forms.DockStyle.Right
         Me.LblTotalHarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotalHarga.Location = New System.Drawing.Point(275, 0)
+        Me.LblTotalHarga.Location = New System.Drawing.Point(309, 0)
         Me.LblTotalHarga.Name = "LblTotalHarga"
-        Me.LblTotalHarga.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.LblTotalHarga.Size = New System.Drawing.Size(0, 33)
+        Me.LblTotalHarga.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.LblTotalHarga.Size = New System.Drawing.Size(0, 39)
         Me.LblTotalHarga.TabIndex = 11
         '
         'Panel9
@@ -264,10 +265,10 @@ Partial Class FormTransaction
         Me.Panel9.BackColor = System.Drawing.Color.OldLace
         Me.Panel9.Controls.Add(Me.TableLayoutPanel7)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel9.Location = New System.Drawing.Point(0, 201)
+        Me.Panel9.Location = New System.Drawing.Point(0, 251)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(467, 40)
+        Me.Panel9.Size = New System.Drawing.Size(525, 50)
         Me.Panel9.TabIndex = 3
         '
         'TableLayoutPanel7
@@ -284,7 +285,7 @@ Partial Class FormTransaction
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 1
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(467, 40)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(525, 50)
         Me.TableLayoutPanel7.TabIndex = 0
         '
         'Label14
@@ -293,8 +294,8 @@ Partial Class FormTransaction
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(3, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.Label14.Size = New System.Drawing.Size(73, 33)
+        Me.Label14.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Label14.Size = New System.Drawing.Size(85, 39)
         Me.Label14.TabIndex = 10
         Me.Label14.Text = "Status "
         '
@@ -305,10 +306,10 @@ Partial Class FormTransaction
         Me.CBStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CBStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBStatus.FormattingEnabled = True
-        Me.CBStatus.Location = New System.Drawing.Point(189, 2)
+        Me.CBStatus.Location = New System.Drawing.Point(213, 2)
         Me.CBStatus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CBStatus.Name = "CBStatus"
-        Me.CBStatus.Size = New System.Drawing.Size(275, 39)
+        Me.CBStatus.Size = New System.Drawing.Size(309, 45)
         Me.CBStatus.TabIndex = 27
         '
         'Panel7
@@ -316,10 +317,10 @@ Partial Class FormTransaction
         Me.Panel7.BackColor = System.Drawing.Color.OldLace
         Me.Panel7.Controls.Add(Me.TableLayoutPanel5)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel7.Location = New System.Drawing.Point(0, 160)
+        Me.Panel7.Location = New System.Drawing.Point(0, 200)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(467, 41)
+        Me.Panel7.Size = New System.Drawing.Size(525, 51)
         Me.Panel7.TabIndex = 3
         '
         'TableLayoutPanel5
@@ -335,7 +336,7 @@ Partial Class FormTransaction
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 1
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(467, 41)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(525, 51)
         Me.TableLayoutPanel5.TabIndex = 0
         '
         'Label12
@@ -344,8 +345,8 @@ Partial Class FormTransaction
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(3, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.Label12.Size = New System.Drawing.Size(82, 33)
+        Me.Label12.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Label12.Size = New System.Drawing.Size(98, 39)
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "Coupon"
         '
@@ -353,10 +354,10 @@ Partial Class FormTransaction
         '
         Me.LblKuponTerpakai.AutoSize = True
         Me.LblKuponTerpakai.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblKuponTerpakai.Location = New System.Drawing.Point(189, 0)
+        Me.LblKuponTerpakai.Location = New System.Drawing.Point(213, 0)
         Me.LblKuponTerpakai.Name = "LblKuponTerpakai"
-        Me.LblKuponTerpakai.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.LblKuponTerpakai.Size = New System.Drawing.Size(0, 33)
+        Me.LblKuponTerpakai.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.LblKuponTerpakai.Size = New System.Drawing.Size(0, 39)
         Me.LblKuponTerpakai.TabIndex = 9
         '
         'Panel6
@@ -364,10 +365,10 @@ Partial Class FormTransaction
         Me.Panel6.BackColor = System.Drawing.Color.OldLace
         Me.Panel6.Controls.Add(Me.TableLayoutPanel4)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel6.Location = New System.Drawing.Point(0, 120)
+        Me.Panel6.Location = New System.Drawing.Point(0, 150)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(467, 40)
+        Me.Panel6.Size = New System.Drawing.Size(525, 50)
         Me.Panel6.TabIndex = 3
         '
         'TableLayoutPanel4
@@ -384,7 +385,7 @@ Partial Class FormTransaction
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(467, 40)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(525, 50)
         Me.TableLayoutPanel4.TabIndex = 0
         '
         'Label10
@@ -393,8 +394,8 @@ Partial Class FormTransaction
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(3, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.Label10.Size = New System.Drawing.Size(129, 33)
+        Me.Label10.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Label10.Size = New System.Drawing.Size(156, 39)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Type of wash"
         '
@@ -402,10 +403,10 @@ Partial Class FormTransaction
         '
         Me.LblTypeOfWash.AutoSize = True
         Me.LblTypeOfWash.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTypeOfWash.Location = New System.Drawing.Point(189, 0)
+        Me.LblTypeOfWash.Location = New System.Drawing.Point(213, 0)
         Me.LblTypeOfWash.Name = "LblTypeOfWash"
-        Me.LblTypeOfWash.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.LblTypeOfWash.Size = New System.Drawing.Size(0, 33)
+        Me.LblTypeOfWash.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.LblTypeOfWash.Size = New System.Drawing.Size(0, 39)
         Me.LblTypeOfWash.TabIndex = 7
         '
         'Panel5
@@ -413,10 +414,10 @@ Partial Class FormTransaction
         Me.Panel5.BackColor = System.Drawing.Color.OldLace
         Me.Panel5.Controls.Add(Me.TableLayoutPanel3)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 80)
+        Me.Panel5.Location = New System.Drawing.Point(0, 100)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(467, 40)
+        Me.Panel5.Size = New System.Drawing.Size(525, 50)
         Me.Panel5.TabIndex = 3
         '
         'TableLayoutPanel3
@@ -432,7 +433,7 @@ Partial Class FormTransaction
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(467, 40)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(525, 50)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'Label6
@@ -441,8 +442,8 @@ Partial Class FormTransaction
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(3, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.Label6.Size = New System.Drawing.Size(74, 33)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Label6.Size = New System.Drawing.Size(88, 39)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Weight"
         '
@@ -450,10 +451,10 @@ Partial Class FormTransaction
         '
         Me.LblWeight.AutoSize = True
         Me.LblWeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblWeight.Location = New System.Drawing.Point(189, 0)
+        Me.LblWeight.Location = New System.Drawing.Point(213, 0)
         Me.LblWeight.Name = "LblWeight"
-        Me.LblWeight.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.LblWeight.Size = New System.Drawing.Size(0, 33)
+        Me.LblWeight.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.LblWeight.Size = New System.Drawing.Size(0, 39)
         Me.LblWeight.TabIndex = 5
         '
         'Panel4
@@ -461,10 +462,10 @@ Partial Class FormTransaction
         Me.Panel4.BackColor = System.Drawing.Color.OldLace
         Me.Panel4.Controls.Add(Me.TableLayoutPanel2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 40)
+        Me.Panel4.Location = New System.Drawing.Point(0, 50)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(467, 40)
+        Me.Panel4.Size = New System.Drawing.Size(525, 50)
         Me.Panel4.TabIndex = 2
         '
         'TableLayoutPanel2
@@ -481,7 +482,7 @@ Partial Class FormTransaction
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(467, 40)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(525, 50)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'Label7
@@ -490,8 +491,8 @@ Partial Class FormTransaction
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(3, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.Label7.Size = New System.Drawing.Size(121, 33)
+        Me.Label7.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Label7.Size = New System.Drawing.Size(146, 39)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "ID Costumer"
         '
@@ -499,10 +500,10 @@ Partial Class FormTransaction
         '
         Me.LblID_User.AutoSize = True
         Me.LblID_User.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblID_User.Location = New System.Drawing.Point(189, 0)
+        Me.LblID_User.Location = New System.Drawing.Point(213, 0)
         Me.LblID_User.Name = "LblID_User"
-        Me.LblID_User.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.LblID_User.Size = New System.Drawing.Size(0, 33)
+        Me.LblID_User.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.LblID_User.Size = New System.Drawing.Size(0, 39)
         Me.LblID_User.TabIndex = 4
         '
         'Panel2
@@ -515,7 +516,7 @@ Partial Class FormTransaction
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(467, 40)
+        Me.Panel2.Size = New System.Drawing.Size(525, 50)
         Me.Panel2.TabIndex = 1
         '
         'LblIDTransaction
@@ -523,10 +524,10 @@ Partial Class FormTransaction
         Me.LblIDTransaction.AutoSize = True
         Me.LblIDTransaction.Dock = System.Windows.Forms.DockStyle.Left
         Me.LblIDTransaction.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblIDTransaction.Location = New System.Drawing.Point(155, 0)
+        Me.LblIDTransaction.Location = New System.Drawing.Point(186, 0)
         Me.LblIDTransaction.Name = "LblIDTransaction"
-        Me.LblIDTransaction.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.LblIDTransaction.Size = New System.Drawing.Size(0, 33)
+        Me.LblIDTransaction.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.LblIDTransaction.Size = New System.Drawing.Size(0, 39)
         Me.LblIDTransaction.TabIndex = 1
         '
         'Label5
@@ -537,8 +538,8 @@ Partial Class FormTransaction
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Padding = New System.Windows.Forms.Padding(0, 8, 0, 0)
-        Me.Label5.Size = New System.Drawing.Size(155, 33)
+        Me.Label5.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
+        Me.Label5.Size = New System.Drawing.Size(186, 39)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = " ID Transaction :"
         '
@@ -548,10 +549,10 @@ Partial Class FormTransaction
         Me.LblDate.Dock = System.Windows.Forms.DockStyle.Right
         Me.LblDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDate.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.LblDate.Location = New System.Drawing.Point(467, 0)
+        Me.LblDate.Location = New System.Drawing.Point(525, 0)
         Me.LblDate.Name = "LblDate"
-        Me.LblDate.Padding = New System.Windows.Forms.Padding(0, 8, 0, 4)
-        Me.LblDate.Size = New System.Drawing.Size(0, 37)
+        Me.LblDate.Padding = New System.Windows.Forms.Padding(0, 10, 0, 5)
+        Me.LblDate.Size = New System.Drawing.Size(0, 44)
         Me.LblDate.TabIndex = 0
         '
         'CBTipe
@@ -559,10 +560,10 @@ Partial Class FormTransaction
         Me.CBTipe.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CBTipe.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBTipe.FormattingEnabled = True
-        Me.CBTipe.Location = New System.Drawing.Point(359, 109)
+        Me.CBTipe.Location = New System.Drawing.Point(404, 136)
         Me.CBTipe.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CBTipe.Name = "CBTipe"
-        Me.CBTipe.Size = New System.Drawing.Size(144, 37)
+        Me.CBTipe.Size = New System.Drawing.Size(162, 40)
         Me.CBTipe.TabIndex = 27
         '
         'BtnSave
@@ -571,22 +572,26 @@ Partial Class FormTransaction
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSave.ForeColor = System.Drawing.Color.Gainsboro
-        Me.BtnSave.Location = New System.Drawing.Point(811, 404)
-        Me.BtnSave.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk
+        Me.BtnSave.IconColor = System.Drawing.Color.Gainsboro
+        Me.BtnSave.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnSave.IconSize = 50
+        Me.BtnSave.Location = New System.Drawing.Point(927, 480)
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(178, 56)
-        Me.BtnSave.TabIndex = 22
-        Me.BtnSave.Text = "Save Data"
+        Me.BtnSave.Size = New System.Drawing.Size(97, 95)
+        Me.BtnSave.TabIndex = 2
+        Me.BtnSave.Text = "Save"
+        Me.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnSave.UseVisualStyleBackColor = True
         '
         'FormTransaction
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1161, 730)
-        Me.Controls.Add(Me.CBTipe)
+        Me.ClientSize = New System.Drawing.Size(1306, 912)
         Me.Controls.Add(Me.BtnSave)
+        Me.Controls.Add(Me.CBTipe)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LVDataTransaction)
         Me.Controls.Add(Me.Label3)
@@ -663,7 +668,7 @@ Partial Class FormTransaction
     Friend WithEvents Panel4 As Panel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents CBTipe As ComboBox
-    Friend WithEvents BtnSave As Button
     Friend WithEvents CBStatus As ComboBox
     Friend WithEvents status_transaksi As ColumnHeader
+    Friend WithEvents BtnSave As FontAwesome.Sharp.IconButton
 End Class
