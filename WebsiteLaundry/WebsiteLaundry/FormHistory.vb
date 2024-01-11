@@ -9,9 +9,9 @@ Public Class FormHistory
         For i = 0 To LVDataHistory.Items.Count - 1
             If LVDataHistory.Items(i).SubItems(6).Text = "In Progress.." Then
 
-                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(255, 128, 128)
+                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(255, 128, 128) 'warna merah
             Else
-                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(149, 255, 102)
+                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(149, 255, 102) ' warna hijau
             End If
         Next
 
@@ -82,7 +82,7 @@ Public Class FormHistory
     Private Sub FormHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Module1.connect()
         View(GetLVDataHistory())
-        LVDataHistory.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
+        LVDataHistory.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize) 'menyesuaikan lebar kolom sesuai dengan headernya
         Statuscolor()
     End Sub
 

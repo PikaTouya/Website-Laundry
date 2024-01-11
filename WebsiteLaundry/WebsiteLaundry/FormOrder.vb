@@ -46,7 +46,7 @@ Public Class FormOrder
         'menangkap id user secara otomatis
         Id_User.Text = Module1.LoggedInUserID
 
-        ' Access the phone number from the database based on the user ID
+        ' mengakses nomor telepon user dari database
         Dim phoneNumberQuery As String = "SELECT nomortelepon_pengguna FROM Pengguna WHERE id_pengguna = @id_pengguna"
         Using cmd As New SqlCommand(phoneNumberQuery, Module1.Conn)
             cmd.Parameters.AddWithValue("@id_pengguna", Module1.LoggedInUserID)
@@ -54,8 +54,8 @@ Public Class FormOrder
             Try
                 Dim phoneNumber As Object = cmd.ExecuteScalar()
 
-                If phoneNumber IsNot DBNull.Value AndAlso phoneNumber IsNot Nothing Then
-                    ' Set the phone number to lbltelepon
+                If phoneNumber IsNot DBNull.Value AndAlso phoneNumber IsNot Nothing Then 'jika bukan null
+                    ' menangkap nomor telepon user
                     lbltelepon.Text = phoneNumber.ToString()
                 End If
             Catch ex As Exception
@@ -78,7 +78,7 @@ Public Class FormOrder
         Dim decimalSeparator As String = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator
 
         ' Memeriksa apakah karakter yang dimasukkan adalah angka, tanda desimal, atau kontrol karakter (seperti backspace)
-        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = decimalSeparator AndAlso Not Char.IsControl(e.KeyChar) Then
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = decimalSeparator Then
             ' Jika bukan angka, tanda desimal, atau kontrol karakter, batalkan input
             e.Handled = True
         End If
@@ -91,8 +91,8 @@ Public Class FormOrder
 
     Private Sub berat_pakaian_TextChanged(sender As Object, e As EventArgs) Handles berat_pakaian.TextChanged
         ' Periksa apakah cbjenis dan beratpakaian sudah di isi
-        If Not String.IsNullOrEmpty(cbjenis.Text) AndAlso Not String.IsNullOrEmpty(berat_pakaian.Text) Then
-            Dim berat As Double
+        If Not String.IsNullOrEmpty(cbjenis.Text) AndAlso Not String.IsNullOrEmpty(berat_pakaian.Text) Then 'periksa apakah cbjenis dan berat pakaian textnya tidak kosong
+            Dim berat As Double 'memakai tipe data double karena berat bisa saja desimal
             If Double.TryParse(berat_pakaian.Text, berat) Then
                 ' Panggil fungsi untuk mendapatkan harga dari database berdasarkan jenis cuci
                 LoadPriceFromDatabase(cbjenis.Text)
@@ -134,10 +134,10 @@ Public Class FormOrder
                 Dim totalOrderWithoutCoupon As Integer = CInt(cmdTotalOrderWithoutCoupon.ExecuteScalar())
 
                 ' Calculate the remaining stars
-                Dim remainingStars As Integer = totalOrderWithoutCoupon Mod 10
+                Dim currentOrders As Integer = totalOrderWithoutCoupon Mod 10
 
                 ' Display the remaining stars
-                FormCoupon.lblCurrentOrders.Text = "Remaining Stars: " & remainingStars.ToString()
+                FormCoupon.lblCurrentOrders.Text = "Current Orders: " & currentOrders.ToString()
 
                 ' Calculate the unused coupons
                 Dim totalOrderWithCouponQuery As String = "SELECT COUNT(*) FROM Transaksi WHERE pakai_kupon = 1 AND id_pengguna = @id_pengguna"
@@ -179,7 +179,7 @@ Public Class FormOrder
         Cmd.Parameters.AddWithValue("@jenisCuci", jenisCuci)
 
         Try
-            Dim harga As Object = Cmd.ExecuteScalar()
+            Dim harga As Object = Cmd.ExecuteScalar() 'untuk mengambil nilai harga dari database berdasarkan jenis cuci
 
             If harga IsNot DBNull.Value AndAlso harga IsNot Nothing Then
                 ' Set nilai textbox harga_transaksi berdasarkan harga dari database
@@ -216,7 +216,7 @@ Public Class FormOrder
             ' Add parameters to the SqlCommand to prevent SQL injection
             Cmd.Parameters.AddWithValue("@id_transaksi", Id_Transaksi.Text)
             Cmd.Parameters.AddWithValue("@id_pengguna", Id_User.Text)
-            Cmd.Parameters.AddWithValue("@tanggal_transaksi", DateTime.Now) ' Assuming you want to use the current timestamp
+            Cmd.Parameters.AddWithValue("@tanggal_transaksi", DateTime.Now)
             Cmd.Parameters.AddWithValue("@jenis_cuci", cbjenis.Text)
             Cmd.Parameters.AddWithValue("@berat_pakaian", Decimal.Parse(berat_pakaian.Text))
             Cmd.Parameters.AddWithValue("@harga_transaksi", Decimal.Parse(harga_transaksi.Text))
