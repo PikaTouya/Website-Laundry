@@ -132,7 +132,7 @@ Public Class FormHistory
                 .SubItems.Add(jenis_cuci)
                 .SubItems.Add(pakai_kupon)
                 .SubItems.Add(harga_transaksi)
-                .SubItems.Add(Status_transaksi)
+                .SubItems.Add(status_transaksi)
             End With
         End While
 

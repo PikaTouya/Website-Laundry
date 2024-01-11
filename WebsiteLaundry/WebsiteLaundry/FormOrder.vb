@@ -137,7 +137,7 @@ Public Class FormOrder
                 Dim remainingStars As Integer = totalOrderWithoutCoupon Mod 10
 
                 ' Display the remaining stars
-                FormCoupon.lblRemainingStars.Text = "Remaining Stars: " & remainingStars.ToString()
+                FormCoupon.lblCurrentOrders.Text = "Remaining Stars: " & remainingStars.ToString()
 
                 ' Calculate the unused coupons
                 Dim totalOrderWithCouponQuery As String = "SELECT COUNT(*) FROM Transaksi WHERE pakai_kupon = 1 AND id_pengguna = @id_pengguna"

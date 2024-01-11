@@ -22,10 +22,10 @@ Public Class FormCoupon
                 Dim totalOrderWithoutCoupon As Integer = CInt(cmdTotalOrderWithoutCoupon.ExecuteScalar())
 
                 ' Calculate the remaining stars
-                Dim remainingStars As Integer = totalOrderWithoutCoupon Mod 10
+                Dim currentOrders As Integer = totalOrderWithoutCoupon Mod 10
 
                 ' Display the remaining stars
-                lblRemainingStars.Text = "Remaining Stars: " & remainingStars.ToString()
+                lblCurrentOrders.Text = "Current Orders: " & currentOrders.ToString()
 
                 ' Calculate the unused coupons
                 Dim totalOrderWithCouponQuery As String = "SELECT COUNT(*) FROM Transaksi WHERE pakai_kupon = 1 AND id_pengguna = @id_pengguna"
