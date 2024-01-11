@@ -58,7 +58,7 @@ Public Class FormTransaction
             Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
             Dim jenis_cuci As String = Dr("jenis_cuci").ToString()
             Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
-            Dim harga_transaksi As Double = Convert.ToDouble(Dr("harga_transaksi")) 'untuk memakai format ToString("NO")
+            Dim harga_transaksi As String = "Rp " & Dr("harga_transaksi").ToString()
             Dim status_transaksi As String = Dr("status_transaksi").ToString()
 
 
@@ -204,7 +204,7 @@ Public Class FormTransaction
             LblWeight.Text = .SubItems(3).Text
             LblTypeOfWash.Text = .SubItems(4).Text
             LblKuponTerpakai.Text = .SubItems(5).Text
-            LblTotalHarga.Text = harga_transaksi.ToString("N0")
+            LblTotalHarga.Text = .SubItems(6).Text
             CBStatus.Visible = True
             CBStatus.Text = .SubItems(7).Text
             BtnSave.Visible = True

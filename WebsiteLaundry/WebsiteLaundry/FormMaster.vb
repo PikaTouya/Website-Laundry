@@ -12,8 +12,4 @@ Public Class FormMaster
         Call FormUtama.OpenChildForm(New MasterFormJasa)
         FormUtama.IconChildForm.IconChar = IconChar.Tag
     End Sub
-
-    Private Sub FormMaster_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
