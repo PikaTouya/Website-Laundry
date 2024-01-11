@@ -213,7 +213,6 @@ Public Class FormOrder
             ' Create a new SqlCommand object
             Dim Cmd As New SqlClient.SqlCommand(strsql, Module1.Conn)
 
-            ' Add parameters to the SqlCommand to prevent SQL injection
 
 
             Dim jenisCuci As String = String.Empty
