@@ -44,7 +44,7 @@ Public Class FormTransaction
         LVDataTransaction.Items.Clear()
 
         ' Lakukan SELECT data dari tabel Pengguna
-        strsql = "SELECT * FROM Transaksi"
+        strsql = "SELECT Transaksi.*, Jasa.jenis_cuci FROM Transaksi INNER JOIN  Jasa on Jasa.id_jasa = Transaksi.id_jasa"
         Cmd.CommandText = strsql
         Cmd.Connection = Conn
         Da.SelectCommand = Cmd
@@ -113,11 +113,28 @@ Public Class FormTransaction
 
             ' Tampilkan hasil pencarian di ListView
             While (Dr.Read())
+                Dim jenis_cuci As String
+
+                Select Case Dr("id_jasa").ToString()
+                    Case "JS001"
+                        jenis_cuci = "Normal Wash"
+                    Case "JS002"
+                        jenis_cuci = "Normal Wash + Ironing"
+                    Case "JS003"
+                        jenis_cuci = "Quick Wash"
+                    Case "JS004"
+                        jenis_cuci = "Quick Wash + Ironing"
+                    Case Else
+                        jenis_cuci = "Tidak Diketahui"
+                End Select
+
+
+
                 Dim id_transaksi As String = Dr("id_transaksi").ToString()
                 Dim tanggal_Transaksi As String = Dr("tanggal_transaksi").ToString()
                 Dim id_pengguna As String = Dr("id_pengguna").ToString()
                 Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
-                Dim jenis_cuci As String = Dr("jenis_cuci").ToString()
+
                 Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
                 Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
                 Dim status_transaksi As String = Dr("status_transaksi").ToString()
@@ -158,11 +175,26 @@ Public Class FormTransaction
 
             ' Tampilkan hasil pencarian di ListView
             While (Dr.Read())
+                Dim jenis_cuci As String
+
+                Select Case Dr("id_jasa").ToString()
+                    Case "JS001"
+                        jenis_cuci = "Normal Wash"
+                    Case "JS002"
+                        jenis_cuci = "Normal Wash + Ironing"
+                    Case "JS003"
+                        jenis_cuci = "Quick Wash"
+                    Case "JS004"
+                        jenis_cuci = "Quick Wash + Ironing"
+                    Case Else
+                        jenis_cuci = "Tidak Diketahui"
+                End Select
+
+
                 Dim id_transaksi As String = Dr("id_transaksi").ToString()
                 Dim tanggal_Transaksi As String = Dr("tanggal_transaksi").ToString()
                 Dim id_pengguna As String = Dr("id_pengguna").ToString()
                 Dim berat_pakaian As String = Dr("berat_pakaian").ToString() & " KG"
-                Dim jenis_cuci As String = Dr("jenis_cuci").ToString()
                 Dim pakai_kupon As String = Dr("pakai_kupon").ToString()
                 Dim harga_transaksi As String = Dr("harga_transaksi").ToString()
                 Dim status_transaksi As String = Dr("status_transaksi").ToString()

@@ -17,7 +17,7 @@ Public Class FormOrder
         cbjenis.Items.Add("Quick Wash")
         cbjenis.Items.Add("Quick Wash + Ironing")
 
-        'membuat pilihan pada cbcoupon
+        'membuat pilihan cbjenis cbcoupon
         cbcoupon.Items.Add("Yes, I wanna use my coupon!")
         cbcoupon.Items.Add("No, I wanna keep it!")
 
@@ -207,17 +207,37 @@ Public Class FormOrder
             Module1.connect()
             Dim StatusOrder As String = "In Progress.."
             ' Prepare the SQL statement for inserting data into the database
-            Dim strsql As String = "INSERT INTO Transaksi (id_transaksi, id_pengguna, tanggal_transaksi, jenis_cuci, berat_pakaian, harga_transaksi, pakai_kupon, status_transaksi) " &
+            Dim strsql As String = "INSERT INTO Transaksi (id_transaksi, id_pengguna, tanggal_transaksi, id_jasa, berat_pakaian, harga_transaksi, pakai_kupon, status_transaksi) " &
                                "VALUES (@id_transaksi, @id_pengguna, @tanggal_transaksi, @jenis_cuci, @berat_pakaian, @harga_transaksi, @pakai_kupon, @status_transaksi)"
 
             ' Create a new SqlCommand object
             Dim Cmd As New SqlClient.SqlCommand(strsql, Module1.Conn)
 
             ' Add parameters to the SqlCommand to prevent SQL injection
+
+
+            Dim jenisCuci As String = String.Empty
+
+            ' Ganti nilai @jenis_cuci berdasarkan kondisi
+            Select Case cbjenis.Text
+                Case "Normal Wash"
+                    jenisCuci = "JS001"
+                Case "Normal Wash + Ironing"
+                    jenisCuci = "JS002"
+                Case "Quick Wash"
+                    jenisCuci = "JS003"
+                Case "Quick Wash + Ironing"
+                    jenisCuci = "JS004"
+                Case Else
+                    jenisCuci = "JS001"
+            End Select
+
+
+
             Cmd.Parameters.AddWithValue("@id_transaksi", Id_Transaksi.Text)
             Cmd.Parameters.AddWithValue("@id_pengguna", Id_User.Text)
             Cmd.Parameters.AddWithValue("@tanggal_transaksi", DateTime.Now)
-            Cmd.Parameters.AddWithValue("@jenis_cuci", cbjenis.Text)
+            Cmd.Parameters.AddWithValue("@jenis_cuci", jenisCuci)
             Cmd.Parameters.AddWithValue("@berat_pakaian", Decimal.Parse(berat_pakaian.Text))
             Cmd.Parameters.AddWithValue("@harga_transaksi", Decimal.Parse(harga_transaksi.Text))
             Cmd.Parameters.AddWithValue("@pakai_kupon", If(cbcoupon.Text = "Yes, I wanna use my coupon!", True, False))
