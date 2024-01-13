@@ -201,7 +201,7 @@ Public Class MasterFormPengguna
         Cmd.CommandText = strsql
         Cmd.Connection = Conn
         Cmd.Parameters.Clear()
-        Cmd.Parameters.AddWithValue("@SearchText", "%" & searchText & "%")
+        Cmd.Parameters.AddWithValue("@SearchText", "%" & searchText & "%") '"%" & searchText & "%" adalah nilai yang akan diisikan ke dalam parameter
         Da.SelectCommand = Cmd
         Dr = Cmd.ExecuteReader()
 

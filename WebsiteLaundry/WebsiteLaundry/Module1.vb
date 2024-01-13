@@ -14,7 +14,7 @@ Module Module1
     Sub connect()
         strsql = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
         Conn = New SqlConnection(strsql)
-        If Conn.State = ConnectionState.Closed Then
+        If Conn.State = ConnectionState.Closed Then 'jika koneksi sedang tertutup
             Conn.Open()
         End If
     End Sub

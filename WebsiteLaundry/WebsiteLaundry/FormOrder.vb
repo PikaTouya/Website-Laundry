@@ -77,9 +77,9 @@ Public Class FormOrder
         ' Mendapatkan tanda desimal dari pengaturan regional
         Dim decimalSeparator As String = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator
 
-        ' Memeriksa apakah karakter yang dimasukkan adalah angka, tanda desimal, atau kontrol karakter (seperti backspace)
+        ' Memeriksa apakah karakter yang dimasukkan adalah angka atau tanda desimal
         If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = decimalSeparator Then
-            ' Jika bukan angka, tanda desimal, atau kontrol karakter, batalkan input
+            ' Jika bukan angka, tanda desimal, batalkan input
             e.Handled = True
         End If
 
@@ -93,7 +93,7 @@ Public Class FormOrder
         ' Periksa apakah cbjenis dan beratpakaian sudah di isi
         If Not String.IsNullOrEmpty(cbjenis.Text) AndAlso Not String.IsNullOrEmpty(berat_pakaian.Text) Then 'periksa apakah cbjenis dan berat pakaian textnya tidak kosong
             Dim berat As Double 'memakai tipe data double karena berat bisa saja desimal
-            If Double.TryParse(berat_pakaian.Text, berat) Then
+            If Double.TryParse(berat_pakaian.Text, berat) Then 'Double.TryParse digunakan untuk mencoba mengonversi suatu string ke tipe data Double
                 ' Panggil fungsi untuk mendapatkan harga dari database berdasarkan jenis cuci
                 LoadPriceFromDatabase(cbjenis.Text)
 

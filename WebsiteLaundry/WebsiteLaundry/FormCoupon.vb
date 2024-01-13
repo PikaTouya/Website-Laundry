@@ -6,14 +6,12 @@ Public Class FormCoupon
     Private totalCoupon As Integer = 0
 
     Private Sub FormCoupon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Panggil fungsi untuk mengecek jumlah transaksi tanpa kupon
-        ' Connect to the database
         Module1.connect()
 
-        ' Get the user's ID
+        'menangkap user id
         Dim userId As String = Module1.LoggedInUserID
 
-        ' Calculate total orders without using a coupon
+        ' hitung total order tanpa kupon
         Dim totalOrderWithoutCouponQuery As String = "SELECT COUNT(*) FROM Transaksi WHERE pakai_kupon = 0 AND id_pengguna = @id_pengguna"
         Using cmdTotalOrderWithoutCoupon As New SqlCommand(totalOrderWithoutCouponQuery, Module1.Conn)
             cmdTotalOrderWithoutCoupon.Parameters.AddWithValue("@id_pengguna", userId)
@@ -21,13 +19,13 @@ Public Class FormCoupon
             Try
                 Dim totalOrderWithoutCoupon As Integer = CInt(cmdTotalOrderWithoutCoupon.ExecuteScalar())
 
-                ' Calculate the remaining stars
+                ' hitung current orders
                 Dim currentOrders As Integer = totalOrderWithoutCoupon Mod 10
 
-                ' Display the remaining stars
+                ' Tampilkan current orders
                 lblCurrentOrders.Text = "Current Orders: " & currentOrders.ToString()
 
-                ' Calculate the unused coupons
+                ' hitung unused coupons
                 Dim totalOrderWithCouponQuery As String = "SELECT COUNT(*) FROM Transaksi WHERE pakai_kupon = 1 AND id_pengguna = @id_pengguna"
                 Using cmdTotalOrderWithCoupon As New SqlCommand(totalOrderWithCouponQuery, Module1.Conn)
                     cmdTotalOrderWithCoupon.Parameters.AddWithValue("@id_pengguna", userId)
@@ -37,7 +35,7 @@ Public Class FormCoupon
 
                         Dim unusedCoupons As Integer = (totalOrderWithoutCoupon \ 10) - totalOrderWithCoupon
 
-                        ' Display the unused coupons
+                        ' tampilkan unused coupons
                         lblUnusedCoupons.Text = "Unused Coupons: " & unusedCoupons.ToString()
                     Catch ex As Exception
                         ' Handle any exceptions that may occur during the database operation

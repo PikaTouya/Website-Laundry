@@ -65,7 +65,7 @@ Partial Class FormTransaction
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LblDate = New System.Windows.Forms.Label()
         Me.CBTipe = New System.Windows.Forms.ComboBox()
-        Me.BtnSave = New System.Windows.Forms.Button()
+        Me.BtnSave = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
@@ -122,7 +122,7 @@ Partial Class FormTransaction
         '
         Me.berat_pakaian.Text = "Weight"
         Me.berat_pakaian.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.berat_pakaian.Width = 179
+        Me.berat_pakaian.Width = 146
         '
         'jenis_cuci
         '
@@ -568,15 +568,19 @@ Partial Class FormTransaction
         'BtnSave
         '
         Me.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnSave.Cursor = System.Windows.Forms.Cursors.Default
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSave.ForeColor = System.Drawing.Color.Gainsboro
-        Me.BtnSave.Location = New System.Drawing.Point(811, 404)
-        Me.BtnSave.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk
+        Me.BtnSave.IconColor = System.Drawing.Color.Gainsboro
+        Me.BtnSave.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnSave.Location = New System.Drawing.Point(825, 375)
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(178, 56)
-        Me.BtnSave.TabIndex = 22
-        Me.BtnSave.Text = "Save Data"
+        Me.BtnSave.Size = New System.Drawing.Size(94, 85)
+        Me.BtnSave.TabIndex = 28
+        Me.BtnSave.Text = "Save"
+        Me.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnSave.UseVisualStyleBackColor = True
         '
         'FormTransaction
@@ -585,8 +589,8 @@ Partial Class FormTransaction
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1161, 730)
-        Me.Controls.Add(Me.CBTipe)
         Me.Controls.Add(Me.BtnSave)
+        Me.Controls.Add(Me.CBTipe)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LVDataTransaction)
         Me.Controls.Add(Me.Label3)
@@ -663,7 +667,7 @@ Partial Class FormTransaction
     Friend WithEvents Panel4 As Panel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents CBTipe As ComboBox
-    Friend WithEvents BtnSave As Button
     Friend WithEvents CBStatus As ComboBox
     Friend WithEvents status_transaksi As ColumnHeader
+    Friend WithEvents BtnSave As FontAwesome.Sharp.IconButton
 End Class

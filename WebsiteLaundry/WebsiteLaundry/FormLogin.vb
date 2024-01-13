@@ -5,8 +5,8 @@ Public Class FormLoginOrSignup
     Dim connectionString As String = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
     Dim strsql As String
     Sub KondisiAwal()
-        TBUsername1.Text = "ADMIN001"
-        TBPass1.Text = "SAYAADMIN001"
+        TBUsername1.Text = ""
+        TBPass1.Text = ""
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""
@@ -202,7 +202,7 @@ Public Class FormLoginOrSignup
         btnSignUp.Enabled = False
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If PanelSlide.Location.X > -750 Then
+        If PanelSlide.Location.X > -650 Then
             PanelSlide.Location = New Point(PanelSlide.Location.X - 10, PanelSlide.Location.Y)
             TBUserID.Text = GenerateID("USR")
 
@@ -229,5 +229,9 @@ Public Class FormLoginOrSignup
         If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> ControlChars.Back AndAlso e.KeyChar <> ChrW(Keys.Delete) Then
             e.Handled = True ' Menahan karakter yang tidak valid
         End If
+    End Sub
+
+    Private Sub PanelSlide_Paint(sender As Object, e As PaintEventArgs) Handles PanelSlide.Paint
+
     End Sub
 End Class

@@ -10,7 +10,6 @@ Public Class MasterFormJasa
     End Sub
 
     Private Sub MasterFormJasa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Panggil fungsi connect dari Module1 untuk membuka koneksi ke database
         connect()
 
         ' Ambil harga dari database untuk setiap jenis cuci
@@ -25,7 +24,7 @@ Public Class MasterFormJasa
             ' Update nilai textbox sesuai dengan jenis cuci
             Select Case jenisCuci
                 Case "Normal Wash"
-                    tbharganormal.Text = harga.ToString("N0") 'ToString("N0") akan menghasilkan string "12,346", kalau tidak pakai ini maka akan menghasilkan 12345,67
+                    tbharganormal.Text = harga.ToString("N0") 'ToString("N0") akan menghasilkan string "10000", kalau tidak pakai ini maka akan menghasilkan "10000,00"
                 Case "Normal Wash + Ironing"
                     tbharganormalsetrika.Text = harga.ToString("N0")
                 Case "Quick Wash"
@@ -53,7 +52,6 @@ Public Class MasterFormJasa
     End Sub
 
     Private Sub SavePrice_Click(sender As Object, e As EventArgs) Handles SavePrice.Click
-        ' Panggil fungsi connect dari Module1 untuk membuka koneksi ke database
         connect()
 
         ' Update harga di database sesuai dengan nilai textbox yang diubah
