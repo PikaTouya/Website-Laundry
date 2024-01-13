@@ -7,7 +7,6 @@ Public Class FormOrder
         frmCoupon.Show() ' alasan mengshow form coupon, karena ingin mengecek bisa pakai kupon atau tidak, jika tidak maka visible false
         frmCoupon.Hide() ' Jika Anda tidak ingin menampilkan FormCoupon secara langsung
 
-
         ' Tetapkan tanggal dan jam dan hari
         tanggal_transaksi.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy HH:mm:ss")
 
@@ -213,8 +212,6 @@ Public Class FormOrder
             ' Create a new SqlCommand object
             Dim Cmd As New SqlClient.SqlCommand(strsql, Module1.Conn)
 
-
-
             Dim jenisCuci As String = String.Empty
 
             ' Ganti nilai @jenis_cuci berdasarkan kondisi
@@ -230,8 +227,6 @@ Public Class FormOrder
                 Case Else
                     jenisCuci = "JS001"
             End Select
-
-
 
             Cmd.Parameters.AddWithValue("@id_transaksi", Id_Transaksi.Text)
             Cmd.Parameters.AddWithValue("@id_pengguna", Id_User.Text)

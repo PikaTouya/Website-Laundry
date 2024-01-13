@@ -186,9 +186,11 @@ Public Class MasterFormPengguna
     'agar ketika tbsearch diketik, sudah memunculkan data yang berkaitan dengan tbsearch.text
     Private Sub TBSearch_TextChanged(sender As Object, e As EventArgs) Handles TBSearch.TextChanged
         SearchData(TBSearch.Text)
+
     End Sub
 
     Private Sub SearchData(searchText As String)
+
         ' Pastikan bahwa DataReader ditutup sebelum menjalankan perintah SELECT
         If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
             Dr.Close()
@@ -202,6 +204,7 @@ Public Class MasterFormPengguna
         Cmd.Connection = Conn
         Cmd.Parameters.Clear()
         Cmd.Parameters.AddWithValue("@SearchText", "%" & searchText & "%") '"%" & searchText & "%" adalah nilai yang akan diisikan ke dalam parameter
+
         Da.SelectCommand = Cmd
         Dr = Cmd.ExecuteReader()
 
@@ -216,6 +219,7 @@ Public Class MasterFormPengguna
 
         ' Tutup DataReader
         Dr.Close()
+
     End Sub
 
 

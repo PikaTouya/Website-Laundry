@@ -9,7 +9,7 @@ Public Class FormHistory
         For i = 0 To LVDataHistory.Items.Count - 1
             If LVDataHistory.Items(i).SubItems(6).Text = "In Progress.." Then
 
-                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(255, 128, 128) 'warna merah
+                LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(250, 123, 123) 'warna merah
             Else
                 LVDataHistory.Items.Item(i).BackColor = Color.FromArgb(149, 255, 102) ' warna hijau
             End If

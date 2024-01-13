@@ -5,8 +5,8 @@ Public Class FormLoginOrSignup
     Dim connectionString As String = "Data Source=localhost; Initial Catalog=Laundry; Integrated Security=True"
     Dim strsql As String
     Sub KondisiAwal()
-        TBUsername1.Text = ""
-        TBPass1.Text = ""
+        TBUsername1.Text = "ADMIN001"
+        TBPass1.Text = "SAYAADMIN001"
         TBPass1.PasswordChar = "*"
 
         TBUserID.Text = ""
@@ -202,7 +202,7 @@ Public Class FormLoginOrSignup
         btnSignUp.Enabled = False
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If PanelSlide.Location.X > -650 Then
+        If PanelSlide.Location.X > -750 Then
             PanelSlide.Location = New Point(PanelSlide.Location.X - 10, PanelSlide.Location.Y)
             TBUserID.Text = GenerateID("USR")
 

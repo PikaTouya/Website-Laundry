@@ -41,9 +41,9 @@ Partial Class FormHistory
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(26, 190)
+        Me.Label1.Location = New System.Drawing.Point(25, 147)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(264, 29)
+        Me.Label1.Size = New System.Drawing.Size(311, 32)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Search by ID Tansaksi :"
         '
@@ -53,26 +53,29 @@ Partial Class FormHistory
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("News706 BT", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(423, 36)
+        Me.Label3.Location = New System.Drawing.Point(476, 34)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(318, 56)
+        Me.Label3.Size = New System.Drawing.Size(377, 67)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Your History"
         '
         'LVDataHistory
         '
-        Me.LVDataHistory.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid
+        Me.LVDataHistory.Alignment = System.Windows.Forms.ListViewAlignment.[Default]
         Me.LVDataHistory.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LVDataHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LVDataHistory.BackColor = System.Drawing.SystemColors.Window
+        Me.LVDataHistory.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.LVDataHistory.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id_transaksi, Me.tanggal_transaksi, Me.berat_pakaian, Me.jenis_cuci, Me.pakai_kupon, Me.harga_transaksi, Me.Status_transaksi})
         Me.LVDataHistory.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LVDataHistory.ForeColor = System.Drawing.Color.Black
         Me.LVDataHistory.FullRowSelect = True
         Me.LVDataHistory.GridLines = True
         Me.LVDataHistory.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.LVDataHistory.HideSelection = False
-        Me.LVDataHistory.Location = New System.Drawing.Point(31, 242)
+        Me.LVDataHistory.Location = New System.Drawing.Point(31, 211)
+        Me.LVDataHistory.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LVDataHistory.Name = "LVDataHistory"
-        Me.LVDataHistory.Size = New System.Drawing.Size(1103, 450)
+        Me.LVDataHistory.Size = New System.Drawing.Size(1241, 673)
         Me.LVDataHistory.Sorting = System.Windows.Forms.SortOrder.Descending
         Me.LVDataHistory.TabIndex = 15
         Me.LVDataHistory.UseCompatibleStateImageBehavior = False
@@ -122,19 +125,19 @@ Partial Class FormHistory
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(308, 188)
+        Me.TBSearch.Location = New System.Drawing.Point(342, 144)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(826, 38)
+        Me.TBSearch.Size = New System.Drawing.Size(929, 44)
         Me.TBSearch.TabIndex = 16
         Me.TBSearch.WordWrap = False
         '
         'FormHistory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1161, 730)
+        Me.ClientSize = New System.Drawing.Size(1306, 912)
         Me.Controls.Add(Me.TBSearch)
         Me.Controls.Add(Me.LVDataHistory)
         Me.Controls.Add(Me.Label3)
