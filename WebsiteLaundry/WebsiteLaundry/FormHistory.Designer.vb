@@ -71,7 +71,6 @@ Partial Class FormHistory
         Me.LVDataHistory.FullRowSelect = True
         Me.LVDataHistory.GridLines = True
         Me.LVDataHistory.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.LVDataHistory.HideSelection = False
         Me.LVDataHistory.Location = New System.Drawing.Point(31, 211)
         Me.LVDataHistory.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LVDataHistory.Name = "LVDataHistory"

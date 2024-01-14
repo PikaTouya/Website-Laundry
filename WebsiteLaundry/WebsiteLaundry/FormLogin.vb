@@ -40,12 +40,12 @@ Public Class FormLoginOrSignup
                 Dim NamaUser As String = Dr("nama_pengguna").ToString()
                 FormUtama.lblNamaUser.Text = NamaUser
                 FormUtama.lblNamaUser.Visible = True
-                FormUtama.IconUser.IconChar = IconChar.CircleUser
                 FormUtama.IconUser.Visible = True
                 FormUtama.btnlogin.Visible = False
                 FormUtama.btnlogout.Visible = True
                 Dim levelpengguna As String = Dr("level_pengguna").ToString()
                 If levelpengguna = "ADMIN" Then
+                    FormUtama.IconUser.IconChar = IconChar.UserSecret
                     FormUtama.PanelMenu.Visible = True
                     FormUtama.btnTransaction.Visible = True
                     FormUtama.btnMaster.Visible = True
@@ -53,6 +53,7 @@ Public Class FormLoginOrSignup
                     FormUtama.btnHistory.Visible = False
                     FormUtama.btnCoupon.Visible = False
                 Else
+                    FormUtama.IconUser.IconChar = IconChar.UserAstronaut
                     FormUtama.PanelMenu.Visible = True
                     FormUtama.btnHistory.Visible = True
                     FormUtama.btnCoupon.Visible = True

@@ -22,5 +22,15 @@ WebsiteLaundry
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:WebsiteLaundry.My.Resources.Resources.download">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WebsiteLaundry.My.Resources.Resources.Free_Vector___Washing_machine_neon_sign">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

@@ -58,8 +58,8 @@ Public Class FormUtama
     Sub Reset()
         ClearButton()
         leftBorderBtn.Visible = False
-        iconChildForm.IconChar = IconChar.Landmark
-        iconChildForm.IconColor = Color.Gainsboro
+        IconChildForm.IconChar = IconChar.FortAwesomeAlt
+        IconChildForm.IconColor = Color.Gainsboro
         lblChildForm.Text = "Bobok Laundry"
     End Sub
 
@@ -208,4 +208,5 @@ Public Class FormUtama
         Public Shared color5 As Color = Color.FromArgb(249, 88, 155)
         Public Shared color6 As Color = Color.FromArgb(24, 161, 251)
     End Structure
+
 End Class
