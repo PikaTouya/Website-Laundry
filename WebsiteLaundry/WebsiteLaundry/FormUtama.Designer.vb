@@ -51,21 +51,21 @@ Partial Class FormUtama
         Me.lblwaktu = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.IconPictureBox10 = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox8 = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox3 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IconPictureBox4 = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
+        Me.IconPictureBox11 = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox7 = New FontAwesome.Sharp.IconPictureBox()
+        Me.IconPictureBox9 = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox6 = New FontAwesome.Sharp.IconPictureBox()
         Me.IconPictureBox5 = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.IconPictureBox9 = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconPictureBox10 = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconPictureBox11 = New FontAwesome.Sharp.IconPictureBox()
         Me.PanelMenu.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.ImgHome, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,17 +77,17 @@ Partial Class FormUtama
         Me.PanelContent.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IconPictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IconPictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IconPictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IconPictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IconPictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IconPictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -535,6 +535,21 @@ Partial Class FormUtama
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'IconPictureBox10
+        '
+        Me.IconPictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.IconPictureBox10.BackColor = System.Drawing.Color.Transparent
+        Me.IconPictureBox10.ForeColor = System.Drawing.Color.LightGray
+        Me.IconPictureBox10.IconChar = FontAwesome.Sharp.IconChar.Odysee
+        Me.IconPictureBox10.IconColor = System.Drawing.Color.LightGray
+        Me.IconPictureBox10.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox10.IconSize = 274
+        Me.IconPictureBox10.Location = New System.Drawing.Point(285, -21)
+        Me.IconPictureBox10.Name = "IconPictureBox10"
+        Me.IconPictureBox10.Size = New System.Drawing.Size(274, 274)
+        Me.IconPictureBox10.TabIndex = 4
+        Me.IconPictureBox10.TabStop = False
+        '
         'IconPictureBox8
         '
         Me.IconPictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -608,6 +623,21 @@ Partial Class FormUtama
         Me.IconPictureBox2.TabIndex = 4
         Me.IconPictureBox2.TabStop = False
         '
+        'IconPictureBox11
+        '
+        Me.IconPictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.IconPictureBox11.BackColor = System.Drawing.Color.Transparent
+        Me.IconPictureBox11.ForeColor = System.Drawing.Color.Ivory
+        Me.IconPictureBox11.IconChar = FontAwesome.Sharp.IconChar.OptinMonster
+        Me.IconPictureBox11.IconColor = System.Drawing.Color.Ivory
+        Me.IconPictureBox11.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox11.IconSize = 278
+        Me.IconPictureBox11.Location = New System.Drawing.Point(534, 721)
+        Me.IconPictureBox11.Name = "IconPictureBox11"
+        Me.IconPictureBox11.Size = New System.Drawing.Size(289, 278)
+        Me.IconPictureBox11.TabIndex = 4
+        Me.IconPictureBox11.TabStop = False
+        '
         'IconPictureBox7
         '
         Me.IconPictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -622,6 +652,21 @@ Partial Class FormUtama
         Me.IconPictureBox7.Size = New System.Drawing.Size(150, 150)
         Me.IconPictureBox7.TabIndex = 4
         Me.IconPictureBox7.TabStop = False
+        '
+        'IconPictureBox9
+        '
+        Me.IconPictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.IconPictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.IconPictureBox9.ForeColor = System.Drawing.Color.LightGray
+        Me.IconPictureBox9.IconChar = FontAwesome.Sharp.IconChar.Cloud
+        Me.IconPictureBox9.IconColor = System.Drawing.Color.LightGray
+        Me.IconPictureBox9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox9.IconSize = 200
+        Me.IconPictureBox9.Location = New System.Drawing.Point(623, 3)
+        Me.IconPictureBox9.Name = "IconPictureBox9"
+        Me.IconPictureBox9.Size = New System.Drawing.Size(200, 200)
+        Me.IconPictureBox9.TabIndex = 4
+        Me.IconPictureBox9.TabStop = False
         '
         'IconPictureBox6
         '
@@ -653,21 +698,6 @@ Partial Class FormUtama
         Me.IconPictureBox5.TabIndex = 4
         Me.IconPictureBox5.TabStop = False
         '
-        'IconPictureBox1
-        '
-        Me.IconPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.IconPictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.IconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Cloud
-        Me.IconPictureBox1.IconColor = System.Drawing.Color.Gainsboro
-        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox1.IconSize = 369
-        Me.IconPictureBox1.Location = New System.Drawing.Point(-31, 65)
-        Me.IconPictureBox1.Name = "IconPictureBox1"
-        Me.IconPictureBox1.Size = New System.Drawing.Size(369, 369)
-        Me.IconPictureBox1.TabIndex = 4
-        Me.IconPictureBox1.TabStop = False
-        '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -693,53 +723,23 @@ Partial Class FormUtama
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Bobok Laundry"
         '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.IconPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.IconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Cloud
+        Me.IconPictureBox1.IconColor = System.Drawing.Color.Gainsboro
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 369
+        Me.IconPictureBox1.Location = New System.Drawing.Point(-31, 65)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(369, 369)
+        Me.IconPictureBox1.TabIndex = 4
+        Me.IconPictureBox1.TabStop = False
+        '
         'Timer1
         '
-        '
-        'IconPictureBox9
-        '
-        Me.IconPictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.IconPictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.IconPictureBox9.ForeColor = System.Drawing.Color.LightGray
-        Me.IconPictureBox9.IconChar = FontAwesome.Sharp.IconChar.Cloud
-        Me.IconPictureBox9.IconColor = System.Drawing.Color.LightGray
-        Me.IconPictureBox9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox9.IconSize = 200
-        Me.IconPictureBox9.Location = New System.Drawing.Point(623, 3)
-        Me.IconPictureBox9.Name = "IconPictureBox9"
-        Me.IconPictureBox9.Size = New System.Drawing.Size(200, 200)
-        Me.IconPictureBox9.TabIndex = 4
-        Me.IconPictureBox9.TabStop = False
-        '
-        'IconPictureBox10
-        '
-        Me.IconPictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.IconPictureBox10.BackColor = System.Drawing.Color.Transparent
-        Me.IconPictureBox10.ForeColor = System.Drawing.Color.LightGray
-        Me.IconPictureBox10.IconChar = FontAwesome.Sharp.IconChar.Odysee
-        Me.IconPictureBox10.IconColor = System.Drawing.Color.LightGray
-        Me.IconPictureBox10.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox10.IconSize = 274
-        Me.IconPictureBox10.Location = New System.Drawing.Point(285, -21)
-        Me.IconPictureBox10.Name = "IconPictureBox10"
-        Me.IconPictureBox10.Size = New System.Drawing.Size(274, 274)
-        Me.IconPictureBox10.TabIndex = 4
-        Me.IconPictureBox10.TabStop = False
-        '
-        'IconPictureBox11
-        '
-        Me.IconPictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.IconPictureBox11.BackColor = System.Drawing.Color.Transparent
-        Me.IconPictureBox11.ForeColor = System.Drawing.Color.Ivory
-        Me.IconPictureBox11.IconChar = FontAwesome.Sharp.IconChar.OptinMonster
-        Me.IconPictureBox11.IconColor = System.Drawing.Color.Ivory
-        Me.IconPictureBox11.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconPictureBox11.IconSize = 278
-        Me.IconPictureBox11.Location = New System.Drawing.Point(534, 721)
-        Me.IconPictureBox11.Name = "IconPictureBox11"
-        Me.IconPictureBox11.Size = New System.Drawing.Size(289, 278)
-        Me.IconPictureBox11.TabIndex = 4
-        Me.IconPictureBox11.TabStop = False
         '
         'FormUtama
         '
@@ -771,17 +771,17 @@ Partial Class FormUtama
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IconPictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IconPictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IconPictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IconPictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IconPictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IconPictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

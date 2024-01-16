@@ -50,20 +50,32 @@ Partial Class MasterFormPengguna
         Me.TBPhone = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PanelUbahData = New System.Windows.Forms.Panel()
+        Me.PanelLV = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.PanelUbahData.SuspendLayout()
+        Me.PanelLV.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'TBSearch
         '
-        Me.TBSearch.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBSearch.BackColor = System.Drawing.SystemColors.Window
         Me.TBSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBSearch.ForeColor = System.Drawing.Color.Black
-        Me.TBSearch.Location = New System.Drawing.Point(278, 232)
+        Me.TBSearch.Location = New System.Drawing.Point(247, 7)
         Me.TBSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBSearch.Name = "TBSearch"
-        Me.TBSearch.Size = New System.Drawing.Size(185, 39)
+        Me.TBSearch.Size = New System.Drawing.Size(189, 39)
         Me.TBSearch.TabIndex = 1
         Me.TBSearch.WordWrap = False
         '
@@ -73,7 +85,7 @@ Partial Class MasterFormPengguna
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(774, 300)
+        Me.Label2.Location = New System.Drawing.Point(39, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 29)
         Me.Label2.TabIndex = 5
@@ -81,11 +93,11 @@ Partial Class MasterFormPengguna
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(32, 235)
+        Me.Label1.Location = New System.Drawing.Point(3, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(249, 29)
         Me.Label1.TabIndex = 6
@@ -97,7 +109,7 @@ Partial Class MasterFormPengguna
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnAdd.Location = New System.Drawing.Point(779, 786)
+        Me.btnAdd.Location = New System.Drawing.Point(44, 548)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(142, 60)
@@ -119,17 +131,17 @@ Partial Class MasterFormPengguna
         '
         'LVData
         '
-        Me.LVData.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LVData.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LVData.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id_pengguna, Me.nama_pengguna, Me.level_pengguna, Me.nomortelepon_pengguna})
         Me.LVData.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LVData.FullRowSelect = True
         Me.LVData.GridLines = True
         Me.LVData.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.LVData.HideSelection = False
-        Me.LVData.Location = New System.Drawing.Point(36, 289)
+        Me.LVData.Location = New System.Drawing.Point(0, 74)
         Me.LVData.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LVData.Name = "LVData"
-        Me.LVData.Size = New System.Drawing.Size(710, 585)
+        Me.LVData.Size = New System.Drawing.Size(686, 596)
         Me.LVData.TabIndex = 14
         Me.LVData.UseCompatibleStateImageBehavior = False
         Me.LVData.View = System.Windows.Forms.View.Details
@@ -171,7 +183,7 @@ Partial Class MasterFormPengguna
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnUpdate.Location = New System.Drawing.Point(945, 786)
+        Me.btnUpdate.Location = New System.Drawing.Point(210, 548)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(142, 60)
@@ -185,7 +197,7 @@ Partial Class MasterFormPengguna
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnDelete.Location = New System.Drawing.Point(1111, 786)
+        Me.btnDelete.Location = New System.Drawing.Point(376, 548)
         Me.btnDelete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(142, 60)
@@ -214,7 +226,7 @@ Partial Class MasterFormPengguna
         Me.TBUserID.BackColor = System.Drawing.SystemColors.Window
         Me.TBUserID.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBUserID.ForeColor = System.Drawing.Color.Black
-        Me.TBUserID.Location = New System.Drawing.Point(779, 333)
+        Me.TBUserID.Location = New System.Drawing.Point(44, 95)
         Me.TBUserID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBUserID.Name = "TBUserID"
         Me.TBUserID.Size = New System.Drawing.Size(474, 39)
@@ -227,7 +239,7 @@ Partial Class MasterFormPengguna
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label4.Location = New System.Drawing.Point(774, 573)
+        Me.Label4.Location = New System.Drawing.Point(39, 335)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(83, 29)
         Me.Label4.TabIndex = 5
@@ -239,7 +251,7 @@ Partial Class MasterFormPengguna
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label5.Location = New System.Drawing.Point(774, 483)
+        Me.Label5.Location = New System.Drawing.Point(39, 245)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(132, 29)
         Me.Label5.TabIndex = 5
@@ -251,7 +263,7 @@ Partial Class MasterFormPengguna
         Me.TBPass.BackColor = System.Drawing.SystemColors.Window
         Me.TBPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBPass.ForeColor = System.Drawing.Color.Black
-        Me.TBPass.Location = New System.Drawing.Point(779, 516)
+        Me.TBPass.Location = New System.Drawing.Point(44, 278)
         Me.TBPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBPass.Name = "TBPass"
         Me.TBPass.Size = New System.Drawing.Size(474, 39)
@@ -264,7 +276,7 @@ Partial Class MasterFormPengguna
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label6.Location = New System.Drawing.Point(774, 391)
+        Me.Label6.Location = New System.Drawing.Point(39, 153)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(136, 29)
         Me.Label6.TabIndex = 5
@@ -276,7 +288,7 @@ Partial Class MasterFormPengguna
         Me.TBUsername.BackColor = System.Drawing.SystemColors.Window
         Me.TBUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBUsername.ForeColor = System.Drawing.Color.Black
-        Me.TBUsername.Location = New System.Drawing.Point(779, 424)
+        Me.TBUsername.Location = New System.Drawing.Point(44, 186)
         Me.TBUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBUsername.Name = "TBUsername"
         Me.TBUsername.Size = New System.Drawing.Size(474, 39)
@@ -289,7 +301,7 @@ Partial Class MasterFormPengguna
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label7.Location = New System.Drawing.Point(469, 238)
+        Me.Label7.Location = New System.Drawing.Point(-4, 8)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(83, 29)
         Me.Label7.TabIndex = 5
@@ -303,7 +315,7 @@ Partial Class MasterFormPengguna
         Me.Cblevel2.Location = New System.Drawing.Point(0, 0)
         Me.Cblevel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Cblevel2.Name = "Cblevel2"
-        Me.Cblevel2.Size = New System.Drawing.Size(160, 40)
+        Me.Cblevel2.Size = New System.Drawing.Size(123, 40)
         Me.Cblevel2.TabIndex = 2
         '
         'ClearCbLevel2
@@ -316,10 +328,11 @@ Partial Class MasterFormPengguna
         Me.ClearCbLevel2.IconColor = System.Drawing.SystemColors.Window
         Me.ClearCbLevel2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ClearCbLevel2.IconSize = 45
-        Me.ClearCbLevel2.Location = New System.Drawing.Point(160, 0)
+        Me.ClearCbLevel2.Location = New System.Drawing.Point(123, 0)
         Me.ClearCbLevel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ClearCbLevel2.Name = "ClearCbLevel2"
-        Me.ClearCbLevel2.Size = New System.Drawing.Size(40, 35)
+        Me.ClearCbLevel2.Padding = New System.Windows.Forms.Padding(0, 0, 5, 8)
+        Me.ClearCbLevel2.Size = New System.Drawing.Size(40, 43)
         Me.ClearCbLevel2.TabIndex = 17
         Me.ClearCbLevel2.UseVisualStyleBackColor = True
         '
@@ -346,7 +359,7 @@ Partial Class MasterFormPengguna
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label8.Location = New System.Drawing.Point(774, 670)
+        Me.Label8.Location = New System.Drawing.Point(39, 432)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(188, 29)
         Me.Label8.TabIndex = 5
@@ -358,7 +371,7 @@ Partial Class MasterFormPengguna
         Me.TBPhone.BackColor = System.Drawing.SystemColors.Window
         Me.TBPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBPhone.ForeColor = System.Drawing.Color.Black
-        Me.TBPhone.Location = New System.Drawing.Point(778, 703)
+        Me.TBPhone.Location = New System.Drawing.Point(43, 465)
         Me.TBPhone.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TBPhone.Name = "TBPhone"
         Me.TBPhone.Size = New System.Drawing.Size(475, 39)
@@ -370,9 +383,9 @@ Partial Class MasterFormPengguna
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.Controls.Add(Me.Cblevel2)
         Me.Panel1.Controls.Add(Me.ClearCbLevel2)
-        Me.Panel1.Location = New System.Drawing.Point(546, 231)
+        Me.Panel1.Location = New System.Drawing.Point(76, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 35)
+        Me.Panel1.Size = New System.Drawing.Size(163, 43)
         Me.Panel1.TabIndex = 18
         '
         'Panel2
@@ -380,10 +393,85 @@ Partial Class MasterFormPengguna
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.Controls.Add(Me.CBLevel1)
         Me.Panel2.Controls.Add(Me.ClearCbLevel1)
-        Me.Panel2.Location = New System.Drawing.Point(779, 618)
+        Me.Panel2.Location = New System.Drawing.Point(44, 380)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(474, 35)
         Me.Panel2.TabIndex = 19
+        '
+        'PanelUbahData
+        '
+        Me.PanelUbahData.Controls.Add(Me.TBUserID)
+        Me.PanelUbahData.Controls.Add(Me.Panel2)
+        Me.PanelUbahData.Controls.Add(Me.btnAdd)
+        Me.PanelUbahData.Controls.Add(Me.btnUpdate)
+        Me.PanelUbahData.Controls.Add(Me.btnDelete)
+        Me.PanelUbahData.Controls.Add(Me.Label2)
+        Me.PanelUbahData.Controls.Add(Me.TBUsername)
+        Me.PanelUbahData.Controls.Add(Me.Label4)
+        Me.PanelUbahData.Controls.Add(Me.TBPhone)
+        Me.PanelUbahData.Controls.Add(Me.Label8)
+        Me.PanelUbahData.Controls.Add(Me.TBPass)
+        Me.PanelUbahData.Controls.Add(Me.Label5)
+        Me.PanelUbahData.Controls.Add(Me.Label6)
+        Me.PanelUbahData.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PanelUbahData.Location = New System.Drawing.Point(692, 0)
+        Me.PanelUbahData.Name = "PanelUbahData"
+        Me.PanelUbahData.Size = New System.Drawing.Size(562, 670)
+        Me.PanelUbahData.TabIndex = 20
+        '
+        'PanelLV
+        '
+        Me.PanelLV.Controls.Add(Me.TableLayoutPanel1)
+        Me.PanelLV.Controls.Add(Me.LVData)
+        Me.PanelLV.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelLV.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLV.Name = "PanelLV"
+        Me.PanelLV.Size = New System.Drawing.Size(692, 670)
+        Me.PanelLV.TabIndex = 21
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel7, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel8, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 7)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(686, 60)
+        Me.TableLayoutPanel1.TabIndex = 23
+        '
+        'Panel7
+        '
+        Me.Panel7.Controls.Add(Me.TBSearch)
+        Me.Panel7.Controls.Add(Me.Label1)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel7.Location = New System.Drawing.Point(3, 3)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(440, 54)
+        Me.Panel7.TabIndex = 0
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.Panel1)
+        Me.Panel8.Controls.Add(Me.Label7)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel8.Location = New System.Drawing.Point(449, 3)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(234, 54)
+        Me.Panel8.TabIndex = 1
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.PanelLV)
+        Me.Panel5.Controls.Add(Me.PanelUbahData)
+        Me.Panel5.Location = New System.Drawing.Point(27, 218)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1254, 670)
+        Me.Panel5.TabIndex = 22
         '
         'MasterFormPengguna
         '
@@ -391,31 +479,23 @@ Partial Class MasterFormPengguna
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1306, 912)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.IconBack)
-        Me.Controls.Add(Me.LVData)
-        Me.Controls.Add(Me.TBUsername)
-        Me.Controls.Add(Me.TBPhone)
-        Me.Controls.Add(Me.TBPass)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TBUserID)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TBSearch)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnDelete)
-        Me.Controls.Add(Me.btnUpdate)
-        Me.Controls.Add(Me.btnAdd)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MasterFormPengguna"
         Me.Text = "List Of User"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        Me.PanelUbahData.ResumeLayout(False)
+        Me.PanelUbahData.PerformLayout()
+        Me.PanelLV.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -449,4 +529,10 @@ Partial Class MasterFormPengguna
     Friend WithEvents TBPhone As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents PanelUbahData As Panel
+    Friend WithEvents PanelLV As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel8 As Panel
 End Class

@@ -10,6 +10,7 @@ Public Class MasterFormPengguna
 
     'edited by ferico'
     Private Sub MasterFormPengguna_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PanelUbahData.Visible = False
         Module1.connect()
         CBLevel1.Items.Add("ADMIN")
         CBLevel1.Items.Add("USER")
@@ -118,7 +119,8 @@ Public Class MasterFormPengguna
             ' ketika mau ubah data, tombol tambah tidak akan bisa dipakai
             btnAdd.Enabled = False
             btnAdd.ForeColor = Color.DimGray
-            FormConfirm.Show() 'jika ingin update atau delete data, admin harus masukkan passwordnya terlebih dahulu untuk keamanan
+            PanelUbahData.Visible = True
+            FormConfirm.ShowDialog() 'jika ingin update atau delete data, admin harus masukkan passwordnya terlebih dahulu untuk keamanan
         End With
     End Sub
 
@@ -274,6 +276,8 @@ Public Class MasterFormPengguna
             e.Handled = True
         End If
     End Sub
+
+
 
     'finish by ferico
 End Class
