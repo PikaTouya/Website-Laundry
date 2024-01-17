@@ -82,6 +82,7 @@ Public Class FormTransaction
     End Sub
 
     Private Sub FormHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PanelUbahData.Visible = False
         Module1.connect()
         View()
         LVDataTransaction.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
@@ -239,6 +240,7 @@ Public Class FormTransaction
             CBStatus.Visible = True
             CBStatus.Text = .SubItems(7).Text
         End With
+        PanelUbahData.Visible = True
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
@@ -268,6 +270,7 @@ Public Class FormTransaction
         LblTypeOfWash.Text = ""
         LblWeight.Text = ""
         CBStatus.Visible = False
+        PanelUbahData.Visible = False
     End Sub
 
     Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged

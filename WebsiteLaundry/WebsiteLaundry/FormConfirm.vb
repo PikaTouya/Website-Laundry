@@ -5,6 +5,8 @@ Public Class FormConfirm
         If tbConfirm.Text = Module1.LoggedInUserPassword Then
             Me.Close()
             MasterFormPengguna.PanelUbahData.Visible = True
+            tbConfirm.Text = ""
+            tbConfirm.Focus()
         Else
             MsgBox("Please put the correct password!")
             tbConfirm.Text = ""
@@ -19,5 +21,7 @@ Public Class FormConfirm
 
     Private Sub FormConfirm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tbConfirm.PasswordChar = "*"
+
     End Sub
+
 End Class
