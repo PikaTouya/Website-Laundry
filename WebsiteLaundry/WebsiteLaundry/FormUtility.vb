@@ -39,7 +39,9 @@
                         Cmd.Parameters.AddWithValue("@Username", FormUtama.lblNamaUser.Text)
                         Cmd.ExecuteNonQuery()
 
-                        MsgBox("Password successfully changed!")
+                        MsgBox("Password successfully changed! Please re-login")
+                        Me.Close()
+                        FormLoginOrSignup.show()
                         KondisiAwal()
                     End If
                 End If

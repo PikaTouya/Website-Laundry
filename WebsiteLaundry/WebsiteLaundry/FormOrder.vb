@@ -98,7 +98,15 @@ Public Class FormOrder
 
                 ' Hitung harga_transaksi berdasarkan harga dari database
                 If cbcoupon.Text = "Yes, I wanna use my coupon!" Then
-                    harga_transaksi.Text = "0"
+                    If berat_pakaian.Text <= 3 Then
+                        harga_transaksi.Text = "0"
+                    Else
+                        MessageBox.Show("Maximum Weight While Using Coupon is 3 KG!")
+                        berat_pakaian.Text = ""
+                        cbjenis.SelectedIndex = -1 'untuk mereset pilihan combobox
+                        cbcoupon.SelectedIndex = -1
+                        harga_transaksi.Text = ""
+                    End If
                 Else
                     Dim harga As Double
                     If Double.TryParse(harga_transaksi.Text, harga) Then
