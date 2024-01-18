@@ -8,7 +8,6 @@ Public Class MasterFormPengguna
         FormUtama.IconChildForm.IconChar = IconChar.Edit
     End Sub
 
-    'edited by ferico'
     Private Sub MasterFormPengguna_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PanelUbahData.Visible = False
         Module1.connect()

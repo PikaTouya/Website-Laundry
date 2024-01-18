@@ -76,9 +76,9 @@ Public Class FormOrder
         ' Mendapatkan tanda desimal dari pengaturan regional
         Dim decimalSeparator As String = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator
 
-        ' Memeriksa apakah karakter yang dimasukkan adalah angka atau tanda desimal
-        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = decimalSeparator Then
-            ' Jika bukan angka, tanda desimal, batalkan input
+        ' Memeriksa apakah karakter yang dimasukkan adalah angka atau tanda desimal atau tanda kontrol seperti backspace
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = decimalSeparator AndAlso Not Char.IsControl(e.KeyChar) Then
+            ' Jika bukan angka, tanda desimal, backspace, batalkan input
             e.Handled = True
         End If
 
