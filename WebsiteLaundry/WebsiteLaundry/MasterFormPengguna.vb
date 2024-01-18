@@ -169,7 +169,7 @@ Public Class MasterFormPengguna
             TBUserID.Text = ""
             TBUsername.Text = ""
             TBPass.Text = ""
-            CBLevel1.Text = ""
+            CBLevel1.SelectedIndex = -1
             TBPhone.Text = ""
 
         ElseIf BtnClearAndDelete.Text = "Delete" Then
@@ -295,7 +295,7 @@ Public Class MasterFormPengguna
         Cblevel2.DropDownStyle = ComboBoxStyle.DropDownList
         View()
     End Sub
-    Private Sub ClearCbLevel1_Click(sender As Object, e As EventArgs) Handles ClearCbLevel1.Click
+    Private Sub ClearCbLevel1_Click(sender As Object, e As EventArgs)
         CBLevel1.Items.Clear()
         CBLevel1.Items.Add("ADMIN")
         CBLevel1.Items.Add("USER")

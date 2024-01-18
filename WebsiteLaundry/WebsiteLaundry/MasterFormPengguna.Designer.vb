@@ -45,7 +45,6 @@ Partial Class MasterFormPengguna
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Cblevel2 = New System.Windows.Forms.ComboBox()
         Me.ClearCbLevel2 = New FontAwesome.Sharp.IconButton()
-        Me.ClearCbLevel1 = New FontAwesome.Sharp.IconButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TBPhone = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -177,7 +176,7 @@ Partial Class MasterFormPengguna
         Me.CBLevel1.Location = New System.Drawing.Point(0, 0)
         Me.CBLevel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CBLevel1.Name = "CBLevel1"
-        Me.CBLevel1.Size = New System.Drawing.Size(387, 37)
+        Me.CBLevel1.Size = New System.Drawing.Size(421, 37)
         Me.CBLevel1.TabIndex = 7
         '
         'BtnClearAndDelete
@@ -339,23 +338,6 @@ Partial Class MasterFormPengguna
         Me.ClearCbLevel2.TabIndex = 17
         Me.ClearCbLevel2.UseVisualStyleBackColor = True
         '
-        'ClearCbLevel1
-        '
-        Me.ClearCbLevel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClearCbLevel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.ClearCbLevel1.FlatAppearance.BorderSize = 0
-        Me.ClearCbLevel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ClearCbLevel1.IconChar = FontAwesome.Sharp.IconChar.TimesSquare
-        Me.ClearCbLevel1.IconColor = System.Drawing.SystemColors.Window
-        Me.ClearCbLevel1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ClearCbLevel1.IconSize = 45
-        Me.ClearCbLevel1.Location = New System.Drawing.Point(387, 0)
-        Me.ClearCbLevel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ClearCbLevel1.Name = "ClearCbLevel1"
-        Me.ClearCbLevel1.Size = New System.Drawing.Size(34, 28)
-        Me.ClearCbLevel1.TabIndex = 17
-        Me.ClearCbLevel1.UseVisualStyleBackColor = True
-        '
         'Label8
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -396,7 +378,6 @@ Partial Class MasterFormPengguna
         '
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.Controls.Add(Me.CBLevel1)
-        Me.Panel2.Controls.Add(Me.ClearCbLevel1)
         Me.Panel2.Location = New System.Drawing.Point(16, 358)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
@@ -583,7 +564,6 @@ Partial Class MasterFormPengguna
     Friend WithEvents Cblevel2 As ComboBox
     Protected WithEvents Label7 As Label
     Friend WithEvents ClearCbLevel2 As FontAwesome.Sharp.IconButton
-    Friend WithEvents ClearCbLevel1 As FontAwesome.Sharp.IconButton
     Friend WithEvents nomortelepon_pengguna As ColumnHeader
     Friend WithEvents Label8 As Label
     Friend WithEvents TBPhone As TextBox
