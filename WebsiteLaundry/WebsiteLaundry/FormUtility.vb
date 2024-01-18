@@ -1,4 +1,6 @@
-﻿Public Class FormUtility
+﻿Imports System.Windows.Controls
+
+Public Class FormUtility
 
     Sub KondisiAwal()
         CurrentPass.Text = ""
@@ -41,6 +43,14 @@
 
                         MsgBox("Password successfully changed! Please re-login")
                         Me.Close()
+                        Reset()
+                        FormUtama.Reset()
+                        FormUtama.PanelMenu.Visible = False
+                        FormUtama.btnlogin.Visible = True
+                        FormUtama.lblNamaUser.Visible = False
+                        FormUtama.IconUser.Visible = False
+                        FormUtama.btnOrder.Visible = False
+
                         FormLoginOrSignup.show()
                         KondisiAwal()
                     End If

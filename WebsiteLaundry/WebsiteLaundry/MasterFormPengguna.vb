@@ -183,8 +183,19 @@ Public Class MasterFormPengguna
                 Dr.Close()
             End If
 
-            strsql = "DELETE FROM Pengguna WHERE id_pengguna = '" & ctrl & "'"
+            strsql = "DELETE FROM Transaksi WHERE id_pengguna = '" & ctrl & "'"
             Dim Cmd As New SqlClient.SqlCommand
+            Cmd.CommandText = strsql
+            Cmd.Connection = Conn
+            Cmd.ExecuteNonQuery()
+
+            ' Pastikan bahwa DataReader ditutup sebelum menjalankan perintah DELETE
+            If Dr IsNot Nothing AndAlso Not Dr.IsClosed Then
+                Dr.Close()
+            End If
+
+            strsql = "DELETE FROM Pengguna WHERE id_pengguna = '" & ctrl & "'"
+            Cmd = New SqlClient.SqlCommand
             Cmd.CommandText = strsql
             Cmd.Connection = Conn
             Cmd.ExecuteNonQuery()
